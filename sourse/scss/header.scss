@@ -1,0 +1,98 @@
+.header {
+  position: relative;
+  z-index: 10;
+
+  &__topWrapper {
+    background-color: $green;
+  }
+
+  &__top {
+    max-width: 1630px;
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    &Item {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 8px;
+      color: $white;
+      font-size: 12px;
+
+    }
+  }
+
+  &__wrapper {
+    background-color: $white;
+  }
+
+  &__container {
+    max-width: 1790px;
+    margin: 0 auto;
+  }
+
+  &__nav {
+    width: 550px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    &Wrapper {
+      height: 110px;
+    }
+
+    &Item {
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 27px;
+    }
+  }
+
+  &__navLeft {
+    width: 550px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 25px;
+
+    &Item {
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 27px;
+
+      a {
+        border-radius: 4px;
+        padding: 4px 15px;
+      }
+
+      &Select {
+        border-radius: 4px;
+        padding: 4px 15px;
+      }
+    }
+
+    &ShoppingCart {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: $yellow;
+    }
+  }
+
+}
+
+@media (min-width: $md1+px) {
+
+}
+
+@media (min-width: $md2+px) {
+
+}
+
+@media (max-width: $md3+px) {
+
+}

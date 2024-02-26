@@ -1,0 +1,83 @@
+.home {
+  &__main {
+    position: relative;
+    z-index: 9;
+    margin-top: -110px;
+    height: 930px;
+    display: flex;
+
+    &Content {
+      padding-top: 50px;
+      max-width: 587px;
+      height: 466px;
+
+      &Wrapper {
+        position: relative;
+        z-index: 10;
+        max-width: 1530px;
+        margin: -466px auto 0;
+      }
+
+      &Title {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 64px;
+      }
+
+      &Text {
+        margin-top: 11px;
+        margin-bottom: 22px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+    }
+  }
+
+
+  &__bgBottle {
+    width: 172px;
+    overflow: hidden;
+
+    position: absolute;
+    margin-left: -86px;
+    top: 237px;
+    left: 50%;
+    z-index: 10;
+  }
+
+  &__bgText {
+    width: 1790px;
+    margin: 0 auto;
+
+    &Wrapper {
+      overflow: hidden;
+      width: 100%;
+      position: absolute;
+      top: 170px;
+      left: 0;
+      z-index: 9;
+    }
+  }
+
+  &__bgGrey {
+    flex-basis: 50%;
+    background-color: $bg-grey;
+    display: flex;
+    flex-direction: column;
+
+    &BlockSky {
+      background-color: $sky-blue;
+      flex-basis: 50%;
+    }
+  }
+
+  &__bgBlue {
+    flex-basis: 50%;
+    background-color: $blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+}

@@ -1,0 +1,350 @@
+//@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+// Переменные
+$minWidth: 320px;
+$maxWidth: 1530;
+$maxWidthContainer: 1530;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$black: #000000;
+$green: #0E6232;
+$sky-blue: #B8E1F2;
+$blue: #00A6D3;
+$yellow: #FDFD09;
+$grey: #EEEEEE;
+$bg-grey: #F6F6F6;
+$text-grey: #868686;
+$white: #ffffff;
+$border-color: rgba(16, 23, 37, 0.7);
+$border-color-grey: rgba(16, 23, 37, 0.2);
+$bg-opacity: rgba(16, 23, 37, 0.4);
+$fontFamily: "Montserrat", sans-serif;
+// Переменные
+
+@import "zeroing_style";
+@import "header";
+@import "home-page";
+@import "main";
+@import "footer";
+
+.wrapper {
+  display: flex;
+  background-color: $bg-grey;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+._container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+
+  //background-color: #F2F1F1;
+  @media (max-width: $md1 + px) {
+    max-width: 970px;
+    //background-color: #A1C767;
+  }
+
+  @media (max-width: $md2 + px) {
+    max-width: 750px;
+  }
+
+  @media (max-width: $md3 + px) {
+    max-width: none;
+    padding: 0 24px;
+  }
+}
+
+.btnRadius {
+  background-color: $green;
+  color: $white;
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+
+  @media (max-width: $md1 + px) {
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  @media (max-width: $md2 + px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (max-width: $md3 + px) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.title-h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+
+  @media (max-width: $md1 + px) {
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  @media (max-width: $md2 + px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.btn-link {
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (max-width: $md3 + px) {
+    padding: 7px 10px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 26px;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: $green;
+  color: $white;
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      //background-color: $green;
+      //color: $white;
+    }
+  }
+}
+
+.btn-dark {
+  background-color: inherit;
+  color: $black;
+  border: 2px solid $black;
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+.form-input {
+  input {
+    min-width: 200px;
+    height: 35px;
+    background: rgba(242, 241, 241, 0.5);
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    padding: 6px 12px;
+
+    @media (max-width: $md3 + px) {
+      min-width: 100%;
+    }
+  }
+}
+
+.form-select {
+  font-size: 16px;
+  line-height: 21px;
+
+  select {
+    min-width: 200px;
+    height: 35px;
+    padding: 9px;
+    background: rgba(242, 241, 241, 0.5);
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    margin-top: 4px;
+
+    @media (max-width: $md3 + px) {
+      min-width: 100%;
+    }
+  }
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.color-white {
+  color: $white;
+}
+.color-blue {
+  color: $blue;
+}
+
+.color-green {
+  color: $green;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $black;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.justify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.check-box {
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:after,
+  input[type="checkbox"]:after {
+    background-color: inherit;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    display: block;
+    left: -20px;
+    top: -14px;
+    width: 15px;
+    height: 15px;
+  }
+
+  input[type="radio"]:checked:after,
+  input[type="checkbox"]:checked:after {
+    background-color: $green;
+    border: none;
+  }
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.check-box-custom {
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:checked {
+    & + label {
+      cursor: pointer;
+      background-color: $green;
+      color: $white;
+      border: none;
+      padding: 6px;
+    }
+  }
+}
+
+.radio-custom {
+  input[type="radio"] {
+    width: 0;
+    height: 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:checked {
+    & + label {
+      cursor: pointer;
+      background-color: $green;
+      color: $white;
+    }
+  }
+}
+
+//
+//@media (max-width: $md1 + px) {
+//
+//}
+//@media (max-width: $md2 + px) {
+//
+//}
+//@media (max-width: $md3 + px) {
+//
+//}
