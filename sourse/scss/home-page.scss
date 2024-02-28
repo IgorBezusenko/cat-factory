@@ -34,7 +34,6 @@
     }
   }
 
-
   &__bgBottle {
     width: 172px;
     overflow: hidden;
@@ -79,5 +78,210 @@
     display: flex;
     justify-content: center;
     align-items: end;
+  }
+
+  &Shop {
+    height: 880px;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &__nav {
+      height: 264px;
+      margin-top: -132px;
+      position: absolute;
+      top: 50%;
+      right: -80px;
+      z-index: 10;
+
+      &Item {
+        padding: 10px;
+        background-color: $white;
+        color: $green;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &Detox {
+          width: 52px;
+          height: 52px;
+          background-image: url("../../img/home-page/icon_programdetox.svg");
+        }
+
+        &Morning {
+          width: 52px;
+          height: 52px;
+          background-image: url("../../img/home-page/icon_morning.svg");
+        }
+
+        &Shop {
+          width: 52px;
+          height: 52px;
+          background-image: url("../../img/home-page/icon_shop.svg");
+        }
+
+        &:hover {
+          background-color: $green;
+          color: $white;
+
+          &Detox {
+            background-image: url("../../img/home-page/icon_programdetox_green.svg");
+          }
+
+          &Morning {
+            background-image: url("../../img/home-page/icon_morning_green.svg");
+          }
+
+          &Shop {
+            background-image: url("../../img/home-page/icon_shop_green.svg");
+          }
+        }
+      }
+
+      &Item.active {
+        background-color: $green;
+        color: $white;
+      }
+
+    }
+
+    &__card {
+      position: relative;
+      z-index: 10;
+      padding: 30px;
+      padding-top: 0;
+      border-radius: 5px;
+      overflow: hidden;
+
+      &HoverAnimate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $green;
+        border-radius: 5px;
+        transition: 0.3s;
+        transform: translateY(+101%);
+        z-index: -1;
+
+        &Block {
+          padding: 30px;
+          padding-top: 0;
+          color: $white;
+
+          &List {
+            margin-top: 66px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            li {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 26px;
+
+            }
+          }
+        }
+
+      }
+
+      &:hover {
+        .homeShop__cardHoverAnimate {
+          transform: translateY(0);
+        }
+
+        .homeShop__cardImg {
+          border-bottom: 2px solid $white;
+
+          img {
+            opacity: 0;
+          }
+        }
+
+        .homeShop__cardTitle {
+          color: $white;
+        }
+
+        .homeShop__cardText {
+          color: $white;
+        }
+
+        .homeShop__cardTabs {
+          opacity: 1;
+          z-index: 11;
+        }
+
+      }
+
+      &Img {
+        height: 447px;
+        display: flex;
+        justify-content: center;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &Title {
+        margin-top: 26px;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 38px;
+      }
+
+
+      &Text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 13px;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 38px;
+      }
+
+      &Tabs {
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        opacity: 0;
+        z-index: -1;
+      }
+
+      &Buttons {
+        margin-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &Wrapper {
+        position: relative;
+        width: 480px;
+
+        // height: 706px;
+        // background-color: $white;
+        &White {
+          background-color: $white;
+          position: absolute;
+          top: 27%;
+          left: 0;
+          border-radius: 5px;
+          width: 100%;
+          height: 63%;
+        }
+      }
+    }
   }
 }
