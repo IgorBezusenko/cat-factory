@@ -1,7 +1,8 @@
 .footer {
   background-color: $black;
   color: $white;
-  padding: 68px 75px;
+  padding: 60px 0;
+  z-index: 100;
 
   @media (max-width: $md1 + px) {
 

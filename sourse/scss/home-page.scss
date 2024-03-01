@@ -81,23 +81,24 @@
   }
 
   &Shop {
-    height: 880px;
+    padding-top: 170px;
     position: relative;
     z-index: 9;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 25px;
 
     &__nav {
       height: 264px;
-      margin-top: -132px;
       position: absolute;
       top: 50%;
-      right: -80px;
+      right: -110px;
       z-index: 10;
 
       &Item {
-        padding: 10px;
+        width: 102px;
+        padding: 10px 0;
         background-color: $white;
         color: $green;
         display: flex;
@@ -105,47 +106,46 @@
         align-items: center;
         justify-content: center;
 
-        &Detox {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+
+
+        &Detox, &Morning, &Shop {
           width: 52px;
           height: 52px;
-          background-image: url("../../img/home-page/icon_programdetox.svg");
+        }
+
+        &Detox {
+          background-image: url("../../img/home-page/icon_programdetox_green.svg");
         }
 
         &Morning {
-          width: 52px;
-          height: 52px;
-          background-image: url("../../img/home-page/icon_morning.svg");
+          background-image: url("../../img/home-page/icon_morning_green.svg");
         }
 
         &Shop {
-          width: 52px;
-          height: 52px;
-          background-image: url("../../img/home-page/icon_shop.svg");
+          background-image: url("../../img/home-page/icon_shop_green.svg");
         }
 
-        &:hover {
+        &:hover, &.active {
           background-color: $green;
           color: $white;
 
-          &Detox {
-            background-image: url("../../img/home-page/icon_programdetox_green.svg");
+          .homeShop__navItemDetox {
+            background-image: url("../../img/home-page/icon_programdetox.svg");
           }
 
-          &Morning {
-            background-image: url("../../img/home-page/icon_morning_green.svg");
+          .homeShop__navItemShop {
+            background-image: url("../../img/home-page/icon_shop.svg");
+
           }
 
-          &Shop {
-            background-image: url("../../img/home-page/icon_shop_green.svg");
+          .homeShop__navItemMorning {
+            background-image: url("../../img/home-page/icon_morning.svg");
           }
         }
       }
-
-      &Item.active {
-        background-color: $green;
-        color: $white;
-      }
-
     }
 
     &__card {
@@ -279,7 +279,105 @@
           left: 0;
           border-radius: 5px;
           width: 100%;
-          height: 63%;
+          height: 73%;
+        }
+      }
+    }
+  }
+
+  &__orderNow {
+    display: flex;
+    justify-content: end;
+
+    &Wrapper {
+      position: relative;
+      z-index: 8;
+      margin-top: -300px;
+      padding-top: 420px;
+      padding-bottom: 650px;
+      //height: 1000px;
+      background-color: $sky-blue;
+    }
+
+    &Content {
+      max-width: 587px;
+
+      &Text {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 38px;
+
+      }
+
+      &Title {
+        margin-top: 30px;
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 102px;
+
+      }
+
+      &List {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+
+      &SubTitle {
+        margin-top: 75px;
+        margin-bottom: 26px;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 26px;
+      }
+    }
+
+  }
+
+  &__productsSale {
+    position: relative;
+    z-index: 8;
+    margin-top: -397px;
+
+    &Title {
+      margin-bottom: 30px;
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 64px;
+
+    }
+
+    &Content {
+      display: flex;
+      gap: 25px;
+
+    }
+
+    &Item {
+      font-family: $fontFamilyInter;
+      font-size: 30px;
+      line-height: 36px;
+      &Title {
+        font-weight: 700;
+      }
+
+      &Text {
+
+        &Sale {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
         }
       }
     }
