@@ -50,7 +50,7 @@ $fontFamilyInter: "Inter", sans-serif;
 
   //background-color: #F2F1F1;
   @media (max-width: $md1 + px) {
-    max-width: 970px;
+    max-width: 985px;
     //background-color: #A1C767;
   }
 
@@ -71,23 +71,24 @@ $fontFamilyInter: "Inter", sans-serif;
 }
 
 .title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 31px;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 64px;
 
   @media (max-width: $md1 + px) {
-    font-size: 22px;
-    line-height: 29px;
+    font-size: 40px;
+    line-height: 54px;
   }
 
   @media (max-width: $md2 + px) {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   @media (max-width: $md3 + px) {
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 28px;
+    line-height: 36px;
+
   }
 }
 
@@ -121,6 +122,7 @@ $fontFamilyInter: "Inter", sans-serif;
 }
 
 .btn {
+  height: 56px;
   font-size: 20px;
   font-weight: 800;
   line-height: 26px;
@@ -132,7 +134,11 @@ $fontFamilyInter: "Inter", sans-serif;
 .btn-default {
   background-color: $white;
   color: $green;
+}
 
+.btn-primary {
+  background-color: $green;
+  color: $white;
 }
 
 .btn-default-hover {
@@ -157,10 +163,6 @@ $fontFamilyInter: "Inter", sans-serif;
   }
 }
 
-.btn-primary {
-  background-color: $green;
-  color: $white;
-}
 
 .btn-tab {
   width: 88px;
@@ -216,22 +218,35 @@ $fontFamilyInter: "Inter", sans-serif;
 }
 
 .form-select {
-  font-size: 16px;
-  line-height: 21px;
+  position: relative;
+
+
+  &:before {
+    width: 13px;
+    height: 8px;
+    content: "";
+    background-image: url('../../img/select-arrow.svg');
+    position: absolute;
+    pointer-events: none;
+    right: 15px;
+    top: 24px;
+  }
 
   select {
-    min-width: 200px;
-    height: 35px;
-    padding: 9px;
+    width: 100%;
+    // height: 35px;
+    appearance: none;
+    padding: 15px;
     background: rgba(242, 241, 241, 0.5);
     border: 1px solid $border-color;
     border-radius: 5px;
-    margin-top: 4px;
-
-    @media (max-width: $md3 + px) {
-      min-width: 100%;
-    }
+    font-family: $fontFamilyInter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-indent: 5px;
   }
+
 }
 
 .bg-green {
@@ -292,6 +307,10 @@ $fontFamilyInter: "Inter", sans-serif;
 
 .mb-35 {
   margin-bottom: 35px;
+}
+
+.pb-0 {
+  padding-bottom: 0;
 }
 
 .pl-20 {

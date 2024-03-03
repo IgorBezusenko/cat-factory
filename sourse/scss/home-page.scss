@@ -111,7 +111,9 @@
         line-height: 20px;
 
 
-        &Detox, &Morning, &Shop {
+        &Detox,
+        &Morning,
+        &Shop {
           width: 52px;
           height: 52px;
         }
@@ -128,7 +130,8 @@
           background-image: url("../../img/home-page/icon_shop_green.svg");
         }
 
-        &:hover, &.active {
+        &:hover,
+        &.active {
           background-color: $green;
           color: $white;
 
@@ -360,26 +363,265 @@
 
     &Content {
       display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
       gap: 25px;
 
     }
 
     &Item {
+      width: 480px;
+      height: 600px;
+      padding: 0 30px 30px 30px;
+
       font-family: $fontFamilyInter;
       font-size: 30px;
       line-height: 36px;
+
+      position: relative;
+      z-index: 11;
+
+
+      &BgAbsolute {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color: $white;
+        width: 100%;
+        height: 79%;
+        border-radius: 5px;
+
+      }
+
+      &Img {
+        width: 420px;
+        height: 300px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+
       &Title {
+        margin-top: 27px;
         font-weight: 700;
       }
 
+
       &Text {
+        margin-top: 15px;
 
         &Sale {
           font-size: 20px;
           font-weight: 400;
           line-height: 24px;
+          text-decoration: line-through;
+          padding-right: 5px;
         }
+      }
+
+      &Select {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 15px;
       }
     }
   }
+
+  &__tryNow {
+    max-width: 1360px;
+
+    &Wrapper {
+      // margin-top: 290px;
+      padding: 290px 0;
+    }
+
+    &Title {
+      font-size: 100px;
+      font-weight: 800;
+      line-height: 128px;
+
+    }
+
+    &SubTitle {
+      max-width: 850px;
+      margin-top: 32px;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 38px;
+
+    }
+
+    &Text {
+      max-width: 850px;
+      margin-top: 32px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+    }
+
+    &Btn {
+
+      margin-top: 32px;
+    }
+  }
+
+  &__fan {
+    max-width: 1920px;
+    margin: 0 auto;
+
+
+    &Title {
+      margin-bottom: 36px;
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 64px;
+
+    }
+
+    &Content {
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+
+    &Item {
+      width: 640px;
+      height: 850px;
+      padding: 0 55px 55px 55px;
+
+      font-size: 30px;
+      line-height: 36px;
+
+      position: relative;
+      z-index: 11;
+
+
+
+      &BgAbsolute {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color: $sky-blue;
+        width: 100%;
+        height: 79%;
+      }
+
+      &.first {
+        color: $green;
+      }
+
+      &.active {
+        color: $white;
+
+        .home__fanItemBgAbsolute {
+          background-color: $blue;
+        }
+      }
+
+      &Img {
+        width: 550px;
+        height: 560px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+
+      &Text {
+        margin-top: 60px;
+
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 38px;
+      }
+
+      &TextSmall {
+        margin-top: 40px;
+
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 24px;
+      }
+
+    }
+
+
+
+    //background-color: #F2F1F1;
+    @media (max-width: 1919px) {
+      max-width: 1300px;
+      //background-color: #A1C767;
+    }
+
+    //background-color: #F2F1F1;
+    @media (max-width: $md1 + px) {
+      max-width: 985px;
+      //background-color: #A1C767;
+    }
+
+    @media (max-width: $md2 + px) {
+      max-width: 750px;
+    }
+
+    @media (max-width: $md3 + px) {
+      max-width: none;
+      padding: 0 24px;
+    }
+
+  }
+
+
+  &__consultation {
+    position: relative;
+    z-index: 10;
+    padding-top: 460px;
+    padding-bottom: 340px;
+
+    &Wrapper {
+      background-color: $sky-blue;
+    }
+
+    &BgImg {
+      position: absolute;
+      top: -350px;
+      left: -200px;
+    }
+
+    &Content {
+
+      display: flex;
+      justify-content: end;
+    }
+
+    &Item {
+      max-width: 710px;
+      padding: 5px;
+
+      &Title {}
+
+      &Text {
+        margin-top: 20px;
+        margin-bottom: 40px;
+
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+
+      }
+
+
+
+    }
+  }
+
+
 }
