@@ -473,9 +473,11 @@
   &__fan {
     max-width: 1920px;
     margin: 0 auto;
-
+    z-index: 11;
 
     &Title {
+      padding: 0 55px;
+
       margin-bottom: 36px;
       font-size: 50px;
       font-weight: 800;
@@ -485,22 +487,19 @@
 
     &Content {
       display: flex;
-      flex-wrap: wrap;
 
+      //flex-wrap: wrap;
     }
 
     &Item {
       width: 640px;
       height: 850px;
       padding: 0 55px 55px 55px;
-
       font-size: 30px;
       line-height: 36px;
 
       position: relative;
       z-index: 11;
-
-
 
       &BgAbsolute {
         position: absolute;
@@ -554,29 +553,6 @@
 
     }
 
-
-
-    //background-color: #F2F1F1;
-    @media (max-width: 1919px) {
-      max-width: 1300px;
-      //background-color: #A1C767;
-    }
-
-    //background-color: #F2F1F1;
-    @media (max-width: $md1 + px) {
-      max-width: 985px;
-      //background-color: #A1C767;
-    }
-
-    @media (max-width: $md2 + px) {
-      max-width: 750px;
-    }
-
-    @media (max-width: $md3 + px) {
-      max-width: none;
-      padding: 0 24px;
-    }
-
   }
 
 
@@ -592,7 +568,7 @@
 
     &BgImg {
       position: absolute;
-      top: -350px;
+      bottom: 0;
       left: -200px;
     }
 
@@ -603,10 +579,10 @@
     }
 
     &Item {
+      z-index: 11;
       max-width: 710px;
       padding: 5px;
 
-      &Title {}
 
       &Text {
         margin-top: 20px;
@@ -618,10 +594,141 @@
 
       }
 
+      &Btn {
+        display: flex;
+        justify-content: start;
+      }
 
 
     }
   }
 
+  @media (max-width: 1919px) {
+    &__fan {
+      max-width: 1300px;
+      margin: 0;
+
+
+      &Content {
+        display: flex;
+        overflow: scroll;
+        width: 100vw;
+      }
+
+
+    }
+    &__consultation {
+      padding-top: 110px;
+      padding-bottom: 460px;
+
+      &BgImg {
+        overflow: hidden;
+        height: 600px;
+        position: absolute;
+
+        left: 50%;
+        margin-left: -260px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &Content {
+        justify-content: center;
+      }
+
+      &Item {
+        &Text {
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+
+        &Btn {
+          justify-content: center;
+        }
+
+      }
+    }
+  }
+
+  @media (max-width: $md1 + px) {
+    //max-width: 985px;
+
+    &__fan {
+      max-width: 1080px;
+      margin: 0 auto;
+
+      &Item {
+        width: 380px;
+        height: 496px;
+        padding: 0 30px 30px 30px;
+
+
+        &Img {
+          width: 318px;
+          height: 322px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+
+        &Text {
+          margin-top: 35px;
+
+          font-size: 17px;
+          line-height: 22px;
+
+        }
+
+        &TextSmall {
+          margin-top: 20px;
+
+          font-size: 12px;
+          line-height: 15px;
+        }
+
+      }
+
+
+    }
+    &__consultationItemText {
+      font-size: 11px;
+      line-height: 15px;
+    }
+  }
+
+
+  @media (max-width: $md2 + px) {
+    //max-width: 750px;
+
+  }
+
+  @media (max-width: $md3 + px) {
+    //max-width: none;
+    //padding: 0 12px;
+
+    &__consultation {
+
+      &BgImg {
+        left: 50%;
+        margin-left: -180px;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &Item {
+        padding: 5px 12px;
+      }
+    }
+  }
 
 }

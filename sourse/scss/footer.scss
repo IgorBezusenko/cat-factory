@@ -1,10 +1,137 @@
 .footer {
-  background-color: $black;
   color: $white;
   padding: 60px 0;
   z-index: 100;
 
-  @media (max-width: $md1 + px) {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+
+  &__wrapper {
+    background-color: $black;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__title {
+    font-weight: 800;
+  }
+
+  &__text {
+    margin-top: 7px;
+  }
+
+  &__nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 88px;
+    //&Item {
+    //
+    //}
+
+    &Order2 {
+      flex-grow: 1;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+
+    }
+
+    &Social {
+
+      &Link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+      }
+
+    }
+
+    &List {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+  }
+
+
+  &__subscribe {
+    align-self: start;
+  }
+
+
+  &__input {
+    margin-top: 40px;
+
+    input {
+      max-width: 520px;
+      width: 100%;
+      background: inherit;
+      contain: $white;
+      border: 1px solid $white;
+      padding: 19px;
+      border-radius: 10px;
+
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 20px;
+
+      &::placeholder {
+        color: $white;
+      }
+
+    }
+
+  }
+
+  @media (max-width: $md2 + px) {
+    padding: 30px 0;
+    &__content {
+      flex-direction: column;
+      //display: flex;
+      justify-content: center;
+      //align-items: center;
+      //gap: 60px;
+    }
+
+    &__subscribe {
+      align-self: center;
+    }
+    &__nav {
+      flex-direction: column;
+      align-items: center;
+
+
+      &Social {
+        order: 1;
+
+        &Link {
+          //display: inline-flex;
+          //align-items: center;
+          //gap: 9px;
+        }
+
+      }
+
+      &Order2 {
+        //display: flex;
+        //align-items: start;
+        //justify-content: space-between;
+        order: 2;
+        gap: 20px;
+        text-align: center;
+        justify-content: space-between;
+      }
+    }
 
 
   }
