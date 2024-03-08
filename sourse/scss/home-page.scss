@@ -355,10 +355,6 @@
 
     &Title {
       margin-bottom: 30px;
-      font-size: 50px;
-      font-weight: 800;
-      line-height: 64px;
-
     }
 
     &Content {
@@ -417,7 +413,7 @@
 
         &Sale {
           font-size: 20px;
-          font-weight: 400;
+          font-weight: 500;
           line-height: 24px;
           text-decoration: line-through;
           padding-right: 5px;
@@ -433,11 +429,18 @@
   }
 
   &__tryNow {
-    max-width: 1360px;
+
+    position: relative;
+    z-index: 10;
 
     &Wrapper {
-      // margin-top: 290px;
       padding: 290px 0;
+    }
+
+    &Content {
+      max-width: 1360px;
+      position: relative;
+      z-index: 12;
     }
 
     &Title {
@@ -468,6 +471,121 @@
 
       margin-top: 32px;
     }
+
+    &BgAbsolute {
+      &Left {
+        &Water, &IceBig, &IceLittle {
+          z-index: 9;
+          position: absolute;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &Water {
+          bottom: -534px;
+          left: -490px;
+        }
+
+        &IceBig {
+          bottom: -260px;
+          left: -190px;
+        }
+
+        &IceLittle {
+          bottom: -310px;
+          left: -130px;
+        }
+      }
+
+      &RightLeft {
+        &Water, &IceBig, &IceLittle {
+          z-index: 10;
+          position: absolute;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &Water {
+          bottom: -385px;
+          right: 10px;
+          z-index: 8;
+        }
+
+        &IceBig {
+          bottom: -285px;
+          right: 225px;
+        }
+
+        &IceLittle {
+          bottom: -330px;
+          right: 220px;
+        }
+      }
+
+      &Right {
+        &Bottel, &Water, &IceBig, &IceLittle, &IceMiddleTop, &IceMiddleBottom1, &IceMiddleBottom2 {
+          z-index: 9;
+          position: absolute;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &Bottel {
+          bottom: -240px;
+          right: 10px;
+        }
+
+        &IceMiddleTop {
+          transform: rotate(-40deg);
+          top: -130px;
+          right: -65px;
+          z-index: 8;
+        }
+
+        &Water {
+          z-index: 10;
+          top: -170px;
+          right: -190px;
+        }
+
+        &IceBig {
+          transform: rotate(-15deg);
+          top: -240px;
+          right: 140px;
+          z-index: 8;
+        }
+
+        &IceLittle {
+          transform: rotate(-25deg);
+          top: -295px;
+          right: 160px;
+          z-index: 8;
+        }
+
+        &IceMiddleBottom1 {
+          bottom: -340px;
+          right: 0;
+        }
+
+        &IceMiddleBottom2 {
+          bottom: -335px;
+          right: -115px;
+          z-index: 9;
+        }
+      }
+    }
   }
 
   &__fan {
@@ -476,7 +594,7 @@
     z-index: 11;
 
     &Title {
-      padding: 0 55px;
+      //padding: 0 55px;
 
       margin-bottom: 36px;
       font-size: 50px;
@@ -487,8 +605,6 @@
 
     &Content {
       display: flex;
-
-      //flex-wrap: wrap;
     }
 
     &Item {
@@ -554,7 +670,6 @@
     }
 
   }
-
 
   &__consultation {
     position: relative;
@@ -657,6 +772,7 @@
   @media (max-width: $md1 + px) {
     //max-width: 985px;
 
+
     &__fan {
       max-width: 1080px;
       margin: 0 auto;
@@ -704,15 +820,212 @@
     }
   }
 
+  &__tryNow {
+    &BgAbsolute {
+      &Left {
+        &Water {
+          bottom: -534px;
+          left: -440px;
+        }
+
+        &IceBig {
+          bottom: -260px;
+          left: -90px;
+        }
+
+        &IceLittle {
+          bottom: -310px;
+          left: -30px;
+        }
+      }
+    }
+  }
 
   @media (max-width: $md2 + px) {
-    //max-width: 750px;
+    &__productsSale {
+      margin-top: -297px;
 
+      &Title {
+        display: none;
+      }
+
+      &Content {
+        justify-content: center;
+      }
+    }
+    &__tryNow {
+
+      &BgAbsolute {
+        &Left {
+          &Water {
+            height: 311px;
+            bottom: -240px;
+            left: -40px;
+          }
+
+          &IceBig {
+            height: 122px;
+            bottom: -60px;
+            left: -10px;
+          }
+
+          &IceLittle {
+            height: 75px;
+            bottom: -75px;
+            left: 6px;
+          }
+        }
+
+        &RightLeft {
+          &Water {
+            display: none;
+          }
+          &IceBig {
+            height: 72px;
+            bottom: -391px;
+            right: 83px;
+            transform: rotate(-42deg);
+          }
+
+          &IceLittle {
+            height: 50px;
+            bottom: -403px;
+            right: 110px;transform: rotate(-20deg);
+          }
+        }
+
+        &Right {
+          &Bottel {
+            height: 350px;
+            bottom: -380px;
+            right: 50%;
+            margin-right: -50px;
+          }
+
+          &Water {
+            transform: rotate(15deg);
+            height: 614px;
+            top: 211px;
+            right: 0;
+          }
+
+          &IceBig {
+            display: none;
+          }
+
+          &IceLittle {
+            display: none;
+          }
+
+          &IceMiddleTop {
+            display: none;
+          }
+
+          &IceMiddleBottom1 {
+            display: none;
+          }
+
+          &IceMiddleBottom2 {
+            display: none;
+          }
+        }
+      }
+
+
+      &Wrapper {
+        padding: 64px 0 480px;
+      }
+
+      &Title {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+      }
+
+      &SubTitle {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+
+      }
+
+      &Text {
+        max-width: 850px;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &Btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 29px;
+      }
+
+
+    }
+    &__fan {
+      &Title {
+        text-align: center;
+      }
+    }
   }
 
   @media (max-width: $md3 + px) {
-    //max-width: none;
-    //padding: 0 12px;
+    &__productsSale {
+      margin-top: -297px;
+
+      &Title {
+        display: none;
+      }
+
+      &Content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &Item {
+        width: 330px;
+        height: 415px;
+        padding: 0 20px 20px 20px;
+
+        font-size: 20px;
+        line-height: 24px;
+
+        &Img {
+          width: 290px;
+          height: 210px;
+        }
+
+        &Title {
+          margin-top: 17px;
+        }
+
+        &Text {
+          margin-top: 10px;
+
+          &Sale {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+          }
+        }
+
+        &Select {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-size: 14px;
+          line-height: 17px;
+        }
+
+        &Btn {
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
 
     &__consultation {
 
