@@ -9,7 +9,7 @@ const connection__city_bg_modal = document.querySelector(
 const connection__city__modal_wrapper = document.querySelector(
   ".connection__city__modal-wrapper"
 );
-const burger = document.querySelector(".icon-menu");
+const burger = document.querySelector(".icon-menu-burger");
 const menu__body_burger = document.querySelector(".menu__body_burger");
 
 const mySidenav = document.getElementById("mySidenav");
@@ -54,9 +54,9 @@ const modalCityClose = (e) => {
   checkMenuCase(e.target.tagName.toLowerCase());
 };
 
-connection__city_modalShow.addEventListener("click", modalCityShow);
-connection__city_bg_modal.addEventListener("click", modalCityClose);
-connection__city__modal_wrapper.addEventListener("click", modalCityClose);
+// connection__city_modalShow.addEventListener("click", modalCityShow);
+// connection__city_bg_modal.addEventListener("click", modalCityClose);
+// connection__city__modal_wrapper.addEventListener("click", modalCityClose);
 
 const showBurgerMenu = () => {
   burger.classList.add("active");

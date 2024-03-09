@@ -35,7 +35,7 @@
   }
 
   &__bgBottle {
-    width: 172px;
+    height: 623px;
     overflow: hidden;
 
     position: absolute;
@@ -43,18 +43,30 @@
     top: 237px;
     left: 50%;
     z-index: 10;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__bgText {
-    width: 1790px;
+    height: 256px;
     margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     &Wrapper {
       overflow: hidden;
       width: 100%;
       position: absolute;
       top: 170px;
-      left: 0;
+      right: 0;
       z-index: 9;
     }
   }
@@ -72,12 +84,24 @@
   }
 
   &__bgBlue {
+    position: relative;
     flex-basis: 50%;
     background-color: $blue;
 
     display: flex;
     justify-content: center;
     align-items: end;
+
+    &Img {
+      height: 749px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
   }
 
   &Shop {
@@ -609,7 +633,7 @@
 
     &Content {
       display: flex;
-      justify-content: center;
+      //justify-content: center;
     }
 
     &Item {
@@ -940,6 +964,62 @@
 
   @media (max-width: $md2 + px) {
     //max-width: 750px;
+    &__main {
+      height: 558px;
+
+      &Content {
+        max-width: none;
+        height: auto;
+
+        &Wrapper {
+          margin: 0 auto;
+        }
+
+        &Title {
+          text-align: center;
+        }
+
+        &Text {
+          margin-top: 14px;
+          margin-bottom: 32px;
+          text-align: center;
+        }
+
+        &Btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button{
+            padding: 11px 22px;
+            font-size: 15px;
+            line-height:  19px;
+          }
+        }
+      }
+    }
+    &__bgText {
+      height: 129px;
+    }
+    &__bgBottle {
+      height: 356px;
+      margin-left: -150px;
+      top: 232px;
+    }
+
+    &__bgBlue {
+      flex-basis: 75%;
+
+      &Img {
+        height: 397px;
+      }
+    }
+
+    &__bgGrey {
+      flex-basis: 25%;
+      background-color: $sky-blue;
+    }
+
+
     &Shop {
       justify-content: center;
     }
@@ -1099,6 +1179,23 @@
 
   @media (max-width: $md3 + px) {
     //max-width: none;
+    &__main {
+
+      &Content {
+        &Title {
+          font-size: 28px;
+          line-height: 35px;
+        }
+
+        &Text {
+          margin-top: 14px;
+          margin-bottom: 32px;
+          font-size: 16px;
+          line-height: 21px;
+        }
+
+      }
+    }
     &__orderNow {
       &Content {
         max-width: none;
