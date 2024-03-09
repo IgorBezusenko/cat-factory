@@ -47,6 +47,7 @@ $fontFamilyInter: "Inter", sans-serif;
 ._container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
+  padding: 0 12px;
 
   //background-color: #F2F1F1;
   @media (max-width: $md1 + px) {
@@ -60,7 +61,6 @@ $fontFamilyInter: "Inter", sans-serif;
 
   @media (max-width: $md3 + px) {
     max-width: none;
-    padding: 0 12px;
   }
 }
 
@@ -129,6 +129,9 @@ $fontFamilyInter: "Inter", sans-serif;
   padding: 15px 30px;
   border-radius: 5px;
 
+  @media (max-width: $md1 + px) {
+    padding: 15px 25px;
+  }
   @media (max-width: $md3 + px) {
     padding: 6px 15px;
     font-size: 12px;
