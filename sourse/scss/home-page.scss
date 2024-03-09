@@ -975,19 +975,25 @@
           &Water {
             height: 311px;
             bottom: -240px;
-            left: -40px;
+            //left: -40px;
+            left: 50%;
+            margin-left: -250px;
           }
 
           &IceBig {
             height: 122px;
             bottom: -60px;
-            left: -10px;
+            //left: -10px;
+            left: 50%;
+            margin-left: -215px;
           }
 
           &IceLittle {
             height: 75px;
             bottom: -75px;
-            left: 6px;
+            //left: 6px;
+            left: 50%;
+            margin-left: -185px;
           }
         }
 
@@ -1005,14 +1011,16 @@
           &IceBig {
             height: 72px;
             bottom: -391px;
-            right: 83px;
+            right: 50%;
+            margin-right: -80px;
             transform: rotate(-42deg);
           }
 
           &IceLittle {
             height: 50px;
             bottom: -403px;
-            right: 110px;
+            right: 50%;
+            margin-right: -50px;
             transform: rotate(-20deg);
           }
         }
@@ -1039,7 +1047,8 @@
             transform: rotate(15deg);
             height: 614px;
             top: 211px;
-            right: 0;
+            right: 50%;
+            margin-right: -200px;
           }
 
           &IceBig, &IceLittle, &IceMiddleTop, &IceMiddleBottom1, &IceMiddleBottom2 {
@@ -1089,6 +1098,13 @@
   }
 
   @media (max-width: $md3 + px) {
+    //max-width: none;
+    &__orderNow {
+      &Content {
+        max-width: none;
+      }
+    }
+
     &__productsSale {
       margin-top: -297px;
 

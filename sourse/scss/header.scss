@@ -2,18 +2,15 @@
   position: relative;
   z-index: 10;
 
-  &__topWrapper {
-    background-color: #0E6232;
-  }
 
   &__top {
-    max-width: 1630px;
-    margin: 0 auto;
     height: 40px;
+    margin: 0 auto;
+    background-color: #0E6232;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    overflow: hidden;
 
     &Item {
       display: flex;
@@ -85,8 +82,28 @@
 
 }
 
-@media (min-width: $md1 + px) {}
+@media (max-width: $md1 + px) {
+  .header {
+    &__nav {
+      gap: 35px;
+    }
+  }
+}
 
-@media (min-width: $md2 + px) {}
+@media (max-width: $md2 + px) {
+  .header {
+    &__container {
+      max-width: none;
+      //margin: 0 auto;
+    }
 
-@media (max-width: $md3 + px) {}
+    &__nav, &__navLeft {
+      display: none;
+    }
+
+
+  }
+}
+
+@media (max-width: $md3 + px) {
+}

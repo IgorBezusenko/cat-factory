@@ -1,0 +1,49 @@
+.runningLineBlock {
+
+
+  .runningLine-wrap {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 20px;
+  }
+
+  .runningLine {
+    flex-shrink: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  .runningLine-item {
+    flex: 0 0 auto;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .runningLine-item:hover {
+    padding: 0 10px;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .marquee {
+    animation: scroll 20s linear infinite;
+  }
+
+  .runningLine-wrap:hover .marquee {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+  }
+
+}
