@@ -318,13 +318,13 @@
       margin-top: -300px;
       padding-top: 420px;
       padding-bottom: 650px;
-      //height: 1000px;
       background-color: $sky-blue;
     }
 
     &Content {
       max-width: 587px;
-
+      position: relative;
+      z-index: 13;
       &Text {
         font-size: 30px;
         font-weight: 500;
@@ -363,6 +363,76 @@
         font-size: 20px;
         font-weight: 800;
         line-height: 26px;
+      }
+    }
+
+    &Cucumber {
+      position: relative;
+      z-index: 8;
+
+      &Water, &Bottle, &C1, &C2, &C3, &C4, &C5,&C9 {
+        z-index: 9;
+        position: absolute;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &Water {
+        z-index: 12;
+        top: -30px;
+        left: 50%;
+        margin-left: -500px;
+      }
+
+      &Bottle {
+        z-index: 10;
+        top: -100px;
+        left: 50%;
+        margin-left: -700px;
+      }
+
+      &C1 {
+        top: -40px;
+        left: 50%;
+        margin-left: -650px;
+      }
+
+      &C2 {
+        z-index: 11;
+        top: 600px;
+        left: 50%;
+        margin-left: -460px;
+      }
+
+      &C3 {
+        z-index: 11;
+        top: 640px;
+        left: 50%;
+        margin-left: -350px;
+      }
+
+      &C4 {
+        z-index: 11;
+        top: 870px;
+        left: 50%;
+        margin-left: -430px;
+      }
+
+      &C5 {
+        z-index: 11;
+        top: 770px;
+        left: 50%;
+        margin-left: -700px;
+      }
+
+      &C9 {
+        top: 444px;
+        left: 50%;
+        margin-left: -300px;
       }
     }
 
@@ -610,7 +680,8 @@
 
 
   &__fan {
-    max-width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
     overflow-x: scroll;
 
     &Wrapper {
@@ -620,8 +691,6 @@
     }
 
     &Title {
-      //padding: 0 55px;
-
       margin-bottom: 36px;
       font-size: 50px;
       font-weight: 800;
@@ -631,7 +700,6 @@
 
     &Content {
       display: flex;
-      //justify-content: center;
     }
 
     &Item {
@@ -874,6 +942,21 @@
 
       }
     }
+
+    &__orderNow{
+      &Cucumber {
+
+        &Water, &Bottle, &C1, &C2, &C3, &C4, &C5,&C9 {
+
+          img {
+            width: 80%;
+          }
+        }
+
+
+      }
+    }
+
     &__productsSale {
       &Content {
         gap: 10px;
@@ -971,6 +1054,7 @@
 
         &Wrapper {
           margin: 0 auto;
+          padding: 0 12px;
         }
 
         &Title {
@@ -1112,6 +1196,121 @@
         }
       }
     }
+
+    &__orderNow {
+      display: flex;
+      justify-content: start;
+
+      &Wrapper {
+        margin-top: -100px;
+        padding-top: 200px;
+        padding-bottom: 530px;
+      }
+
+      &Content {
+        max-width: none;
+        padding: 0 5px;
+
+        &Text {
+          font-size: 14px;
+          line-height: 18px;
+
+        }
+
+        &Title {
+          margin-top: 10px;
+          font-size: 48px;
+          line-height: 61px;
+        }
+
+        &List {
+          gap: 5px;
+
+          margin-top: 30px;
+          font-size: 12px;
+          line-height: 16px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+              width: 17px;
+              height: 17px;
+            }
+          }
+        }
+
+        &SubTitle {
+          margin-top: 32px;
+          margin-bottom: 26px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        &Btn {
+          button {
+            padding: 9px 18px;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+      &Cucumber {
+        //position: relative;
+        //z-index: 8;
+
+        &Water, &Bottle, &C1, &C2, &C3, &C4, &C5,&C9 {
+          //z-index: 9;
+          //position: absolute;
+
+          img {
+            width: 100%;
+            //height: 100%;
+            //object-fit: cover;
+          }
+        }
+
+        &Water {
+          height: 456px;
+          z-index: 12;
+          top: 170px;
+          left: 50%;
+          margin-left: -75px;
+        }
+
+        &Bottle {
+          height: 413px;
+          z-index: 10;
+          top: 185px;
+          left: 50%;
+          margin-left: 0;
+        }
+
+        &C1 {
+          height: 240px;
+          top: 260px;
+          left: 50%;
+          margin-left: 0;
+          img{
+            object-fit: contain;
+          }
+        }
+
+        &C2 ,&C3 ,&C4 ,&C5 {
+         display: none;
+        }
+
+        &C9 {
+          height: 72px;
+          top: 444px;
+          left: 50%;
+          margin-left: 0;
+        }
+      }
+    }
+
     &__productsSale {
       margin-top: -297px;
 
@@ -1288,6 +1487,10 @@
     &__orderNow {
       &Content {
         max-width: none;
+      }
+
+      &Wrapper{
+        padding-bottom: 450px;
       }
     }
 
