@@ -178,8 +178,7 @@
     &__card {
       position: relative;
       z-index: 10;
-      padding: 30px;
-      padding-top: 0;
+      padding: 0 30px 30px;
       border-radius: 5px;
       overflow: hidden;
 
@@ -196,8 +195,7 @@
         z-index: -1;
 
         &Block {
-          padding: 30px;
-          padding-top: 0;
+          padding: 0 30px 30px;
           color: $white;
 
           &List {
@@ -989,10 +987,11 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          button{
+
+          button {
             padding: 11px 22px;
             font-size: 15px;
-            line-height:  19px;
+            line-height: 19px;
           }
         }
       }
@@ -1021,7 +1020,97 @@
 
 
     &Shop {
+      padding-top: 140px;
       justify-content: center;
+      gap: 8px;
+
+      &__nav {
+        width: 184px;
+        height: 60px;
+        margin-right: -92px;
+
+        &Item {
+          width: 60px;
+          padding: 10px 0;
+          font-size: 10px;
+          line-height: 12px;
+
+          &Detox,
+          &Morning,
+          &Shop {
+            width: 32px;
+            height: 32px;
+            background-size: contain;
+          }
+        }
+      }
+
+      &__card {
+
+        padding: 0 8px 8px;
+
+
+        &HoverAnimate {
+
+
+          &Block {
+            padding: 0 8px 8px;
+
+
+            &List {
+              margin-top: 20px;
+              gap: 4px;
+
+              li {
+                gap: 10px;
+                font-size: 8px;
+                line-height: 10px;
+              }
+            }
+          }
+
+        }
+
+
+        &Img {
+          height: 167px;
+
+        }
+
+        &Title {
+          margin-top: 10px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+
+        &Text {
+
+          margin-top: 3px;
+          font-size: 12px;
+          line-height: 14px;
+        }
+
+        &Tabs {
+          display: none;
+
+        }
+
+        &Buttons {
+
+          button {
+            font-size: 7px;
+            font-weight: 800;
+            line-height: 10px;
+            padding: 5.5px 10px;
+          }
+        }
+
+        &Wrapper {
+          width: 176px;
+
+        }
+      }
     }
     &__productsSale {
       margin-top: -297px;
@@ -1080,7 +1169,7 @@
         &RightLeft {
           &Water, &IceBig, &IceLittle {
             img {
-              width: 90%;
+              width: 100%;
             }
           }
 
@@ -1108,7 +1197,7 @@
         &Right {
           &Bottel, &Water, &IceBig, &IceLittle, &IceMiddleTop, &IceMiddleBottom1, &IceMiddleBottom2 {
             img {
-              width: 90%;
+              width: 100%;
             }
           }
 
@@ -1255,7 +1344,43 @@
         }
       }
     }
+    &__tryNow {
+      //max-width: 725px;
 
+      &Content {
+        //max-width: 725px;
+      }
+
+      &BgAbsolute {
+
+        &Left {
+
+          &Water {
+            margin-left: -200px;
+          }
+
+          &IceBig {
+            margin-left: -165px;
+          }
+
+          &IceLittle {
+            margin-left: -135px;
+          }
+        }
+
+        &Right {
+          &Water {
+            height: 460px;
+            top: 373px;
+            right: 50%;
+            margin-right: -119px;
+          }
+
+        }
+      }
+
+
+    }
     &__consultation {
 
       &BgImg {
