@@ -67,8 +67,53 @@
       }
 
       &Select {
-        border-radius: 4px;
-        padding: 4px 15px;
+        position: relative;
+
+        &:before, &:after {
+          width: 8px;
+          height: 2px;
+          content: "";
+          background-color: $black;
+          position: absolute;
+          pointer-events: none;
+          top: 17px;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+          right: 6px;
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+          right: 1px;
+        }
+
+        select {
+          width: 100%;
+          appearance: none;
+          padding: 5px 15px 5px 5px;
+          background: inherit;
+          border: none;
+          border-radius: 5px;
+          font-family: $fontFamilyInter;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+        }
+
+
+      }
+      &SelectColorWhite{
+        select{
+          color: $white;
+          option{
+            color: $black;
+          }
+        }
+        &:before, &:after{
+          background-color:$white;
+        }
       }
     }
 
@@ -110,6 +155,7 @@
       &Logo {
         width: 34px;
         height: 34px;
+
         img {
           width: 100%;
           height: 100%;

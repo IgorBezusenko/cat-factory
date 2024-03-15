@@ -37,7 +37,8 @@
                                 <div><img src="./img/header/puck.svg" alt="puck"></div>
                             </div>
 
-                        </div> <div class="runningLine-item">
+                        </div>
+                        <div class="runningLine-item">
                             <div class="header__topItem">
                                 <div>Consultatie nutritionist</div>
                                 <div><img src="./img/header/bus.svg" alt="bus"></div>
@@ -56,7 +57,8 @@
                                 <div><img src="./img/header/puck.svg" alt="puck"></div>
                             </div>
 
-                        </div> <div class="runningLine-item">
+                        </div>
+                        <div class="runningLine-item">
                             <div class="header__topItem">
                                 <div>Consultatie nutritionist</div>
                                 <div><img src="./img/header/bus.svg" alt="bus"></div>
@@ -131,18 +133,26 @@
                         <li class="header__navItem"><a href="#">Bestseller</a></li>
                         <li class="header__navItem"><a href="#">Consultație</a></li>
                     </ul>
-                    <div class="header__navLogo"><a href="#"><img src="./img/header/logo-white.svg" alt="logo"></a></div>
+                    <div class="header__navLogo"><a href="#"><img src="./img/header/logo-white.svg" alt="logo"></a>
+                    </div>
                     <ul class="header__navLeft ">
                         <li class="header__navLeftItem color-white"><a href="#">Blog</a></li>
                         <li class="header__navLeftItem color-white"><a href="#">Login</a></li>
                         <li class="header__navLeftItem ">
                             <a href="#" class="header__navLeftShoppingCart">
-                                <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="logo">
+                                <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
                                 <span>0</span>
                             </a>
                         </li>
-                        <li class="header__navLeftItem header__navLeftItemSelect color-white">ro</li>
+                        <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite ">
+                            <select name="lang" id="lang">
+                                <option value="ro">ro</option>
+                                <option value="en">en</option>
+                                <option value="ru">ru</option>
+                            </select>
+                        </li>
                     </ul>
+
                     <div class=" icon-menu-burger " onclick="showBurgerMenu()">
                         <span class="bg-white"></span>
                         <span class="bg-white"></span>
@@ -169,7 +179,9 @@
             <div class="home__bgGrey">
                 <div class="home__bgGreyBlockSky"></div>
             </div>
-            <div class="home__bgBlue"><div class="home__bgBlueImg"><img src="./img/home-page/girl.png" alt="girl"></div></div>
+            <div class="home__bgBlue">
+                <div class="home__bgBlueImg"><img src="./img/home-page/girl.png" alt="girl"></div>
+            </div>
         </div>
         <div class="home__mainContentWrapper ">
             <div class="home__mainContent">
@@ -181,7 +193,9 @@
                     Lucrând împreună cu noi, vei începe să te simți mai bine și vei dobândi încredere în propriul
                     tău corp.</p>
 
-               <div class="home__mainContentBtn"> <button class="btn btn-primary btn-primary-hover">Vezi produsele</button></div>
+                <div class="home__mainContentBtn">
+                    <button class="btn btn-primary btn-primary-hover">Vezi produsele</button>
+                </div>
             </div>
         </div>
 
@@ -189,18 +203,24 @@
             <div class="homeShop">
                 <div class="homeShop__nav">
                     <div class="homeShop__navList">
-                        <button class="homeShop__navItem rounded-t-10 active">
-                            <span class="homeShop__navItemDetox"></span>
-                            <span>Detox</span>
-                        </button>
-                        <button class="homeShop__navItem">
-                            <span class="homeShop__navItemShop"></span>
-                            <span>Shop</span>
-                        </button>
-                        <button class="homeShop__navItem rounded-b-10">
-                            <span class="homeShop__navItemMorning"></span>
-                            <span>Morning</span>
-                        </button>
+                        <a href="#">
+                            <button class="homeShop__navItem rounded-t-10 active">
+                                <span class="homeShop__navItemDetox"></span>
+                                <span>Detox</span>
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class="homeShop__navItem">
+                                <span class="homeShop__navItemShop"></span>
+                                <span>Shop</span>
+                            </button>
+                        </a>
+                        <a href="./morning-products.html">
+                            <button class="homeShop__navItem rounded-b-10">
+                                <span class="homeShop__navItemMorning"></span>
+                                <span>Morning</span>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div class="homeShop__cardWrapper">
@@ -341,14 +361,22 @@
         <div class="home__orderNowWrapper">
             <div class="_container">
                 <div class="home__orderNowCucumber">
-                    <div class="home__orderNowCucumberBottle"><img src="./img/home-page/orderNow/cucumber-bottle.png" alt="bottle"></div>
-                    <div class="home__orderNowCucumberWater"><img src="./img/home-page/orderNow/cucumber-water.png" alt="water"></div>
-                    <div class="home__orderNowCucumberC1"><img src="./img/home-page/orderNow/cucumber1.png" alt="cucumber1"></div>
-                    <div class="home__orderNowCucumberC2"><img src="./img/home-page/orderNow/cucumber2.png" alt="cucumber2"></div>
-                    <div class="home__orderNowCucumberC3"><img src="./img/home-page/orderNow/cucumber3.png" alt="cucumber3"></div>
-                    <div class="home__orderNowCucumberC4"><img src="./img/home-page/orderNow/cucumber4.png" alt="cucumber4"></div>
-                    <div class="home__orderNowCucumberC5"><img src="./img/home-page/orderNow/cucumber5.png" alt="cucumber5"></div>
-                    <div class="home__orderNowCucumberC9"><img src="./img/home-page/orderNow/cucumber9.png" alt="cucumber9"></div>
+                    <div class="home__orderNowCucumberBottle"><img src="./img/home-page/orderNow/cucumber-bottle.png"
+                                                                   alt="bottle"></div>
+                    <div class="home__orderNowCucumberWater"><img src="./img/home-page/orderNow/cucumber-water.png"
+                                                                  alt="water"></div>
+                    <div class="home__orderNowCucumberC1"><img src="./img/home-page/orderNow/cucumber1.png"
+                                                               alt="cucumber1"></div>
+                    <div class="home__orderNowCucumberC2"><img src="./img/home-page/orderNow/cucumber2.png"
+                                                               alt="cucumber2"></div>
+                    <div class="home__orderNowCucumberC3"><img src="./img/home-page/orderNow/cucumber3.png"
+                                                               alt="cucumber3"></div>
+                    <div class="home__orderNowCucumberC4"><img src="./img/home-page/orderNow/cucumber4.png"
+                                                               alt="cucumber4"></div>
+                    <div class="home__orderNowCucumberC5"><img src="./img/home-page/orderNow/cucumber5.png"
+                                                               alt="cucumber5"></div>
+                    <div class="home__orderNowCucumberC9"><img src="./img/home-page/orderNow/cucumber9.png"
+                                                               alt="cucumber9"></div>
                 </div>
                 <div class="home__orderNow">
 
@@ -385,62 +413,40 @@
         </div>
 
         <div class="_container">
-            <div class="home__productsSale">
-                <h2 class="home__productsSaleTitle title">Products on Sale</h2>
-                <div class="home__productsSaleContent">
-                    <div class="home__productsSaleItem">
-                        <div class="home__productsSaleItemBgAbsolute"></div>
-                        <div class="home__productsSaleItemImg">
+            <div class="home__productsSale productsSimilar">
+                <h2 class="productsSimilar__Title home__productsSale__Title title">Products on Sale</h2>
+                <div class="productsSimilar__Content">
+                    <div class="productsSimilar__Item">
+                        <div class="productsSimilar__ItemBgAbsolute"></div>
+                        <div class="productsSimilar__ItemImg">
                             <img src="./img/home-page/smoothie1.png" alt="smoothie">
                         </div>
-                        <h4 class="home__productsSaleItemTitle">Smoothie</h4>
-                        <p class="home__productsSaleItemText"><span class="home__productsSaleItemTextSale">789 MDL
+                        <h4 class="productsSimilar__ItemTitle">Smoothie</h4>
+                        <p class="productsSimilar__ItemText"><span class="productsSimilar__ItemTextSale">789 MDL
                                 </span> 550 MDL</p>
-                        <div class="home__productsSaleItemSelect">
+                        <div class="productsSimilar__ItemSelect">
                             <div class="form-select">
-                                <select name="Strawberry" id="Strawberry">
+                                <select name="Strawberry" id="Strawberry0">
                                     <option value="1">Strawberry Geisha</option>
                                     <option value="2">Strawberry Geisha1</option>
                                     <option value="3">Strawberry Geisha2</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="home__productsSaleItemBtn">
+                        <div class="productsSimilar__ItemBtn">
                             <button class="btn btn-primary btn-primary-hover">Adaugă în coș</button>
                         </div>
                     </div>
 
-                    <div class="home__productsSaleItem">
-                        <div class="home__productsSaleItemBgAbsolute"></div>
-                        <div class="home__productsSaleItemImg">
+                    <div class="productsSimilar__Item">
+                        <div class="productsSimilar__ItemBgAbsolute"></div>
+                        <div class="productsSimilar__ItemImg">
                             <img src="./img/home-page/smoothie1.png" alt="smoothie">
                         </div>
-                        <h4 class="home__productsSaleItemTitle">Smoothie</h4>
-                        <p class="home__productsSaleItemText"><span class="home__productsSaleItemTextSale">789 MDL
+                        <h4 class="productsSimilar__ItemTitle">Smoothie</h4>
+                        <p class="productsSimilar__ItemText"><span class="productsSimilar__ItemTextSale">789 MDL
                                 </span> 550 MDL</p>
-                        <div class="home__productsSaleItemSelect">
-                            <div class="form-select">
-                                <select name="Strawberry" id="Strawberry2">
-                                    <option value="1">Strawberry Geisha</option>
-                                    <option value="2">Strawberry Geisha1</option>
-                                    <option value="3">Strawberry Geisha2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="home__productsSaleItemBtn">
-                            <button class="btn btn-primary btn-primary-hover">Adaugă în coș</button>
-                        </div>
-                    </div>
-
-                    <div class="home__productsSaleItem">
-                        <div class="home__productsSaleItemBgAbsolute"></div>
-                        <div class="home__productsSaleItemImg">
-                            <img src="./img/home-page/smoothie1.png" alt="smoothie">
-                        </div>
-                        <h4 class="home__productsSaleItemTitle">Smoothie</h4>
-                        <p class="home__productsSaleItemText"><span class="home__productsSaleItemTextSale">789 MDL
-                                </span> 550 MDL</p>
-                        <div class="home__productsSaleItemSelect">
+                        <div class="productsSimilar__ItemSelect">
                             <div class="form-select">
                                 <select name="Strawberry" id="Strawberry1">
                                     <option value="1">Strawberry Geisha</option>
@@ -449,7 +455,28 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="home__productsSaleItemBtn">
+                        <div class="productsSimilar__ItemBtn">
+                            <button class="btn btn-primary btn-primary-hover">Adaugă în coș</button>
+                        </div>
+                    </div>
+                    <div class="productsSimilar__Item">
+                        <div class="productsSimilar__ItemBgAbsolute"></div>
+                        <div class="productsSimilar__ItemImg">
+                            <img src="./img/home-page/smoothie1.png" alt="smoothie">
+                        </div>
+                        <h4 class="productsSimilar__ItemTitle">Smoothie</h4>
+                        <p class="productsSimilar__ItemText"><span class="productsSimilar__ItemTextSale">789 MDL
+                                </span> 550 MDL</p>
+                        <div class="productsSimilar__ItemSelect">
+                            <div class="form-select">
+                                <select name="Strawberry" id="Strawberry2">
+                                    <option value="1">Strawberry Geisha</option>
+                                    <option value="2">Strawberry Geisha1</option>
+                                    <option value="3">Strawberry Geisha2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="productsSimilar__ItemBtn">
                             <button class="btn btn-primary btn-primary-hover">Adaugă în coș</button>
                         </div>
                     </div>
