@@ -515,6 +515,11 @@
         margin-top: 30px;
         margin-bottom: 15px;
       }
+      &Btn {
+        button {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -682,7 +687,20 @@
   &__fan {
     max-width: 1920px;
     margin: 0 auto;
-    overflow-x: scroll;
+    overflow-x: auto;
+    //&::-webkit-scrollbar {
+    //  width: 6px;               /* ширина всей полосы прокрутки */
+    //}
+    //
+    //&::-webkit-scrollbar-track {
+    //  background: $bg-grey;        /* цвет зоны отслеживания */
+    //}
+    //
+    //&::-webkit-scrollbar-thumb {
+    //  background-color: $white;    /* цвет бегунка */
+    //  border-radius: 10px;       /* округлось бегунка */
+    //  border: 3px solid $sky-blue;  /* отступ вокруг бегунка */
+    //}
 
     &Wrapper {
       position: relative;
