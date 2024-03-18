@@ -2,6 +2,10 @@
 
   &__Title {
     margin-bottom: 30px;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 128px;
+
   }
 
   &__Content {
@@ -98,9 +102,6 @@
 @media (max-width: $md2 + px) {
   //max-width: 750px;
   .productsSimilar {
-
-
-
     &__Content {
       justify-content: center;
     }
@@ -111,8 +112,6 @@
 @media (max-width: $md3 + px) {
   //max-width: none;
   .productsSimilar {
-
-
 
     &__Content {
       flex-direction: column;
