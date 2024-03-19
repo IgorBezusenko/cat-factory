@@ -1,4 +1,4 @@
-.produse {
+.produce {
   &__nav {
     margin-top: 85px;
     display: flex;
@@ -51,15 +51,15 @@
         background-color: $green;
         color: $white;
 
-        .produse__navItemDetox {
+        .produce__navItemDetox {
           background-image: url("../../img/produse/icon_detox.svg");
         }
 
-        .produse__navItemMorning {
+        .produce__navItemMorning {
           background-image: url("../../img/produse/icon_morning.svg");
         }
 
-        .produse__navItemAll {
+        .produce__navItemAll {
           background-image: url("../../img/produse/icon_all.svg");
         }
       }
@@ -120,11 +120,11 @@
     }
 
     &:hover {
-      .produse__cardHoverAnimate {
+      .produce__cardHoverAnimate {
         transform: translateY(0);
       }
 
-      .produse__cardImg {
+      .produce__cardImg {
         border-bottom: 2px solid $white;
 
         img {
@@ -132,15 +132,15 @@
         }
       }
 
-      .produse__cardTitle {
+      .produce__cardTitle {
         color: $white;
       }
 
-      .produse__cardText {
+      .produce__cardText {
         color: $white;
       }
 
-      .produse__cardTabs {
+      .produce__cardTabs {
         opacity: 1;
         z-index: 11;
       }
@@ -207,11 +207,274 @@
       }
     }
   }
+
+  &View {
+    display: flex;
+    gap: 100px;
+
+    &__img {
+      width: 674px;
+      height: 667px;
+      flex-basis: 674px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__content {
+      padding: 40px 24px;
+    }
+
+    &__subTitle {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 38px;
+    }
+
+    &__title {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 64px;
+      flex-basis: 235px;
+
+      &Block {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &Price {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 46px;
+        color: $green;
+
+        span {
+          font-size: 54px;
+          font-weight: 800;
+          line-height: 69px;
+
+        }
+      }
+    }
+
+    &__reviews {
+      margin-top: 6px;
+
+      &Title {
+        display: flex;
+        gap: 15px;
+      }
+
+      &Stars {
+        display: flex;
+        gap: 3.5px;
+        margin-bottom: 15px;
+      }
+
+      &Text {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+    }
+
+    &__days {
+      margin-top: 55px;
+
+      &List {
+        margin-top: 15px;
+        padding-left: 35px;
+        display: flex;
+        gap: 45px;
+      }
+
+      &Item {
+        cursor: pointer;
+        width: 117px;
+        padding: 38px 0 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        background-color: $grey;
+        border-radius: 10px;
+
+        &.active, &:hover {
+          background-color: $yellow;
+        }
+      }
+
+      &Text {
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 30px;
+
+      }
+
+    }
+
+    &__add {
+      margin-top: 95px;
+      display: flex;
+      gap: 25px;
+
+      &Counter {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding: 17px 23px;
+        border-radius: 10px;
+        background-color: $grey;
+
+        &Text {
+          font-size: 50px;
+          font-weight: 800;
+          line-height: 64px;
+
+        }
+
+        &Btn {
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 51px;
+          color: #6A6A6A;
+
+        }
+      }
+
+      &Btn {
+        flex-grow: 1;
+        //width: 100%;
+        &.btn {
+          font-size: 25px;
+          font-weight: 800;
+          line-height: 32px;
+        }
+      }
+    }
+
+    &__daysConsist {
+      margin-top: 45px;
+
+      &List {
+        margin-top: 37px;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      &Item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      &Img {
+        cursor: pointer;
+        width: 117px;
+        height: 174px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $grey;
+        border-radius: 10px;
+      }
+
+      &Text {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 36px;
+
+      }
+
+    }
+
+    &__hrBold {
+      margin: 30px 0;
+      width: 100%;
+      height: 6px;
+      background-color: $black;
+    }
+
+    &__delivery {
+      margin-top: 10px;
+
+      &List {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      &Item {
+        display: flex;
+        gap: 28px;
+
+        &Title {
+          font-size: 25px;
+          font-weight: 800;
+          line-height: 32px;
+
+        }
+
+        &Text {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 30px;
+
+        }
+      }
+
+      &Img {
+        width: 70px;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    &__storage {
+      margin-top: 50px;
+
+      &List {
+        margin-top: 32px;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+      }
+
+      &Item {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: $grey;
+
+        &.active, &:hover {
+          background-color: $yellow;
+        }
+      }
+
+      &Text {
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 32px;
+
+      }
+    }
+  }
 }
 
 @media (max-width: $md1 + px) {
   //max-width: 985px;
-  .produse {
+  .produce {
     &__content {
       justify-content: center;
       gap: 8px;
@@ -229,7 +492,7 @@
 
 @media (max-width: $md2 + px) {
   //max-width: 750px;
-  .produse {
+  .produce {
     &__card {
 
       padding: 0 8px 8px;
