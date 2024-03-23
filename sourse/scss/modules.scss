@@ -53,7 +53,7 @@
 
   &__trigger {
     position: relative;
-    padding: 23px 0 13px;
+    padding: 23px 54px 13px 0;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -61,6 +61,7 @@
     font-size: 30px;
     font-weight: 800;
     line-height: 38px;
+
 
     &:before, &:after {
       position: absolute;
@@ -73,14 +74,18 @@
     &:before {
       content: "+";
       right: 6px;
-
     }
 
     &:after {
       content: "-";
       right: 12px;
-
       display: none;
+    }
+
+    &_top35 {
+      &:before, &:after {
+        top: 35px;
+      }
     }
   }
 
@@ -103,6 +108,40 @@
     }
   }
 
+  .accordion__content_bnt, .accordion__trigger_btn {
+    flex-shrink: 1;
+    width: 410px;
+    padding: 32px 26px 26px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 32px;
+    background-color: $green;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $green;
+    }
+  }
+
+  .accordion__trigger_btn {
+    display: block;
+  }
+
+  .accordion__content_bnt {
+    display: none;
+  }
+
+  &__checkbox:checked + .accordion__trigger > .accordion__trigger_btn {
+    display: none;
+  }
+
+  &__checkbox:checked + .accordion__trigger > .accordion__content_bnt {
+    display: block;
+  }
+
+
   &__checkbox:checked + .accordion__trigger + .accordion__content {
     max-height: 100%; /* Число большое, чтобы убедиться, что контент полностью раскрыт */
   }
@@ -119,15 +158,251 @@
 
 }
 
+.nutritionist {
+  &__wrapper {
+    height: 665px;
+    background-image: url("../img/modules/nutris-bg.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+
+    &Color {
+      padding-top: 260px;
+      height: 100%;
+      background-color: rgba(0, 166, 211, 0.15);
+    }
+
+    &Content {
+      background-color: rgba(0, 166, 211, 0.8);
+      height: 100%;
+    }
+  }
+
+  max-width: 970px;
+  padding: 30px 0;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: 92px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 37px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__btn {
+    margin-top: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      padding: 15px 65px;
+      background-color: $black;
+      color: $white;
+
+      font-family: $Inter;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+
+
+}
+
+.comments {
+  padding: 90px 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    padding-bottom: 20px;
+    border-bottom: 2px $black solid;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &Title {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 38px;
+
+    }
+
+    &Estimation {
+      margin-top: 29px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &Stars {
+        display: flex;
+        align-items: center;
+        gap: 2.5px;
+      }
+
+      &Date {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 38px;
+
+      }
+    }
+
+    &Text {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26px;
+
+    }
+
+    &Like {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+
+      &Row {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      &Text {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+      }
+
+      &Btn {
+        background-color: transparent;
+        display: flex;
+        align-items: start;
+        gap: 8px;
+
+        span {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 26px;
+
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      padding: 32px 110px 26px;
+      background-color: $white;
+      border: 2px $black solid;
+      border-radius: 10px;
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 32px;
+      color: $black;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+
+}
+
 @media (max-width: $md1 + px) {
   //max-width: 985px;
   .category {
+  }
+  .nutritionist {
+    &__wrapper {
+      height: 550px;
+
+      &Color {
+        padding-top: 200px;
+      }
+    }
+
+    &__title {
+      font-size: 70px;
+      line-height: 72px;
+    }
+
+    &__text {
+      font-size: 25px;
+      line-height: 30px;
+    }
   }
 }
 
 @media (max-width: $md2 + px) {
   //max-width: 750px;
   .category {
+  }
+
+  .nutritionist {
+    &__wrapper {
+      height: 270px;
+      background-size: cover;
+
+      &Color {
+        padding-top: 100px;
+      }
+
+      &Content {
+      }
+    }
+
+    max-width: 344px;
+    padding: 15px 0;
+
+    &__title {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    &__text {
+      margin-top: 13px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    &__btn {
+      margin-top: 8px;
+
+      .btn {
+        padding: 7px 32.5px;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
+
   }
 }
 
@@ -142,7 +417,7 @@
     border-bottom: 1px solid $black;
 
     &__trigger {
-      padding: 8px 0;
+      padding: 8px 28px 8px 0;
       font-size: 15px;
       line-height: 19px;
 
@@ -164,6 +439,11 @@
 
         display: none;
       }
+      &_top35 {
+        &:before, &:after {
+          top: 5px;
+        }
+      }
     }
 
     &__content {
@@ -177,5 +457,115 @@
       }
     }
 
+    .accordion__content_bnt, .accordion__trigger_btn {
+      width: 116px;
+      padding: 9px 7px 7px;
+      border-radius: 3px;
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
+
+  .comments {
+    padding: 75px 0;
+
+    &__list {
+      gap: 10px;
+    }
+
+    &__item {
+      padding-bottom: 15px;
+      border-bottom: 1px $black solid;
+
+      &Title {
+        font-size: 15px;
+        line-height: 19px;
+      }
+
+      &Estimation {
+        margin-top: 13px;
+
+        &Stars {
+          gap: 1.2px;
+
+          &Img {
+            width: 19px;
+            height: 19px;
+
+            img {
+              width: 100%;
+              height: 100%;
+
+            }
+          }
+        }
+
+        &Date {
+          font-size: 15px;
+          line-height: 19px;
+
+        }
+      }
+
+      &Text {
+        margin-top: 8.5px;
+        font-size: 10px;
+        line-height: 13px;
+
+      }
+
+      &Like {
+        margin-top: 12px;
+        gap: 25px;
+
+        &Row {
+          gap: 20px;
+        }
+
+        &Text {
+          font-size: 10px;
+          line-height: 12px;
+        }
+
+        &Btn {
+          gap: 4px;
+
+          img {
+            width: 9.8px;
+            object-fit: contain;
+          }
+
+          span {
+            font-size: 10px;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      margin-top: 23px;
+
+      .btn {
+        padding: 14px 50px 12px;
+        border: 1px $black solid;
+        border-radius: 5px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 424px) {
+  .accordion{
+    &__trigger{
+      &_top35{
+        &:before, &:after {
+          top: 10px;
+        }
+      }
+    }
   }
 }

@@ -34,7 +34,7 @@ html,
 body {
   height: 100%;
   //width: 100%;
-  font-family: $fontFamilyMontserrat;
+  font-family: $Mont;
   line-height: 1;
   font-size: 14px;
   background-color: $grey;
@@ -45,7 +45,8 @@ body {
 
 input,
 button,
-textarea {
+textarea,
+div {
   font-family: inherit;
 }
 
