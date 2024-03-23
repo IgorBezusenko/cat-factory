@@ -17,8 +17,24 @@
     }
   }
 
+  @media (max-width: $md2 + px) {
+    position: relative;
+    padding: 46px 0 0 0;
+    .goBack {
+      position: absolute;
+      top: -45px;
+      left: 29px;
+      z-index: 10;
+      padding: 0;
+      font-size: 12px;
+      line-height: 15px;
+      img{
+        height: 8px;
+      }
+    }
+
+  }
   @media (max-width: $md3 + px) {
-    //background-color: $white;
     padding: 0;
   }
 }

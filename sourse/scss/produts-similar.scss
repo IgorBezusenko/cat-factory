@@ -93,6 +93,7 @@
       font-size: 50px;
       line-height: 58px;
     }
+
     &__Content {
       gap: 10px;
     }
@@ -113,6 +114,7 @@
       font-size: 32px;
       line-height: 38px;
     }
+
     &__Content {
       justify-content: center;
     }
@@ -128,6 +130,7 @@
       font-size: 22px;
       line-height: 28px;
     }
+
     &__Content {
       flex-direction: column;
       align-items: center;
@@ -146,8 +149,6 @@
         height: 210px;
       }
 
-
-
       &Text {
         margin-top: 10px;
 
@@ -161,8 +162,23 @@
       &Select {
         margin-top: 20px;
         margin-bottom: 10px;
-        font-size: 14px;
-        line-height: 17px;
+
+        .form-select {
+          &:before {
+            top: 15px;
+          }
+          select {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+      }
+
+      &Btn {
+        button {
+          padding: 10px 15px;
+        }
       }
     }
   }

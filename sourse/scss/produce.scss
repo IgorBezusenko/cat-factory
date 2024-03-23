@@ -267,12 +267,13 @@
       &Title {
         display: flex;
         gap: 15px;
+        margin-bottom: 15px;
+
       }
 
       &Stars {
         display: flex;
         gap: 3.5px;
-        margin-bottom: 15px;
       }
 
       &Text {
@@ -328,7 +329,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 50px;
-        padding: 17px 23px;
+        padding: 17px 15px 10px;
         border-radius: 10px;
         background-color: $grey;
 
@@ -404,7 +405,7 @@
     }
 
     &__delivery {
-      margin-top: 25px;
+      margin-top: 79px;
 
       &List {
         margin-top: 20px;
@@ -425,6 +426,7 @@
         }
 
         &Text {
+          margin-top: 10px;
           font-size: 24px;
           font-weight: 600;
           line-height: 30px;
@@ -440,7 +442,7 @@
     }
 
     &__storage {
-      margin-top: 50px;
+      margin-top: 60px;
 
       &List {
         margin-top: 32px;
@@ -489,266 +491,12 @@
     }
 
     &View {
-      //display: flex;
       flex-wrap: wrap;
       gap: 80px;
-
-      &__img {
-        width: 674px;
-        height: 667px;
-        flex-basis: 674px;
-        flex-shrink: 0;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-      }
+      justify-content: center;
 
       &__content {
         padding: 20px 12px;
-      }
-
-      &__subTitle {
-        font-size: 30px;
-        font-weight: 800;
-        line-height: 38px;
-      }
-
-      &__title {
-        font-size: 50px;
-        font-weight: 800;
-        line-height: 64px;
-        flex-basis: 235px;
-
-        &Block {
-          display: flex;
-          justify-content: space-between;
-        }
-
-        &Price {
-          font-size: 36px;
-          font-weight: 800;
-          line-height: 46px;
-          color: $green;
-
-          span {
-            font-size: 54px;
-            font-weight: 800;
-            line-height: 69px;
-
-          }
-        }
-      }
-
-      &__reviews {
-        margin-top: 6px;
-
-        &Title {
-          display: flex;
-          gap: 15px;
-        }
-
-        &Stars {
-          display: flex;
-          gap: 3.5px;
-          margin-bottom: 15px;
-        }
-
-        &Text {
-          font-size: 24px;
-          font-weight: 600;
-          line-height: 30px;
-        }
-      }
-
-      &__days {
-        margin-top: 55px;
-
-        &List {
-          margin-top: 15px;
-          padding-left: 35px;
-          display: flex;
-          gap: 45px;
-        }
-
-        &Item {
-          cursor: pointer;
-          width: 117px;
-          padding: 38px 0 2px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 6px;
-          background-color: $grey;
-          border-radius: 10px;
-
-          &.active, &:hover {
-            background-color: $yellow;
-          }
-        }
-
-        &Text {
-          font-size: 24px;
-          font-weight: 800;
-          line-height: 30px;
-
-        }
-
-      }
-
-      &__add {
-        margin-top: 95px;
-        display: flex;
-        gap: 25px;
-
-        &Counter {
-
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 50px;
-          padding: 17px 23px;
-          border-radius: 10px;
-          background-color: $grey;
-
-          &Text {
-            font-size: 50px;
-            font-weight: 800;
-            line-height: 64px;
-
-          }
-
-          &Btn {
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 51px;
-            color: #6A6A6A;
-
-          }
-        }
-
-        &Btn {
-          flex-grow: 1;
-          //width: 100%;
-          &.btn {
-            font-size: 25px;
-            font-weight: 800;
-            line-height: 32px;
-          }
-        }
-      }
-
-      &__daysConsist {
-        margin-top: 45px;
-
-        &List {
-          margin-top: 37px;
-          display: flex;
-          flex-direction: column;
-          gap: 13px;
-        }
-
-        &Item {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-        }
-
-        &Img {
-          cursor: pointer;
-          width: 117px;
-          height: 174px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          background-color: $grey;
-          border-radius: 10px;
-        }
-
-        &Text {
-          font-size: 28px;
-          font-weight: 600;
-          line-height: 36px;
-
-        }
-
-      }
-
-      &__hrBold {
-        margin: 40px 0 20px;
-        width: 100%;
-        height: 6px;
-        background-color: $black;
-      }
-
-      &__delivery {
-        margin-top: 25px;
-
-        &List {
-          margin-top: 20px;
-          display: flex;
-          flex-direction: column;
-          gap: 22px;
-        }
-
-        &Item {
-          display: flex;
-          gap: 28px;
-
-          &Title {
-            font-size: 25px;
-            font-weight: 800;
-            line-height: 32px;
-
-          }
-
-          &Text {
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 30px;
-
-          }
-        }
-
-        &Img {
-          width: 70px;
-          display: flex;
-          justify-content: flex-end;
-        }
-      }
-
-      &__storage {
-        margin-top: 50px;
-
-        &List {
-          margin-top: 32px;
-          display: flex;
-          gap: 15px;
-          flex-direction: column;
-        }
-
-        &Item {
-          display: flex;
-          align-items: center;
-          gap: 34px;
-          padding: 10px;
-          border-radius: 10px;
-          background-color: $grey;
-
-          &.active, &:hover {
-            background-color: $yellow;
-          }
-        }
-
-        &Text {
-          font-size: 25px;
-          font-weight: 800;
-          line-height: 32px;
-
-        }
       }
     }
   }
@@ -812,14 +560,260 @@
         width: 176px;
       }
     }
+
+
   }
 }
 
 
 @media (max-width: $md3 + px) {
   //max-width: none;
-  .produse {
+  .produce {
 
+    &View {
+      display: block;
 
+      &__img {
+        width: 337px;
+        height: 333px;
+        margin: 0 auto;
+      }
+
+      &__content {
+        margin-top: 100px;
+        padding: 20px 12px 30px;
+      }
+
+      &__subTitle {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      &__title {
+        font-size: 25px;
+        line-height: 32px;
+        flex-basis: 120px;
+
+        &Price {
+          font-size: 18.2px;
+          line-height: 23.26px;
+
+          span {
+            font-size: 27px;
+            line-height: 35px;
+          }
+        }
+      }
+
+      &__reviews {
+        margin-top: 6px;
+
+        &Title {
+          margin-bottom: 10px;
+        }
+
+        &Stars {
+          &Img {
+            width: 14px;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        &Text {
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+
+      &__days {
+        margin-top: 30px;
+
+        &List {
+          margin-top: 12px;
+          padding-left: 24px;
+          gap: 22px;
+        }
+
+        &Item {
+          cursor: pointer;
+          width: 58px;
+          padding: 19px 0 2px;
+          gap: 3px;
+          border-radius: 5px;
+
+        }
+
+        &Img {
+          width: 16px;
+
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+
+        &Text {
+          font-size: 12px;
+          line-height: 15px;
+        }
+
+      }
+
+      &__add {
+        margin-top: 45px;
+        gap: 12.5px;
+
+        &Counter {
+          gap: 25px;
+          padding: 8px;
+
+          &Text {
+            font-size: 25px;
+            line-height: 32px;
+          }
+
+          &Btn {
+            font-size: 20px;
+            line-height: 25px;
+          }
+        }
+
+        &Btn {
+          &.btn {
+            font-size: 12.5px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      &__daysConsist {
+        margin-top: 22.5px;
+
+        &List {
+          margin-top: 18.5px;
+          gap: 7px;
+        }
+
+        &Item {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+        }
+
+        &Img {
+          cursor: pointer;
+          width: 58px;
+          height: 88px;
+          border-radius: 5px;
+
+          img {
+            width: 15.65px;
+            height: 57.62px;
+          }
+        }
+
+        &Text {
+          font-size: 14px;
+          line-height: 18px;
+
+        }
+
+      }
+
+      &__hrBold {
+        margin: 20px 0 10px;
+        height: 3px;
+      }
+
+      &__delivery {
+        margin-top: 39px;
+
+        &List {
+          margin-top: 10px;
+          gap: 12px;
+        }
+
+        &Item {
+          gap: 14px;
+
+          &Title {
+            font-size: 12.5px;
+            line-height: 16px;
+
+          }
+
+          &Text {
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 16px;
+
+          }
+        }
+
+        &Img {
+          width: 35px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          img {
+            width: 80%;
+          }
+        }
+      }
+
+      &__storage {
+        margin-top: 30px;
+
+        &List {
+          margin-top: 16px;
+          gap: 8px;
+        }
+
+        &Item {
+          //display: flex;
+          //align-items: center;
+          gap: 17px;
+          padding: 5px;
+          border-radius: 5px;
+          //background-color: $grey;
+
+          //&.active, &:hover {
+          //  background-color: $yellow;
+          //}
+        }
+
+        &Img {
+          width: 35px;
+
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+
+        &Text {
+          font-size: 12.5px;
+          //font-weight: 800;
+          line-height: 16px;
+
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 359px) {
+  .produce {
+    &View {
+      &__img {
+        width: 300px;
+        height: 300px;
+      }
+    }
   }
 }

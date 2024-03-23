@@ -39,6 +39,10 @@
     gap: 45px;
 
     &Wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
       height: 110px;
     }
 
@@ -104,15 +108,18 @@
 
 
       }
-      &SelectColorWhite{
-        select{
+
+      &SelectColorWhite {
+        select {
           color: $white;
-          option{
+
+          option {
             color: $black;
           }
         }
-        &:before, &:after{
-          background-color:$white;
+
+        &:before, &:after {
+          background-color: $white;
         }
       }
     }
@@ -147,7 +154,10 @@
     }
 
     &__nav {
+
+
       &Wrapper {
+        justify-content: center;
         height: auto;
         padding: 18px 34px;
       }
@@ -191,7 +201,6 @@
       width: 100%;
       height: 2px;
       background-color: black;
-      //border-radius: 2px;
 
       &:first-child {
         top: 0;
