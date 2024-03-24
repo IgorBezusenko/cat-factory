@@ -1,0 +1,162 @@
+.morningView {
+  &__productsSimilar {
+    margin-top: 180px;
+  }
+
+  &__benefits {
+    margin-top: 100px;
+    margin-bottom: 80px;
+
+    &Title {
+      font-size: 75px;
+      font-weight: 800;
+      line-height: 77px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &SubTitle {
+      margin-top: 18px;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 37px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &Content {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 75px;
+    }
+
+    &Bottle {
+      height: 1396px;
+
+      img {
+        height: 100%;
+      }
+
+      &Mobile {
+        display: none;
+      }
+    }
+
+    &List {
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+    }
+
+    &Item {
+      cursor: pointer;
+
+      &Img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 116px;
+
+        img {
+          height: 100%;
+        }
+
+      }
+
+      &Text {
+        margin-top: 15px;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 34px;
+        text-align: center;
+        color: #626262;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $md1 + px) {
+  .morningView {
+    &__benefits {
+      &Content {
+        gap: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md2 + px) {
+  .morningView {
+    &__benefits {
+      margin-top: 50px;
+      margin-bottom: 30px;
+
+      &Title {
+        font-size: 25px;
+        line-height: 26px;
+      }
+
+      &SubTitle {
+        margin-top: 10px;
+        font-size: 11px;
+        line-height: 12px;
+      }
+
+      &Content {
+        margin-top: 15px;
+        gap: 10px;
+      }
+
+      &Bottle {
+        height: 513px;
+
+        &Mobile {
+          display: block;
+        }
+
+        &Desktop {
+          display: none;
+        }
+      }
+
+      &List {
+        gap: 20px;
+      }
+
+      &Item {
+
+        &Img {
+          height: 40px;
+        }
+
+        &Text {
+          font-size: 9px;
+          line-height: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md3 + px) {
+  .morningView {
+    &__productsSimilar {
+      margin-top: 37px;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .morningView {
+    &__benefits {
+      &Content {
+        gap: 0;
+      }
+    }
+  }
+}
