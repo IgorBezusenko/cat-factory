@@ -333,7 +333,84 @@
     }
   }
 
+  &__form {
+    margin-top: 150px;
+
+    &Content {
+      border-top: 2px $black solid;
+    }
+
+    &Title {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 50px;
+
+    }
+
+    &Label {
+      margin-bottom: 33px;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 38px;
+
+    }
+
+    &Input {
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+
+      input, textarea {
+        padding: 19px 35px 15px;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 36px;
+        border: 2px solid $black;
+        border-radius: 5px;
+
+      }
+
+      textarea {
+        resize: none;
+        min-height: 350px;
+      }
+    }
+
+    &Rating {
+      margin: 75px 0 60px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  display: flex;
+  justify-content: end;
+
+  & > input {
+    display: none;
+  }
+
+  & > label {
+    //float: right;
+    font-size: 66px;
+    font-weight: 100;
+    color: $black;
+    cursor: pointer;
+  }
+
+  & > input:checked ~ label,
+  &:not(:checked) > label:hover,
+  &:not(:checked) > label:hover ~ label {
+    color: #ffca08;
+  }
+}
+
 
 @media (max-width: $md1 + px) {
   //max-width: 985px;
@@ -439,6 +516,7 @@
 
         display: none;
       }
+
       &_top35 {
         &:before, &:after {
           top: 5px;
@@ -555,13 +633,60 @@
       }
     }
 
+    &__form {
+      margin-top: 23px;
+
+      &Content {
+        border-top: 1px $black solid;
+      }
+
+      &Title {
+        font-size: 16px;
+        line-height: 20px;
+
+      }
+
+      &Label {
+        margin-bottom: 13px;
+        font-size: 12px;
+        line-height: 15px;
+
+      }
+
+      &Input {
+        margin-top: 13px;
+
+        input, textarea {
+          padding: 7px 13px 5px;
+          font-size: 11px;
+          line-height: 14px;
+          border: 1px solid $black;
+          border-radius: 2px;
+
+        }
+
+        textarea {
+          min-height: 135px;
+        }
+      }
+
+      &Rating {
+        margin: 28px 0 23px;
+      }
+    }
+  }
+  .rating {
+    & > label {
+      font-size: 25px;
+      font-weight: 100;
+    }
   }
 }
 
 @media (max-width: 424px) {
-  .accordion{
-    &__trigger{
-      &_top35{
+  .accordion {
+    &__trigger {
+      &_top35 {
         &:before, &:after {
           top: 10px;
         }
