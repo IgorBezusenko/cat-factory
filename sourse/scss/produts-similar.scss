@@ -167,6 +167,7 @@
           &:before {
             top: 15px;
           }
+
           select {
             padding: 10px;
             font-size: 14px;
@@ -180,6 +181,22 @@
           padding: 10px 15px;
         }
       }
+    }
+  }
+}
+
+
+@media (max-width: 374px) {
+  .productsSimilar {
+    &__Title {
+      width: 300px;
+    }
+
+    &__Item {
+      width: 290px;
+      height: 400px;
+      padding: 0;
+
     }
   }
 }

@@ -1,0 +1,144 @@
+.drinksView {
+  margin-top: 200px;
+
+  &__wrapper {
+    height: 1900px;
+    background-image: url('../../img/shop/pngwing1.png'), url('../../img/shop/pngwing3.png'), url('../../img/shop/pngwing2.png'), url('../../img/shop/pngwing4.png');
+    background-repeat: no-repeat;
+    background-size: auto; /* Размеры картинок остаются неизменными */
+    background-position: 115% 0, bottom left, bottom right, bottom left;
+  }
+
+  &__title {
+    max-width: 1100px;
+    font-family: $Inter;
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 145px;
+    text-align: left;
+  }
+
+  &__content {
+    max-width: 710px;
+  }
+
+  &__subTitle {
+    margin-top: 60px;
+    font-family: $Inter;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+
+  }
+
+  &__text {
+    margin-top: 38px;
+    font-family: $Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: left;
+  }
+
+}
+
+@media (max-width: $md1 + px) {
+  .drinksView {
+    margin-top: 150px;
+
+    &__wrapper {
+      height: 1650px;
+      background-size: 40%, 60%, 60%, 60%;
+      background-position: 145% 0, -20% 100%, bottom right, -20% 100%;
+    }
+
+    &__title {
+      font-size: 100px;
+      line-height: 125px;
+    }
+
+  }
+}
+
+@media (max-width: $md2 + px) {
+  .drinksView {
+    margin-top: 100px;
+
+    &__wrapper {
+      height: 1200px;
+      background-size: 40%, 60%, 60%, 60%;
+      background-position: 145% 0, -20% 100%, bottom right, -20% 100%;
+    }
+
+    &__title {
+      font-size: 75px;
+      line-height: 95px;
+    }
+
+    &__subTitle {
+      margin-top: 60px;
+      font-size: 30px;
+      line-height: 36px;
+
+    }
+
+    &__text {
+      margin-top: 38px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+
+@media (max-width: $md3 + px) {
+  .drinksView {
+    margin-top: 23px;
+
+    &__wrapper {
+      height: 880px;
+      background-image: url('../../img/shop/pngwing-mobile.png');
+      background-repeat: no-repeat;
+      background-size: auto; /* Размеры картинок остаются неизменными */
+      background-position: center;
+    }
+
+    &__content {
+      max-width: 330px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      max-width: 330px;
+      margin: 0 auto;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    &__subTitle {
+      margin-top: 22px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    &__text {
+      margin-top: 26px;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $md4 + px) {
+  .drinksView {
+    &__content, &__title {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+  }
+
+}
