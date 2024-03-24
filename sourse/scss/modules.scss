@@ -158,6 +158,36 @@
 
 }
 
+.accordion.defaultIsOpen {
+  .accordion__content {
+    max-height: 100% !important;
+  }
+
+  .accordion__trigger {
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      display: block;
+    }
+  }
+
+  .accordion__checkbox:checked + .accordion__trigger + .accordion__content {
+    max-height: 0 !important;
+  }
+
+  .accordion__checkbox:checked + .accordion__trigger {
+    &:before {
+      display: block;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
 .nutritionist {
   &__wrapper {
     height: 665px;

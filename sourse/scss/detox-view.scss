@@ -1,0 +1,97 @@
+.detoxView {
+  &__know {
+    &Wrapper {
+      height: 1900px;
+      background-image: url("../img/detox-products/detox-bg.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &Title {
+      padding-top: 72px;
+      font-size: 90px;
+      font-weight: 800;
+      line-height: 98.92px;
+      text-align: right;
+    }
+
+    &Content {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &List {
+      max-width: 730px;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 24px 28px 70px;
+      border-radius: 10px;
+    }
+
+    &Item {
+      &Text {
+        padding-bottom: 23px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md1 + px) {
+  .detoxView {
+    &__know {
+      &Title {
+        font-size: 80px;
+        line-height: 85px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md2 + px) {
+  .detoxView {
+    &__know {
+      &Title {
+        font-size: 50px;
+        line-height: 55px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md3 + px) {
+  .detoxView {
+    &__know {
+      &Wrapper {
+        height: 880px;
+        background-position: 100%;
+        background-size: cover;
+      }
+
+      &Title {
+        padding-top: 56px;
+        font-size: 28px;
+        line-height: 31px;
+      }
+
+
+      &List {
+        margin-top: 28px;
+        padding: 12px 14px 35px;
+        border-radius: 5px;
+      }
+
+      &Item {
+        &Title {
+          font-size: inherit;
+          line-height: inherit;
+        }
+
+        &Text {
+          font-size: inherit;
+          line-height: inherit;
+          padding-bottom: 3px;
+        }
+      }
+    }
+  }
+}

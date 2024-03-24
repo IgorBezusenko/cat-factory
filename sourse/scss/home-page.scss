@@ -637,15 +637,16 @@
         }
 
         &Item {
-          border-radius: 10px;
+          border-radius: 0 !important;
+
           &N1 {
-            border-top-right-radius: 0!important;
-            border-bottom-right-radius: 0!important;
+            border-top-left-radius: 10px !important;
+            border-bottom-left-radius: 10px !important;
           }
 
-          &N3 {
-            border-top-left-radius: 0!important;
-            border-bottom-left-radius: 0!important;
+          &N3 { border-top-right-radius: 10px !important;
+            border-bottom-right-radius: 10px !important;
+
           }
 
         }
@@ -1209,9 +1210,6 @@
         max-width: none;
       }
 
-      &Wrapper {
-        padding-bottom: 450px;
-      }
     }
     &__tryNow {
       //max-width: 725px;
@@ -1281,6 +1279,15 @@
 
       &Item {
         padding: 5px 12px;
+      }
+    }
+  }
+
+  @media (max-width: $md4 + px) {
+    &__orderNow {
+
+      &Wrapper {
+        padding-bottom: 450px;
       }
     }
   }
