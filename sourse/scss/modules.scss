@@ -470,6 +470,11 @@
 @media (max-width: $md2 + px) {
   //max-width: 750px;
   .category {
+    &__list {
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
   }
 
   .nutritionist {
@@ -517,6 +522,30 @@
 @media (max-width: $md3 + px) {
   //max-width: none;
   .category {
+
+    &__list {
+      justify-content: center;
+    }
+    &__item {
+      width:160px;
+    }
+
+    &__img {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__title {
+      margin-top: 10px;
+      font-size: 12.5px;
+      line-height: 16.5px;
+    }
+
+    &__text {
+      margin-top: 10px;
+      font-size: 9px;
+      line-height: 12px;
+    }
   }
   .accordion {
     margin-top: 16px;

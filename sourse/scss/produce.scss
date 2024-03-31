@@ -64,6 +64,67 @@
         }
       }
     }
+
+    &ItemFoods {
+      background-color: $white;
+      color: $green;
+      width: 244px;
+      padding: 10px 0;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+
+
+      &Drinks,
+      &Food,
+      &All {
+        width: 52px;
+        height: 52px;
+      }
+
+      &Drinks {
+        background-image: url("../../img/shop-all/drinks_green.svg");
+        background-repeat: no-repeat;
+      }
+
+      &Food {
+        background-image: url("../../img/shop-all/food_green.svg");
+        background-repeat: no-repeat;
+      }
+
+      &All {
+        background-image: url("../../img/shop-all/icon_all_green.svg");
+        background-repeat: no-repeat;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $green;
+        color: $white;
+
+        .produce__navItemFoodsDrinks {
+          background-image: url("../../img/shop-all/drinks.svg");
+
+        }
+
+        .produce__navItemFoodsFood {
+          background-image: url("../../img/shop-all/food.svg");
+
+        }
+
+        .produce__navItemFoodsAll {
+          background-image: url("../../img/shop-all/icon_all.svg");
+
+        }
+      }
+    }
   }
 
   &__content {
@@ -74,6 +135,32 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 25px;
+
+    &ViewAll {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 95px;
+
+      .btn {
+        width: 268px;
+        text-align: center;
+        padding: 15px;
+        background-color: $black;
+        border: 2px solid $black;
+        color: $white;
+        border-radius: 5px;
+        font-family: $Inter;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+
+        &:hover {
+          background-color: $white;
+          color: $black;
+        }
+      }
+    }
   }
 
   &__card {
@@ -91,7 +178,7 @@
       height: 100%;
       background-color: $green;
       border-radius: 5px;
-      transition: 0.3s;
+      transition: 0.5s;
       transform: translateY(+101%);
       z-index: -1;
 
@@ -153,7 +240,8 @@
       justify-content: center;
 
       img {
-        object-fit: cover;
+        max-width: 100%;
+        object-fit: contain;
       }
     }
 
@@ -212,21 +300,37 @@
     display: flex;
     gap: 100px;
 
+
     &__img {
+      position: relative;
       width: 674px;
       height: 667px;
       flex-basis: 674px;
       flex-shrink: 0;
+      z-index: 10;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: contain;
       }
+
+      &Bg {
+        position: absolute;
+        bottom: -130px;
+        left: -28px;
+        z-index: -1;
+        background-color: $white;
+        width: 730px;
+        height: 550px;
+        border-radius: 10px;
+      }
     }
 
     &__content {
       padding: 40px 24px;
+      border-radius: 10px;
+      background-color: $white;
     }
 
     &__subTitle {
@@ -315,6 +419,72 @@
         line-height: 30px;
 
       }
+
+    }
+
+    &__foods {
+      margin-top: 22px;
+
+      &List {
+        display: flex;
+        gap: 7px;
+        margin-top: 15px;
+      }
+
+      &Item {
+        padding: 15px 0;
+        width: 167px;
+        height: 376px;
+        border-radius: 10px;
+
+
+        &:hover, &.active {
+          background-color: $yellow;
+
+          .produceView__foodsImg {
+            background-color: $green;
+          }
+        }
+      }
+
+      &Title {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 26px;
+        text-align: center;
+      }
+
+      &Price {
+        margin-top: 8px;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      &Text {
+        margin-top: 8px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+        text-align: center;
+      }
+
+      &Img {
+        margin: 24px auto 0;
+        text-align: center;
+        width: 114px;
+        height: 114px;
+        background-color: $bg-grey;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+
 
     }
 
@@ -492,7 +662,7 @@
 
     &View {
       flex-wrap: wrap;
-      gap: 80px;
+      gap: 144px;
       justify-content: center;
 
       &__content {
@@ -505,6 +675,87 @@
 @media (max-width: $md2 + px) {
   //max-width: 750px;
   .produce {
+
+    &__nav {
+      margin-top: 45px;
+
+      &List {
+        gap: 15px;
+      }
+
+      &Item {
+        width: 122px;
+        padding: 5px 0;
+        border-radius: 5px;
+
+
+        font-size: 10px;
+        line-height: 12px;
+
+
+        &Detox,
+        &Morning,
+        &All {
+          width: 26px;
+          height: 26px;
+        }
+
+        &Detox {
+          background-image: url("../../img/produse/icon_detox_green.svg");
+          background-size: contain;
+        }
+
+        &Morning {
+          background-image: url("../../img/produse/icon_morning_green.svg");
+          background-size: contain;
+        }
+
+        &All {
+          background-image: url("../../img/produse/icon_all_green.svg");
+          background-size: contain;
+        }
+
+      }
+
+      &ItemFoods {
+        width: 122px;
+        padding: 5px 0;
+        border-radius: 5px;
+
+
+        font-size: 10px;
+        line-height: 12px;
+
+
+        &Drinks,
+        &Food,
+        &All {
+          width: 26px;
+          height: 26px;
+
+        }
+
+        &Drinks {
+          background-image: url("../../img/shop-all/drinks_green.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        &Food {
+          background-image: url("../../img/shop-all/food_green.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        &All {
+          background-image: url("../../img/shop-all/icon_all_green.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+      }
+    }
+
     &__card {
 
       padding: 0 8px 8px;
@@ -561,7 +812,6 @@
       }
     }
 
-
   }
 }
 
@@ -569,7 +819,34 @@
 @media (max-width: $md3 + px) {
   //max-width: none;
   .produce {
+    &__nav {
+      margin-top: 37px;
 
+      &List {
+        gap: 10px;
+      }
+
+      &Item {
+        width: 77px;
+      }
+
+      &ItemFoods {
+        width: 77px;
+      }
+    }
+&__content{
+  &ViewAll {
+    margin-top: 45px;
+
+    .btn {
+      padding: 10px;
+      border: 1px solid $black;
+      font-size: 12px;
+      line-height: 14px;
+
+    }
+  }
+}
     &View {
       display: block;
 
@@ -577,11 +854,20 @@
         width: 337px;
         height: 333px;
         margin: 0 auto;
+
+        &Bg {
+          bottom: -65px;
+          left: -14px;
+          width: 365px;
+          height: 275px;
+          border-radius: 5px;
+        }
       }
 
       &__content {
         margin-top: 100px;
         padding: 20px 12px 30px;
+        border-radius: 5px;
       }
 
       &__subTitle {
@@ -807,12 +1093,17 @@
   }
 }
 
-@media (max-width: 359px) {
+@media (max-width: 382px) {
   .produce {
     &View {
       &__img {
         width: 300px;
         height: 300px;
+
+        &Bg {
+          left: -10px;
+          width: 320px;
+        }
       }
     }
   }

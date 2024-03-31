@@ -132,7 +132,10 @@
     }
 
     &__Content {
-      flex-direction: column;
+      //flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
       align-items: center;
     }
 
