@@ -644,7 +644,8 @@
             border-bottom-left-radius: 10px !important;
           }
 
-          &N3 { border-top-right-radius: 10px !important;
+          &N3 {
+            border-top-right-radius: 10px !important;
             border-bottom-right-radius: 10px !important;
 
           }
@@ -839,9 +840,10 @@
   @media (max-width: $md2 + px) {
     //max-width: 750px;
     &__main {
-      height: 558px;
-
+      height: 488px;
+      margin-top: -116px;
       &Content {
+        padding-top: 75px;
         max-width: none;
         height: auto;
 
@@ -876,10 +878,12 @@
     &__bgText {
       height: 129px;
     }
+
     &__bgBottle {
-      height: 356px;
-      margin-left: -150px;
-      top: 232px;
+      height: 397px;
+      margin-left: 0;
+      left: 12%;
+      top: 130px;
     }
 
     &__bgBlue {
@@ -1191,6 +1195,8 @@
     &__main {
 
       &Content {
+
+
         &Title {
           font-size: 28px;
           line-height: 35px;
@@ -1205,6 +1211,15 @@
 
       }
     }
+
+    &__bgBlue {
+      justify-content: flex-end;
+
+      &Img {
+        height: 354px;
+      }
+    }
+
     &__orderNow {
       &Content {
         max-width: none;
@@ -1213,6 +1228,11 @@
     }
     &__tryNow {
       //max-width: 725px;
+      &Wrapper {
+        background-image: url(../../img/home-page/tryNow/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-position: 30% 159%;
+      }
 
       &Content {
         //max-width: 725px;
@@ -1222,20 +1242,27 @@
 
         &Left {
 
+          display: none;
+
           &Water {
+            display: none;
             margin-left: -200px;
           }
 
           &IceBig {
+            display: none;
             margin-left: -165px;
           }
 
           &IceLittle {
+            display: none;
             margin-left: -135px;
           }
         }
 
         &Right {
+          display: none;
+
           &Water {
             height: 460px;
             top: 373px;
