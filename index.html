@@ -124,7 +124,8 @@
             </div>
         </div>
 
-        <div class="header__wrapper bg-transparent">
+        <div class="header__wrapper bg-transparent" id="header__wrapper" onmouseenter="showMenuDropdown()"
+             onmouseleave="closeMenuDropdown()">
             <div class="header__container">
                 <div class="justify header__navWrapper">
                     <ul class="header__nav">
@@ -136,15 +137,16 @@
                     <div class="header__navLogo"><a href="#"><img src="./img/header/logo-white.svg" alt="logo"></a>
                     </div>
                     <ul class="header__navLeft ">
-                        <li class="header__navLeftItem color-white"><a href="#">Blog</a></li>
-                        <li class="header__navLeftItem color-white"><a href="#">Login</a></li>
+                        <li class="header__navLeftItem  color-white header__navLeftItemActive1"><a href="#">Blog</a></li>
+                        <li class="header__navLeftItem  color-white header__navLeftItemActive2"><a href="#">Login</a>
+                        </li>
                         <li class="header__navLeftItem ">
                             <a href="#" class="header__navLeftShoppingCart">
                                 <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
                                 <span>0</span>
                             </a>
                         </li>
-                        <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite ">
+                        <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite header__navLeftItemActive3">
                             <select name="lang" id="lang">
                                 <option value="ro">ro</option>
                                 <option value="en">en</option>
@@ -153,11 +155,440 @@
                         </li>
                     </ul>
 
-                    <div class=" icon-menu-burger " onclick="showBurgerMenu()">
+                    <div class="menuDropdown" id="menuDropdown">
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Program</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">All day</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Morning</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Combo</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Drinks</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Juices</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Smoothies</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Hot drinks</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Limonade</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Shots</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Food</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Soups</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Salads</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Lunch</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Wraps</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Risotto</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Dessert</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Chia</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Porridge</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Cake</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Smoothie bowl</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Candy</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Supplements</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="icon-menu-burger" onclick="showBurgerMenu()">
                         <span class="bg-white"></span>
                         <span class="bg-white"></span>
                         <span class="bg-white"></span>
                     </div>
+
+                    <nav id="mySidenav" class="menu__body_burger sidenav">
+                        <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>
+
+                        <ul class="menu__list_burger">
+                            <li>
+                                <a href="#" class="menu__link bor">Programe</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link bor">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link bor"
+                                >Bestseller</a>
+                            </li>
+                            <li onclick="showBurgerConsultation()">
+                                <a href="#" class="menu__link bor">Consultație</a>
+                                <img src="img/header/arrow-bor.svg" alt="arrow"/>
+                            </li>
+                            <li>
+                                <div class="burgerHr"></div>
+                            </li>
+                            <li onclick="showBurgerProgram()">
+                                <a href="#" class="menu__link">Program</a>
+                                <img src="img/header/arrow-black.svg" alt="arrow"/>
+                            </li>
+                            <li onclick="showBurgerDrinks()">
+                                <a href="#" class="menu__link">Drinks</a>
+                                <img src="img/header/arrow-black.svg" alt="arrow"/>
+                            </li>
+                            <li onclick="showBurgerFood()">
+                                <a href="#" class="menu__link">Food</a>
+                                <img src="img/header/arrow-black.svg"
+                                     alt="arrow"/></li>
+                            <li onclick="showBurgerDessert()">
+                                <a href="#" class="menu__link">Dessert</a>
+                                <img src="img/header/arrow-black.svg"
+                                     alt="arrow"/>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link">Supplements</a>
+                            </li>
+
+                        </ul>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavConsultation" class="menu__body_burger sidenav">
+                              <span class="arrowBack"
+                                    onclick="closeBurgerConsultation()"><img src="img/header/arrow-back.svg"
+                                                                             alt="arrow"/></span>
+                        <span class="closebtn" onclick="closeAllBurgers()"
+                        >&times;</span
+                        >
+                        <ul class="menu__list_burger">
+                            <li>
+                                <a href="#" class="menu__link bor">Programe</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link bor">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link bor"
+                                >Bestseller</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link bor">Consultație</a>
+                                <img src="img/header/arrow-bor.svg" alt="arrow"/>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link light">Consultație detox</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link light">Consultație nutriționist</a>
+                            </li>
+                        </ul>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavProgram" class="menu__body_burger sidenav">
+                        <span class="arrowBack" onclick="closeBurgerProgram()">
+                            <img src="img/header/arrow-back.svg" alt="arrow"/>
+                        </span>
+                        <span class="closebtn" onclick="closeAllBurgers()">&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Program</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">All day</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Morning</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Combo</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavDrinks" class="menu__body_burger sidenav">
+                        <span class="arrowBack" onclick="closeBurgerDrinks()">
+                            <img src="img/header/arrow-back.svg" alt="arrow"/>
+                        </span>
+                        <span class="closebtn" onclick="closeAllBurgers()">&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Drinks</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Juices</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Smoothies</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Hot drinks</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Limonade</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Shots</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavFood" class="menu__body_burger sidenav">
+                        <span class="arrowBack" onclick="closeBurgerFood()">
+                            <img src="img/header/arrow-back.svg" alt="arrow"/>
+                        </span>
+                        <span class="closebtn" onclick="closeAllBurgers()">&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Food</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Soups</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Salads</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Lunch</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Wraps</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Risotto</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavDessert" class="menu__body_burger sidenav">
+                        <span class="arrowBack" onclick="closeBurgerDessert()">
+                            <img src="img/header/arrow-back.svg" alt="arrow"/>
+                        </span>
+                        <span class="closebtn" onclick="closeAllBurgers()">&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Dessert</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Chia</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Porridge</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Cake</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Smoothie bowl</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Candy</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>

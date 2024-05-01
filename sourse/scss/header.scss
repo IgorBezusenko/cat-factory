@@ -25,6 +25,10 @@
 
   &__wrapper {
     background-color: $white;
+
+    &.active {
+      background-color: $white !important;
+    }
   }
 
   &__container {
@@ -132,6 +136,22 @@
     }
   }
 
+  .header__navLeftItemActive1.active,
+  .header__navLeftItemActive2.active,
+  .header__navLeftItemActive3.active {
+    color: $black !important;
+    select {
+      color: $black;
+
+      option {
+        color: $black;
+      }
+    }
+
+    &:before, &:after {
+      background-color: $black;
+    }
+  }
 }
 
 @media (max-width: $md1 + px) {
@@ -224,6 +244,205 @@
           transform: rotate(45deg);
           bottom: calc(50% - 1px);
         }
+      }
+    }
+  }
+}
+
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow: hidden; /* Disable horizontal scroll */
+  margin-left: 24px;
+  margin-top: 40px;
+  padding-bottom: 80px;
+  transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav {
+  .bor {
+    color: #3D3D3D;;
+  }
+
+  .light {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25.56px;
+
+  }
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav {
+  .closebtn, .arrowBack {
+    position: absolute;
+    top: 12px;
+
+    cursor: pointer;
+  }
+
+  .arrowBack {
+    left: 50px;
+  }
+
+  .closebtn {
+    right: 50px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+
+.menuDropdown {
+  padding: 0 60px 0;
+  display: flex;
+  gap: 150px;
+  background-color: $white;
+  position: fixed;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  top: 150px;
+  left: 0;
+
+  transition: 0.4s;
+
+  .light {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25.56px;
+
+  }
+
+  @media (max-width: $md1 + px) {
+    gap: 75px;
+  }
+}
+
+@media (min-width: $md2+px) {
+  .menu__body_burger {
+    display: none;
+  }
+}
+
+@media (max-width: $md2+px) {
+  .menuDropdown {
+    display: none;
+  }
+}
+
+
+.menu__body_burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
+}
+
+.burgerHr {
+  width: 242px;
+  margin: 22px 0 24px;
+  height: 2px;
+  background-color: $black;
+}
+
+.menu__list_burger {
+  min-height: 450px;
+  overflow-y: auto;
+  padding-top: 70px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+
+  li {
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 25.56px;
+
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+
+  }
+}
+
+li.menu__list_burgerTitle {
+  margin-bottom: 38px;
+}
+
+.menu__list_burgerStep {
+  li {
+    justify-content: start;
+  }
+}
+
+.menu__list_burgerCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__footer_burger {
+  padding-bottom: 150px;
+
+  &Logo {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &Img {
+      width: 74px;
+      height: 74px;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+
+  }
+
+  &Nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+
+    &Item {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 25.56px;
+      color: #3D3D3D;
+
+    }
+
+    .burgerLang {
+      background-color: #3D3D3D !important;
+      padding-left: 9px;
+      padding-right: 6px;
+      border-radius: 4px;
+
+      &:before {
+        transform: rotate(45deg);
+        right: 11px;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        right: 6px;
       }
     }
   }
