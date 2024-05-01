@@ -1,14 +1,4 @@
-const connection__city = document.querySelector(".connection__city");
-const connection__city_modalShow = document.querySelector(
-    ".connection__city-modalShow"
-);
-const connection__city_bg_modal = document.querySelector(
-    ".connection__city-bg-modal"
-);
 
-const connection__city__modal_wrapper = document.querySelector(
-    ".connection__city__modal-wrapper"
-);
 const burger = document.querySelector(".icon-menu-burger");
 const menu__body_burger = document.querySelector(".menu__body_burger");
 
@@ -24,11 +14,6 @@ const header__navLeftItemActive1 = document.querySelector(".header__navLeftItemA
 const header__navLeftItemActive2 = document.querySelector(".header__navLeftItemActive2");
 const header__navLeftItemActive3 = document.querySelector(".header__navLeftItemActive3");
 const shoppingCart = document.getElementById("shoppingCart");
-const modalIpoteca = document.getElementById("modalIpoteca");
-const modalService = document.getElementById("modalService");
-
-const auth_registration = document.getElementById("auth_registration");
-const auth_login = document.getElementById("auth_login");
 
 const overflowHidden = () => {
     document.body.style.overflow = "hidden"
@@ -43,39 +28,6 @@ const overflowAuto = () => {
     }
 };
 
-const modalCityShow = () => {
-    connection__city.classList.add("active");
-    connection__city_bg_modal.classList.add("active");
-    connection__city__modal_wrapper.classList.add("active");
-    overflowHidden();
-};
-const checkMenuCase = (element) => {
-    switch (element) {
-        case "ul":
-        case "li":
-        case "a":
-        case "label":
-        case "input": {
-            console.log("something do");
-            break;
-        }
-
-        default: {
-            connection__city.classList.remove("active");
-            connection__city_bg_modal.classList.remove("active");
-            connection__city__modal_wrapper.classList.remove("active");
-            overflowAuto();
-            break;
-        }
-    }
-};
-const modalCityClose = (e) => {
-    checkMenuCase(e.target.tagName.toLowerCase());
-};
-
-// connection__city_modalShow.addEventListener("click", modalCityShow);
-// connection__city_bg_modal.addEventListener("click", modalCityClose);
-// connection__city__modal_wrapper.addEventListener("click", modalCityClose);
 
 const showBurgerMenu = () => {
     burger.classList.add("active");
@@ -163,64 +115,3 @@ const closeShoppingCart = () => {
     overflowAuto();
 };
 
-const showModalIpoteca = () => {
-    modalIpoteca.style.marginTop = "0";
-    overflowHidden();
-};
-const closeModalIpoteca = (e) => {
-    modalIpoteca.style.marginTop = "-200vh";
-    overflowAuto();
-};
-
-const showModalService = () => {
-    modalService.style.marginTop = 0;
-    overflowHidden();
-};
-const closeModalService = (e) => {
-    modalService.style.marginTop = "-200vh";
-    overflowAuto();
-};
-
-//Auth
-const showModalLogin = () => {
-    auth_registration.style.marginTop = "-200vh";
-    auth_login.style.marginTop = "0";
-    overflowHidden();
-};
-const closeModalLogin = (e) => {
-    auth_login.style.marginTop = "-200vh";
-    overflowAuto();
-};
-const showModalRegistration = () => {
-    auth_login.style.marginTop = "-200vh";
-    auth_registration.style.marginTop = "0";
-    overflowHidden();
-};
-const closeModalRegistration = (e) => {
-    auth_registration.style.marginTop = "-200vh";
-    overflowAuto();
-};
-
-//Filter
-
-const showSearchModal = (modal, wrapper) => {
-    document.querySelector("." + modal).classList.add("active");
-    document.querySelector("." + wrapper).classList.add("active");
-    overflowHidden();
-};
-const closeSearchModal = (modal, wrapper) => {
-    document.querySelector("." + modal).classList.remove("active");
-    document.querySelector("." + wrapper).classList.remove("active");
-    overflowAuto();
-};
-
-//Filter burger
-
-const showFilterBurger = (selector) => {
-    document.querySelector("." + selector).classList.add("active");
-    overflowHidden();
-};
-const closeFilterBurger = (selector) => {
-    document.querySelector("." + selector).classList.remove("active");
-    overflowAuto();
-};
