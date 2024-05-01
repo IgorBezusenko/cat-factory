@@ -19,18 +19,29 @@ const mySidenavDrinks = document.getElementById("mySidenavDrinks");
 const mySidenavFood = document.getElementById("mySidenavFood");
 const mySidenavDessert = document.getElementById("mySidenavDessert");
 const menuDropdown = document.getElementById("menuDropdown");
-const header__wrapper = document.getElementById("header__wrapper");
+const header__wrapper = document.querySelector(".header__wrapper");
 const header__navLeftItemActive1 = document.querySelector(".header__navLeftItemActive1");
 const header__navLeftItemActive2 = document.querySelector(".header__navLeftItemActive2");
 const header__navLeftItemActive3 = document.querySelector(".header__navLeftItemActive3");
+const shoppingCart = document.getElementById("shoppingCart");
 const modalIpoteca = document.getElementById("modalIpoteca");
 const modalService = document.getElementById("modalService");
 
 const auth_registration = document.getElementById("auth_registration");
 const auth_login = document.getElementById("auth_login");
 
-const overflowHidden = () => (document.body.style.overflow = "hidden");
-const overflowAuto = () => (document.body.style.overflow = "auto");
+const overflowHidden = () => {
+    document.body.style.overflow = "hidden"
+    if (window.innerWidth > 1024) {
+        document.body.style.paddingRight = "16px"
+    }
+};
+const overflowAuto = () => {
+    document.body.style.overflow = "auto"
+    if (window.innerWidth > 1024) {
+        document.body.style.paddingRight = ""
+    }
+};
 
 const modalCityShow = () => {
     connection__city.classList.add("active");
@@ -116,7 +127,10 @@ const showMenuDropdown = () => {
     header__navLeftItemActive1.classList.add("active");
     header__navLeftItemActive2.classList.add("active");
     header__navLeftItemActive3.classList.add("active");
-    overflowHidden();
+    if (window.innerWidth > 1024) {
+        overflowHidden();
+    }
+
 };
 const closeMenuDropdown = () => {
     menuDropdown.style.height = "0";
@@ -124,7 +138,9 @@ const closeMenuDropdown = () => {
     header__navLeftItemActive1.classList.remove("active");
     header__navLeftItemActive2.classList.remove("active");
     header__navLeftItemActive3.classList.remove("active");
-    overflowAuto();
+    if (window.innerWidth > 1024) {
+        overflowAuto();
+    }
 };
 
 const closeAllBurgers = () => {
@@ -135,6 +151,17 @@ const closeAllBurgers = () => {
     closeBurgerFood()
     closeBurgerDessert()
 }
+
+const showShoppingCart = () => {
+    shoppingCart.style.width = "100%";
+    setTimeout(() => {
+        overflowHidden()
+    }, 200)
+};
+const closeShoppingCart = () => {
+    shoppingCart.style.width = "0";
+    overflowAuto();
+};
 
 const showModalIpoteca = () => {
     modalIpoteca.style.marginTop = "0";
