@@ -124,28 +124,32 @@
             </div>
         </div>
 
-        <div class="header__wrapper bg-transparent">
+
+        <div class="header__wrapper bg-transparent" onmouseenter="showMenuDropdown()"
+             onmouseleave="closeMenuDropdown()">
             <div class="header__container">
-                <div class="header__navWrapper">
+                <div class="justify header__navWrapper">
                     <ul class="header__nav">
                         <li class="header__navItem"><a href="#">Programe</a></li>
-                        <li class="header__navItem"><a href="#">Shop</a></li>
+                        <li class="header__navItem"><a href="shop-all.html">Shop</a></li>
                         <li class="header__navItem"><a href="#">Bestseller</a></li>
                         <li class="header__navItem"><a href="#">Consultație</a></li>
                     </ul>
-                    <div class="header__navLogo"><a href="index.html"><img src="./img/header/logo-white.svg" alt="logo"></a>
+                    <div class="header__navLogo"><a href="#"><img src="./img/header/logo-white.svg" alt="logo"></a>
                     </div>
                     <ul class="header__navLeft ">
-                        <li class="header__navLeftItem"><a href="#">Blog</a></li>
-                        <li class="header__navLeftItem"><a href="#">Login</a></li>
-                        <li class="header__navLeftItem ">
+                        <li class="header__navLeftItem"><a href="#">Blog</a>
+                        </li>
+                        <li class="header__navLeftItem"><a href="#">Login</a>
+                        </li>
+                        <li class="header__navLeftItem" onclick="showShoppingCart()">
                             <a href="#" class="header__navLeftShoppingCart">
                                 <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
                                 <span>0</span>
                             </a>
                         </li>
-                        <li class="header__navLeftItem header__navLeftItemSelect ">
-                            <select name="lang" id="lang">
+                        <li class="header__navLeftItem header__navLeftItemSelect">
+                            <select name="lang">
                                 <option value="ro">ro</option>
                                 <option value="en">en</option>
                                 <option value="ru">ru</option>
@@ -153,12 +157,609 @@
                         </li>
                     </ul>
 
-                    <div class=" icon-menu-burger " onclick="showBurgerMenu()">
+
+                </div>
+                <div>
+                    <div class="menuDropdown" id="menuDropdown">
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Program</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">All day</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Morning</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Combo</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Drinks</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Juices</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Smoothies</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Hot drinks</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Limonade</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Shots</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Food</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Soups</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Salads</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Lunch</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Wraps</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Risotto</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Dessert</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Chia</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Porridge</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Cake</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Smoothie bowl</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Candy</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Supplements</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="icon-menu-burger" onclick="showBurgerMenu()">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
+                    <nav id="mySidenav" class="menu__body_burger sidenav">
+                        <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger">
+                                <li>
+                                    <a href="#" class="menu__link bor">Programe</a>
+                                </li>
+                                <li>
+                                    <a href="shop-all.html" class="menu__link bor">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link bor"
+                                    >Bestseller</a>
+                                </li>
+                                <li onclick="showBurgerConsultation()">
+                                    <a href="#" class="menu__link bor">Consultație</a>
+                                    <img src="img/header/arrow-bor.svg" alt="arrow"/>
+                                </li>
+                                <li>
+                                    <div class="burgerHr"></div>
+                                </li>
+                                <li onclick="showBurgerProgram()">
+                                    <a href="#" class="menu__link">Program</a>
+                                    <img src="img/header/arrow-black.svg" alt="arrow"/>
+                                </li>
+                                <li onclick="showBurgerDrinks()">
+                                    <a href="#" class="menu__link">Drinks</a>
+                                    <img src="img/header/arrow-black.svg" alt="arrow"/>
+                                </li>
+                                <li onclick="showBurgerFood()">
+                                    <a href="#" class="menu__link">Food</a>
+                                    <img src="img/header/arrow-black.svg"
+                                         alt="arrow"/></li>
+                                <li onclick="showBurgerDessert()">
+                                    <a href="#" class="menu__link">Dessert</a>
+                                    <img src="img/header/arrow-black.svg"
+                                         alt="arrow"/>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link">Supplements</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem" onclick="showShoppingCart()">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavConsultation" class="menu__body_burger sidenav">
+                              <span class="arrowBack"
+                                    onclick="closeBurgerConsultation()"><img src="img/header/arrow-back.svg"
+                                                                             alt="arrow"/></span>
+                        <span class="closebtn" onclick="closeAllBurgers()"
+                        >&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger">
+                                <li>
+                                    <a href="#" class="menu__link bor">Programe</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link bor">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link bor"
+                                    >Bestseller</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link bor">Consultație</a>
+                                    <img src="img/header/arrow-bor.svg" alt="arrow"/>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Consultație detox</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Consultație nutriționist</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem" onclick="showShoppingCart()">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavProgram" class="menu__body_burger sidenav">
+                        <span class="arrowBack" onclick="closeBurgerProgram()">
+                            <img src="img/header/arrow-back.svg" alt="arrow"/>
+                        </span>
+                        <span class="closebtn" onclick="closeAllBurgers()">&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Program</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">All day</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Morning</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Combo</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem" onclick="showShoppingCart()">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavDrinks" class="menu__body_burger sidenav">
+                        <span class="arrowBack" onclick="closeBurgerDrinks()">
+                            <img src="img/header/arrow-back.svg" alt="arrow"/>
+                        </span>
+                        <span class="closebtn" onclick="closeAllBurgers()">&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Drinks</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Juices</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Smoothies</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Hot drinks</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Limonade</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Shots</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem" onclick="showShoppingCart()">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavFood" class="menu__body_burger sidenav">
+                        <span class="arrowBack" onclick="closeBurgerFood()">
+                            <img src="img/header/arrow-back.svg" alt="arrow"/>
+                        </span>
+                        <span class="closebtn" onclick="closeAllBurgers()">&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Food</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Soups</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Salads</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Lunch</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Wraps</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Risotto</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem" onclick="showShoppingCart()">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="mySidenavDessert" class="menu__body_burger sidenav">
+                        <span class="arrowBack" onclick="closeBurgerDessert()">
+                            <img src="img/header/arrow-back.svg" alt="arrow"/>
+                        </span>
+                        <span class="closebtn" onclick="closeAllBurgers()">&times;</span
+                        >
+                        <div class="menu__list_burgerCenter">
+                            <ul class="menu__list_burger menu__list_burgerStep">
+                                <li class="menu__list_burgerTitle">
+                                    <a href="#" class="menu__link">Dessert</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Chia</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Porridge</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Cake</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Smoothie bowl</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link light">Candy</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu__footer_burger">
+                            <div class="menu__footer_burgerLogo">
+                                <div class="menu__footer_burgerLogoImg">
+                                    <img src="img/header/logo-white.svg" alt="logo"/>
+                                </div>
+                            </div>
+                            <ul class="menu__footer_burgerNav">
+                                <li class="menu__footer_burgerNavItem"><a href="#">Blog</a></li>
+                                <li class="menu__footer_burgerNavItem"><a href="#">Login</a></li>
+                                <li class="menu__footer_burgerNavItem" onclick="showShoppingCart()">
+                                    <a href="#" class="header__navLeftShoppingCart">
+                                        <img width="20" height="20" src="./img/header/shopping-cart.svg" alt="shopping">
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li class="header__navLeftItem header__navLeftItemSelect header__navLeftItemSelectColorWhite menu__footer_burgerNavItem burgerLang">
+                                    <select name="lang">
+                                        <option value="ro">ro</option>
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
+
+            </div>
+
+        </div>
+        <div class="shoppingCartWrapper" id="shoppingCart">
+            <div class="shoppingCart">
+                <span class="closebtn" onclick="closeShoppingCart()">&times;</span>
+                <div class="shoppingCart__head">
+                    <div class="shoppingCart__title">Cosul meu</div>
+                    <div class="shoppingCart__mt28 shoppingCart__text">A fost adăugat în coșul de cumpărături</div>
+                </div>
+                <ul class="shoppingCart__list">
+                    <li class="shoppingCart__item ">
+                        <div class="shoppingCart__img"><img src="./img/shopping-cart/cart-img.jpg" alt="img"></div>
+                        <div class="shoppingCart__content">
+
+                            <div class="shoppingCart__contentHead">
+                                <div class="shoppingCart__contentHeadItem">
+                                    <div class="shoppingCart__title">Semafor</div>
+                                    <div class="shoppingCart__text shoppingCart__mt4">1 Day Detox</div>
+                                </div>
+                                <div class="shoppingCart__deleteBtn"><img
+                                        src="./img/shopping-cart/delete.svg" alt="img"></div>
+                            </div>
+                            <div class="shoppingCart__block">
+                                <div class="shoppingCart__counter">
+                                    <button class="shoppingCart__counterBtn">-</button>
+                                    <p class="shoppingCart__counterText">1</p>
+                                    <button class="shoppingCart__counterBtn">+</button>
+                                </div>
+                                <div class="shoppingCart__title">590 MDL</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shoppingCart__item ">
+                        <div class="shoppingCart__img"><img src="./img/detox-products/image4.png" alt="img"></div>
+                        <div class="shoppingCart__content">
+
+                            <div class="shoppingCart__contentHead">
+                                <div class="shoppingCart__contentHeadItem">
+                                    <div class="shoppingCart__title">Shot</div>
+                                    <div class="shoppingCart__text shoppingCart__mt4">Ginger Shot (50 ml)</div>
+                                </div>
+                                <div class="shoppingCart__deleteBtn"><img
+                                        src="./img/shopping-cart/delete.svg" alt="img"></div>
+                            </div>
+                            <div class="shoppingCart__block">
+                                <div class="shoppingCart__counter">
+                                    <button class="shoppingCart__counterBtn">-</button>
+                                    <p class="shoppingCart__counterText">2</p>
+                                    <button class="shoppingCart__counterBtn">+</button>
+                                </div>
+                                <div class="shoppingCart__title">590 MDL</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="shoppingCart__item ">
+                        <div class="shoppingCart__img"><img src="./img/shopping-cart/cart-img.jpg" alt="img"></div>
+                        <div class="shoppingCart__content">
+
+                            <div class="shoppingCart__contentHead">
+                                <div class="shoppingCart__contentHeadItem">
+                                    <div class="shoppingCart__title">Semafor</div>
+                                    <div class="shoppingCart__text shoppingCart__mt4">1 Day Detox</div>
+                                </div>
+                                <div class="shoppingCart__deleteBtn"><img
+                                        src="./img/shopping-cart/delete.svg" alt="img"></div>
+                            </div>
+                            <div class="shoppingCart__block">
+                                <div class="shoppingCart__counter">
+                                    <button class="shoppingCart__counterBtn">-</button>
+                                    <p class="shoppingCart__counterText">1</p>
+                                    <button class="shoppingCart__counterBtn">+</button>
+                                </div>
+                                <div class="shoppingCart__title">590 MDL</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shoppingCart__item ">
+                        <div class="shoppingCart__img"><img src="./img/detox-products/image4.png" alt="img"></div>
+                        <div class="shoppingCart__content">
+
+                            <div class="shoppingCart__contentHead">
+                                <div class="shoppingCart__contentHeadItem">
+                                    <div class="shoppingCart__title">Shot</div>
+                                    <div class="shoppingCart__text shoppingCart__mt4">Ginger Shot (50 ml)</div>
+                                </div>
+                                <div class="shoppingCart__deleteBtn"><img
+                                        src="./img/shopping-cart/delete.svg" alt="img"></div>
+                            </div>
+                            <div class="shoppingCart__block">
+                                <div class="shoppingCart__counter">
+                                    <button class="shoppingCart__counterBtn">-</button>
+                                    <p class="shoppingCart__counterText">2</p>
+                                    <button class="shoppingCart__counterBtn">+</button>
+                                </div>
+                                <div class="shoppingCart__title">590 MDL</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="shoppingCart__item ">
+                        <div class="shoppingCart__img"><img src="./img/shopping-cart/cart-img.jpg" alt="img"></div>
+                        <div class="shoppingCart__content">
+
+                            <div class="shoppingCart__contentHead">
+                                <div class="shoppingCart__contentHeadItem">
+                                    <div class="shoppingCart__title">Semafor</div>
+                                    <div class="shoppingCart__text shoppingCart__mt4">1 Day Detox</div>
+                                </div>
+                                <div class="shoppingCart__deleteBtn"><img
+                                        src="./img/shopping-cart/delete.svg" alt="img"></div>
+                            </div>
+                            <div class="shoppingCart__block">
+                                <div class="shoppingCart__counter">
+                                    <button class="shoppingCart__counterBtn">-</button>
+                                    <p class="shoppingCart__counterText">1</p>
+                                    <button class="shoppingCart__counterBtn">+</button>
+                                </div>
+                                <div class="shoppingCart__title">590 MDL</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shoppingCart__item ">
+                        <div class="shoppingCart__img"><img src="./img/detox-products/image4.png" alt="img"></div>
+                        <div class="shoppingCart__content">
+
+                            <div class="shoppingCart__contentHead">
+                                <div class="shoppingCart__contentHeadItem">
+                                    <div class="shoppingCart__title">Shot</div>
+                                    <div class="shoppingCart__text shoppingCart__mt4">Ginger Shot (50 ml)</div>
+                                </div>
+                                <div class="shoppingCart__deleteBtn"><img
+                                        src="./img/shopping-cart/delete.svg" alt="img"></div>
+                            </div>
+                            <div class="shoppingCart__block">
+                                <div class="shoppingCart__counter">
+                                    <button class="shoppingCart__counterBtn">-</button>
+                                    <p class="shoppingCart__counterText">2</p>
+                                    <button class="shoppingCart__counterBtn">+</button>
+                                </div>
+                                <div class="shoppingCart__title">590 MDL</div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="shoppingCart__footer">
+                    <div class="shoppingCart__footerHead">
+                        <div class="shoppingCart__title">Subtotal</div>
+                        <div class="shoppingCart__title">590 MDL</div>
+                    </div>
+                    <div class="shoppingCart__footerBtn">
+                        <button class="btn">Finalizeaza comanda</button>
+                    </div>
+                    <div class="shoppingCart__footerText">
+                        Contiunua cumparatuirle
+                    </div>
+                </div>
+
             </div>
         </div>
     </header>

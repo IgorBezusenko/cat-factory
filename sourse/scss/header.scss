@@ -284,6 +284,7 @@
 .menuDropdown {
   padding: 0 60px 0;
   display: flex;
+  align-items: start;
   gap: 150px;
   background-color: $white;
   position: fixed;
