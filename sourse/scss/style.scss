@@ -42,6 +42,7 @@ $Inter: "Inter", sans-serif;
 @import "food-view";
 @import "modules";
 @import "produce";
+@import "login";
 
 .wrapper {
   display: flex;
@@ -59,10 +60,8 @@ $Inter: "Inter", sans-serif;
   margin: 0 auto;
   padding: 0 12px;
 
-  //background-color: #F2F1F1;
   @media (max-width: $md1 + px) {
     max-width: 985px;
-    //background-color: #A1C767;
   }
 
   @media (max-width: $md2 + px) {
@@ -141,6 +140,7 @@ $Inter: "Inter", sans-serif;
   font-weight: 800;
   line-height: 26px;
   padding: 15px 30px;
+  border: 1px solid transparent;
   border-radius: 5px;
 
   @media (max-width: $md1 + px) {
@@ -170,7 +170,6 @@ $Inter: "Inter", sans-serif;
       background-color: $white;
       color: $green;
       border: 1px solid $green;
-      padding: 14px 29px;
     }
   }
 }
@@ -181,7 +180,6 @@ $Inter: "Inter", sans-serif;
       background-color: $white;
       color: $green;
       border: 1px solid $green;
-      padding: 14px 29px;
     }
   }
 }
