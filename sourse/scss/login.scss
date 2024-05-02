@@ -282,6 +282,84 @@
       }
 
     }
+
+    &__form {
+      padding: 17px 18px;
+
+      &Hr {
+        height: 1px;
+        margin: 18px 0 11px;
+      }
+
+      &Nav {
+        gap: 17px;
+
+      }
+
+      &Btn {
+        border-radius: 5px;
+        padding: 9px 9px 6px 9px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      &BtnGoBack {
+        height: 30px;
+        gap: 5px;
+        img {
+          width: 5px;
+          height: 10px;
+          object-fit: contain;
+        }
+      }
+
+      &Mt32 {
+        margin-top: 12px;
+      }
+
+      &Mt52 {
+        margin-top: 22px;
+      }
+
+      &Mt79 {
+        margin-top: 22px;
+      }
+
+      &Title {
+        font-size: 13px;
+        line-height: 16px;
+      }
+
+      &Text {
+        font-size: 9px;
+        line-height: 11px;
+
+      }
+
+      &Input {
+        input {
+          padding: 8.5px;
+          border-radius: 5px;
+          font-size: 10px;
+          line-height: 13px;
+
+        }
+
+        input::placeholder {
+          font-size: 10px;
+          line-height: 13px;
+        }
+      }
+
+      &Grid {
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 6px;
+        row-gap: 10px;
+      }
+
+    }
   }
 
 }
