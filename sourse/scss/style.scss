@@ -43,6 +43,7 @@ $Inter: "Inter", sans-serif;
 @import "modules";
 @import "produce";
 @import "login";
+@import "chek-out";
 
 .wrapper {
   display: flex;
@@ -71,6 +72,10 @@ $Inter: "Inter", sans-serif;
   @media (max-width: $md3 + px) {
     max-width: none;
   }
+}
+
+.hidden{
+  display: none;
 }
 
 .zIndex12{

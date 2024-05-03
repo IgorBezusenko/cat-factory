@@ -31,6 +31,7 @@
   }
 
   &__goBack {
+
     width: 900px;
     padding: 0;
     font-size: 21px;
@@ -80,7 +81,7 @@
   }
 
   &__form {
-    padding: 40px 44px;
+    padding: 40px 44px 80px;
 
     &Hr {
       width: 100%;
@@ -152,9 +153,11 @@
       line-height: 26px;
 
     }
-
+&Radio{
+  color: #0E6232;
+}
     &Input {
-      input {
+      input,textarea {
         width: 100%;
         background-color: $bg-grey;
         padding: 20px 20px 20px 28px;
@@ -163,8 +166,12 @@
         font-weight: 600;
         line-height: 30.67px;
       }
+      textarea{
+        height: 200px;
+        padding: 40px 20px 20px 28px;
+      }
 
-      input::placeholder {
+      input::placeholder,textarea::placeholder {
         font-size: 24px;
         font-weight: 600;
         line-height: 30.67px;
@@ -193,7 +200,7 @@
 @media (max-width: $md1 + px) {
 }
 
-@media (max-width: $md2 + px) {
+@media (max-width: $md3 + px) {
 
   .loginContainer {
     //max-width: none;
@@ -284,7 +291,7 @@
     }
 
     &__form {
-      padding: 17px 18px;
+      padding: 17px 18px 35px;
 
       &Hr {
         height: 1px;
@@ -364,7 +371,3 @@
 
 }
 
-@media (max-width: $md3 + px) {
-
-
-}

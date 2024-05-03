@@ -14,6 +14,18 @@ const header__navLeftItemActive1 = document.querySelector(".header__navLeftItemA
 const header__navLeftItemActive2 = document.querySelector(".header__navLeftItemActive2");
 const header__navLeftItemActive3 = document.querySelector(".header__navLeftItemActive3");
 const shoppingCart = document.getElementById("shoppingCart");
+const checkOut__livrareWrapper = document.querySelector(".checkOut__livrareWrapper");
+const checkOut__livrare = document.querySelector(".checkOut__livrare");
+
+const handlerClickLivrareTitle1 = ()=>{
+    checkOut__livrareWrapper.classList.remove("active")
+    checkOut__livrare.classList.remove("active")
+}
+const handlerClickLivrareTitle2 = ()=>{
+    checkOut__livrareWrapper.classList.add("active")
+    checkOut__livrare.classList.add("active")
+
+}
 
 const overflowHidden = () => {
     document.body.style.overflow = "hidden"
