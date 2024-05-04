@@ -238,7 +238,7 @@
     }
 
     &__goBack {
-      position: fixed;
+      position: absolute;
       top: 35px;
       left: 17px;
       width: auto;
@@ -344,15 +344,18 @@
       }
 
       &Input {
-        input {
+        input,textarea {
           padding: 8.5px;
           border-radius: 5px;
           font-size: 10px;
           line-height: 13px;
 
         }
+        textarea {
+          height: 85px;
+        }
 
-        input::placeholder {
+        input::placeholder, textarea::placeholder {
           font-size: 10px;
           line-height: 13px;
         }
