@@ -39,238 +39,315 @@
                 </a>
             </div>
 
-            <div class="checkOut__form">
-                <div class="login__form">
-                    <div class="login__formNav checkOut__formNav">
-                        <a href="#">
-                            <button class="login__formBtn active">Detalii comandă</button>
-                        </a>
-                        <a href="login.html">
-                            <button class="login__formBtn ">Login</button>
-                        </a>
-                    </div>
-                    <div class="login__formText">Livrarea se face in toata Moldova. Livrare gratuita de <strong>la 3000
-                        lei</strong></div>
-                    <div class="checkOut__Hr"></div>
+            <form class="checkOut__content">
+                <div class="checkOut__form">
+                    <div class="login__form">
+                        <div class="login__formNav checkOut__formNav">
+                            <a href="#">
+                                <button class="login__formBtn active">Detalii comandă</button>
+                            </a>
+                            <a href="login.html">
+                                <button class="login__formBtn ">Login</button>
+                            </a>
+                        </div>
+                        <div class="login__formText">Livrarea se face in toata Moldova. Livrare gratuita de <strong>la
+                            3000
+                            lei</strong></div>
+                        <div class="checkOut__Hr"></div>
 
-                    <div>
-                        <div class="accordion defaultIsOpen checkOut__border">
-                            <input type="checkbox" id="section0" class="accordion__checkbox">
-                            <label for="section0" class="accordion__trigger">
-                                Metodă de expediere
-                            </label>
-                            <div class="accordion__content">
-                                <div class="checkOut__livrareWrapper mb-20 active">
+                        <div>
+                            <div class="accordion defaultIsOpen checkOut__border">
+                                <input type="checkbox" id="section0" class="accordion__checkbox">
+                                <label for="section0" class="accordion__trigger">
+                                    Metodă de expediere
+                                </label>
+                                <div class="accordion__content">
+                                    <div class="checkOut__livrareWrapper mb-20 active">
 
-                                    <div class="checkOut__livrareTitle">
-                                        <div class="inputRadioBorderBlackActiveWhite34">
-                                            <input type="radio" name="livrareTitle" value="Livrare" id="livrareTitle1"
-                                            >
-                                            <label for="livrareTitle1" onclick="handlerClickLivrareTitle1()">
+                                        <div class="checkOut__livrareTitle">
+                                            <div class="inputRadioBorderBlackActiveWhite34">
+                                                <input type="radio" name="livrareTitle" value="Livrare"
+                                                       id="livrareTitle1"
+                                                >
+                                                <label for="livrareTitle1" onclick="handlerClickLivrareTitle1()">
                                                 <span class="checkOut__livrareTitleLabel">
                                                 <span>Livrare</span>
                                                 <span><img src="./img/login/bus.svg" alt="bus"></span>
                                                 </span>
-                                            </label>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="checkOut__livrare active">
-                                        <div class=" inputRadio inputRadioWhite27">
-                                            <input type="radio" name="livrare" value="1" id="livrare1" checked>
-                                            <label for="livrare1">
-                                                1 zi Livrare: <strong>70 MDL</strong>
-                                            </label>
+                                        <div class="checkOut__livrare active">
+                                            <div class=" inputRadio inputRadioWhite27">
+                                                <input type="radio" name="livrare" value="1" id="livrare1" checked>
+                                                <label for="livrare1">
+                                                    1 zi Livrare: <strong>70 MDL</strong>
+                                                </label>
+                                            </div>
+                                            <div class=" inputRadio inputRadioWhite27">
+                                                <input type="radio" name="livrare" value="2" id="livrare2">
+                                                <label for="livrare2">
+                                                    2 zile Livrări: <strong>140 MDL</strong>
+                                                </label>
+                                            </div>
+                                            <div class=" inputRadio inputRadioWhite27">
+                                                <input type="radio" name="livrare" value="3" id="livrare3">
+                                                <label for="livrare3">
+                                                    3 zile Livrări: <strong>210 MDL</strong>
+                                                </label>
+                                            </div>
+                                            <div class=" inputRadio inputRadioWhite27">
+                                                <input type="radio" name="livrare" value="4" id="livrare4">
+                                                <label for="livrare4">
+                                                    4 zile Livrări: <strong>280 MDL</strong>
+                                                </label>
+                                            </div>
+                                            <div class=" inputRadio inputRadioWhite27">
+                                                <input type="radio" name="livrare" value="5" id="livrare5">
+                                                <label for="livrare5">
+                                                    5 zile Livrări: <strong>350 MDL</strong>
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div class=" inputRadio inputRadioWhite27">
-                                            <input type="radio" name="livrare" value="2" id="livrare2">
-                                            <label for="livrare2">
-                                                2 zile Livrări: <strong>140 MDL</strong>
-                                            </label>
-                                        </div>
-                                        <div class=" inputRadio inputRadioWhite27">
-                                            <input type="radio" name="livrare" value="3" id="livrare3">
-                                            <label for="livrare3">
-                                                3 zile Livrări: <strong>210 MDL</strong>
-                                            </label>
-                                        </div>
-                                        <div class=" inputRadio inputRadioWhite27">
-                                            <input type="radio" name="livrare" value="4" id="livrare4">
-                                            <label for="livrare4">
-                                                4 zile Livrări: <strong>280 MDL</strong>
-                                            </label>
-                                        </div>
-                                        <div class=" inputRadio inputRadioWhite27">
-                                            <input type="radio" name="livrare" value="5" id="livrare5">
-                                            <label for="livrare5">
-                                                5 zile Livrări: <strong>350 MDL</strong>
-                                            </label>
-                                        </div>
-                                    </div>
 
-                                </div>
-                                <div class=" inputRadioBorderBlackActiveWhite34">
-                                    <input type="radio" name="livrareTitle" value="Ridica Personal" id="livrareTitle2">
-                                    <label for="livrareTitle2" onclick="handlerClickLivrareTitle2()">
+                                    </div>
+                                    <div class=" inputRadioBorderBlackActiveWhite34">
+                                        <input type="radio" name="livrareTitle" value="Ridica Personal"
+                                               id="livrareTitle2">
+                                        <label for="livrareTitle2" onclick="handlerClickLivrareTitle2()">
                                             <span class="checkOut__livrareTitleLabel">
                                                 <span>Ridica Personal</span>
                                                 <span><img src="./img/login/shop.svg" alt="bus"></span>
                                             </span>
-                                    </label>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="accordion checkOut__border">
-                            <input type="checkbox" id="section1" class="accordion__checkbox">
-                            <label for="section1" class="accordion__trigger">
-                                Contact
-                            </label>
-                            <div class="accordion__content">
-                                <div class="login__formGrid checkOut__contact">
-                                    <div class="login__formCol1 login__formInput">
-                                        <input type="text" placeholder="Nume" name="firstName">
+                                        </label>
                                     </div>
-                                    <div class="login__formCol1 login__formInput">
-                                        <input type="text" placeholder="Prenume" name="lastName">
-                                    </div>
-                                    <div class="login__formCol2 login__formInput">
-                                        <input type="text" placeholder="E-mail" name="email">
-                                    </div>
-                                    <div class="login__formCol2 login__formInput">
-                                        <input type="text" placeholder="Telefon: 069 765 908" name="phone">
-                                    </div>
-
 
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="accordion checkOut__border">
-                            <input type="checkbox" id="section2" class="accordion__checkbox">
-                            <label for="section2" class="accordion__trigger">
-                                Adresă de expediere
-                            </label>
-                            <div class="accordion__content">
-                                <div class="checkOut__address checkOut__text">Livrările în suburbiile Chișinăului se
-                                    achită adițional și prețul se stabilește
-                                    la telefon cu consultanță
+                        <div>
+                            <div class="accordion checkOut__border">
+                                <input type="checkbox" id="section1" class="accordion__checkbox">
+                                <label for="section1" class="accordion__trigger">
+                                    Contact
+                                </label>
+                                <div class="accordion__content">
+                                    <div class="login__formGrid checkOut__contact">
+                                        <div class="login__formCol1 login__formInput">
+                                            <input type="text" placeholder="Nume" name="firstName">
+                                        </div>
+                                        <div class="login__formCol1 login__formInput">
+                                            <input type="text" placeholder="Prenume" name="lastName">
+                                        </div>
+                                        <div class="login__formCol2 login__formInput">
+                                            <input type="text" placeholder="E-mail" name="email">
+                                        </div>
+                                        <div class="login__formCol2 login__formInput">
+                                            <input type="text" placeholder="Telefon: 069 765 908" name="phone">
+                                        </div>
+
+
+                                    </div>
                                 </div>
-                                <div class="login__formGrid checkOut__contact">
-                                    <div class="login__formCol2 login__formInput">
-                                        <input type="text" placeholder="Oraș (opțional)" name="city">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="accordion checkOut__border">
+                                <input type="checkbox" id="section2" class="accordion__checkbox">
+                                <label for="section2" class="accordion__trigger">
+                                    Adresă de expediere
+                                </label>
+                                <div class="accordion__content">
+                                    <div class="checkOut__address checkOut__text">Livrările în suburbiile Chișinăului se
+                                        achită adițional și prețul se stabilește
+                                        la telefon cu consultanță
                                     </div>
-                                    <div class="login__formCol2 login__formInput">
-                                        <input type="text" placeholder="Adresa de livrare" name="address">
-                                    </div>
-                                    <div class="login__formCol2 login__formInput">
-                                        <input type="text" placeholder="Apartament, complex, unitate etc. (opțional)"
-                                               name="fullAddress">
-                                    </div>
-                                    <div class="login__formCol2 login__formInput">
+                                    <div class="login__formGrid checkOut__contact">
+                                        <div class="login__formCol2 login__formInput">
+                                            <input type="text" placeholder="Oraș (opțional)" name="city">
+                                        </div>
+                                        <div class="login__formCol2 login__formInput">
+                                            <input type="text" placeholder="Adresa de livrare" name="address">
+                                        </div>
+                                        <div class="login__formCol2 login__formInput">
+                                            <input type="text"
+                                                   placeholder="Apartament, complex, unitate etc. (opțional)"
+                                                   name="fullAddress">
+                                        </div>
+                                        <div class="login__formCol2 login__formInput">
                                         <textarea type="text" placeholder="Note comandă (opțional)"
                                                   name="note"></textarea>
+                                        </div>
+
+
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <div>
-                        <div class="accordion checkOut__border">
-                            <input type="checkbox" id="section6" class="accordion__checkbox">
-                            <label for="section6" class="accordion__trigger">
-                                Please confirm order frequency
-                            </label>
-                            <div class="accordion__content">
+                        <div>
+                            <div class="accordion checkOut__border">
+                                <input type="checkbox" id="section6" class="accordion__checkbox">
+                                <label for="section6" class="accordion__trigger">
+                                    Please confirm order frequency
+                                </label>
+                                <div class="accordion__content">
 
-                                <div class=" checkOut__confirm">
+                                    <div class=" checkOut__confirm">
 
-                                    <div class=" inputRadioBorderBlackActiveWhite34">
-                                        <input type="radio" name="confirm" value="1" id="confirm1">
-                                        <label for="confirm1">
-                                            <span>One-time purchase</span>
-                                        </label>
-                                    </div>
+                                        <div class=" inputRadioBorderBlackActiveWhite34">
+                                            <input type="radio" name="confirm" value="1" id="confirm1">
+                                            <label for="confirm1">
+                                                <span>One-time purchase</span>
+                                            </label>
+                                        </div>
 
-                                    <div class=" inputRadioBorderBlackActiveWhite34">
-                                        <input type="radio" name="confirm" value="2" id="confirm2">
-                                        <label for="confirm2">
+                                        <div class=" inputRadioBorderBlackActiveWhite34">
+                                            <input type="radio" name="confirm" value="2" id="confirm2">
+                                            <label for="confirm2">
                                             <span class="checkOut__confirmFlex"><span>One-time purchase</span> <span
                                                     class="checkOut__confirmSale"> -10%</span></span>
-                                        </label>
+                                            </label>
+                                        </div>
+
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div>
+                        <div>
 
-                        <div class="accordion checkOut__border">
-                            <input type="checkbox" id="section3" class="accordion__checkbox">
-                            <label for="section3" class="accordion__trigger">
-                                Când doriți să începeți programul?
-                            </label>
-                            <div class="accordion__content">
-                                <div style="height: 300px">
-                                    <input id="datepicker" class="hidden" type="text" placeholder="Select a date">
+                            <div class="accordion checkOut__border">
+                                <input type="checkbox" id="section3" class="accordion__checkbox">
+                                <label for="section3" class="accordion__trigger">
+                                    Când doriți să începeți programul?
+                                </label>
+                                <div class="accordion__content">
+                                    <div style="height: 300px">
+                                        <input id="datepicker" class="hidden" type="text" placeholder="Select a date">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <div>
+                        <div>
 
-                        <div class="accordion checkOut__borderNone">
-                            <input type="checkbox" id="section4" class="accordion__checkbox">
-                            <label for="section4" class="accordion__trigger">
-                                Metode de plată
-                            </label>
+                            <div class="accordion checkOut__borderNone">
+                                <input type="checkbox" id="section4" class="accordion__checkbox">
+                                <label for="section4" class="accordion__trigger">
+                                    Metode de plată
+                                </label>
 
-                            <div class="accordion__content">
-                             <div class="checkOut__payed">
-                                 <div class="inputRadioBorderBlackActiveWhite34 inputRadioBorderBlackCenterGreen34">
-                                     <input type="radio" name="payed" value="1" id="payed1">
-                                     <label for="payed1">
-                                         <span>Card</span>
-                                     </label>
-                                 </div>
-                                 <div class="inputRadioBorderBlackActiveWhite34 inputRadioBorderBlackCenterGreen34">
-                                     <input type="radio" name="payed" value="2" id="payed2">
-                                     <label for="payed2">
-                                         <span>PayNet</span>
-                                     </label>
-                                 </div>
+                                <div class="accordion__content">
+                                    <div class="checkOut__payed">
+                                        <div class="inputRadioBorderBlackActiveWhite34 inputRadioBorderBlackCenterGreen34">
+                                            <input type="radio" name="payed" value="1" id="payed1">
+                                            <label for="payed1">
+                                                <span>Card</span>
+                                            </label>
+                                        </div>
+                                        <div class="inputRadioBorderBlackActiveWhite34 inputRadioBorderBlackCenterGreen34">
+                                            <input type="radio" name="payed" value="2" id="payed2">
+                                            <label for="payed2">
+                                                <span>PayNet</span>
+                                            </label>
+                                        </div>
 
-                                 <div class="inputRadioBorderBlackActiveWhite34 inputRadioBorderBlackCenterGreen34">
-                                     <input type="radio" name="payed" value="3" id="payed3">
-                                     <label for="payed3">
-                                         <span>Achitare Cash</span>
-                                     </label>
-                                 </div>
+                                        <div class="inputRadioBorderBlackActiveWhite34 inputRadioBorderBlackCenterGreen34">
+                                            <input type="radio" name="payed" value="3" id="payed3">
+                                            <label for="payed3">
+                                                <span>Achitare Cash</span>
+                                            </label>
+                                        </div>
 
-                                 <div class="inputCheckbox">
-                                     <input type="checkbox" name="acord"  id="acord" >
-                                     <label for="acord">
-                                         <span>Am citit si de acord cu termini si cinditii site-ului web *</span>
-                                     </label>
-                                 </div>
-                             </div>
+                                        <div class="inputCheckbox">
+                                            <input type="checkbox" name="acord" id="acord">
+                                            <label for="acord">
+                                                <span>Am citit si de acord cu termini si cinditii site-ului web *</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+
                     </div>
-
-
                 </div>
-            </div>
+
+                <div class="checkOut__comandContainer">
+                    <div class="checkOut__comand">
+                        <div class="login__formTitle">
+                            COMANDA TA
+                        </div>
+                        <div class="checkOut__comandHr"></div>
+
+                        <div class="checkOut__comandInfo">
+                            <div><span class="checkOut__comandInfoIndex">1</span> <strong>Semafor 3 Days</strong></div>
+                            <div>1.749 MDL</div>
+                        </div>
+
+                        <div class="checkOut__comandHr"></div>
+
+                        <div class="checkOut__comandInfo">
+                            <div>Subtotal</div>
+                            <div>1.749 MDL</div>
+                        </div>
+                        <div class="checkOut__comandInfo">
+                            <div>Livrare (1 zi Livrare)</div>
+                            <div>70 MDL</div>
+                        </div>
+                        <div class="checkOut__comandInfo checkOut__comandInfoTextGreen">
+                            <div>Total</div>
+                            <div>1.819 MDL</div>
+                        </div>
+
+                        <div class="checkOut__comandCupon">
+                            <input type="text" name="cupon" placeholder="Cod Cupon">
+                            <span class="checkOut__comandCuponBtn login__formBtn active">Aplica</span>
+                        </div>
+
+                        <div class="login__formTitle">
+                            Adăugați la comandă (opțional)
+                        </div>
+
+                        <div class="checkOut__comandPunga">
+                            <div class="checkOut__comandPungaBlock">
+                                <div class="checkOut__comandPungaTitle">Pungă frigorifică</div>
+                                <div class="checkOut__comandPungaText">Mentine temperatura <br> continutului maxim 5 ore
+                                </div>
+                                <div class="checkOut__comandPungaCounter">
+                                    <span class="checkOut__comandPungaCounterBtn">-</span>
+                                    <p class="checkOut__comandPungaCounterText">1</p>
+                                    <span class="checkOut__comandPungaCounterBtn">+</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="checkOut__comandPungaImg">
+                                    <img src="./img/login/punga.png" alt="punga">
+                                </div>
+                                <div class="checkOut__comandInfoTextGreen checkOut__comandPungaPrice ">49 MDL</div>
+                            </div>
+                        </div>
+                        <div class="checkOut__comandSubmit">
+                            <button class=" login__formBtn active">Plasează comanda</button>
+                        </div>
+                    </div>
+                    <div class="checkOut__comand checkOut__comandBgOrange">
+                        <div class="checkOut__comandBgOrangeText">Aveti nevoie de ajutor</div>
+                        <div class="checkOut__comandBgOrangeTitle">Consultatie Gratuita!</div>
+                        <div class="checkOut__comandBgOrangeText">Cu drag va ghidamprin apel sau mesaj</div>
+                        <div class="checkOut__comandBgOrangeImg">
+                            <img src="./img/login/chat.png" alt="icon">
+                        </div>
+                        <div class="checkOut__comandBgOrangeBtn checkOut__comandSubmit">
+                            <span class=" login__formBtn active">Scrieti consultantului</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
         </div>
 

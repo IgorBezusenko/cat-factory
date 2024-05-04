@@ -103,7 +103,7 @@
 
     &Btn {
       border-radius: 10px;
-      padding: 18px ;
+      padding: 18px;
       font-size: 25px;
       font-weight: 800;
       line-height: 32px;
@@ -153,11 +153,13 @@
       line-height: 26px;
 
     }
-&Radio{
-  color: #0E6232;
-}
+
+    &Radio {
+      color: #0E6232;
+    }
+
     &Input {
-      input,textarea {
+      input, textarea {
         width: 100%;
         background-color: $bg-grey;
         padding: 20px 20px 20px 28px;
@@ -166,12 +168,13 @@
         font-weight: 600;
         line-height: 30.67px;
       }
-      textarea{
+
+      textarea {
         height: 200px;
         padding: 40px 20px 20px 28px;
       }
 
-      input::placeholder,textarea::placeholder {
+      input::placeholder, textarea::placeholder {
         font-size: 24px;
         font-weight: 600;
         line-height: 30.67px;
@@ -313,6 +316,7 @@
       &BtnGoBack {
         height: 30px;
         gap: 5px;
+
         img {
           width: 5px;
           height: 10px;
@@ -344,13 +348,14 @@
       }
 
       &Input {
-        input,textarea {
+        input, textarea {
           padding: 8.5px;
           border-radius: 5px;
           font-size: 10px;
           line-height: 13px;
 
         }
+
         textarea {
           height: 85px;
         }

@@ -2,6 +2,7 @@
 .wrapper.checkOut {
   background-color: $sky-blue;
   padding-top: 47px;
+  padding-bottom: 100px;
 }
 
 .checkOut {
@@ -36,8 +37,192 @@
     }
   }
 
-  &__form {
+  &__content {
     margin-top: 55px;
+    display: flex;
+    gap: 25px;
+  }
+
+  &__comand {
+    &Container {
+      flex-grow: 1;
+    }
+
+    background-color: $white;
+    border-radius: 10px;
+    padding: 40px 44px;
+
+    &Hr {
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      margin: 25px 0;
+    }
+
+    &Info {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 26px;
+
+      &TextGreen {
+        color: $green;
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 30px;
+      }
+
+      &Index {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 3px 12px;
+        background-color: $bg-grey;
+        border-radius: 4px;
+      }
+    }
+
+    &Cupon {
+      margin: 40px 0;
+      display: flex;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 26px;
+
+      input {
+        flex-grow: 1;
+        background-color: $bg-grey;
+        padding: 22px 16px;
+        border-radius: 5px;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 26px;
+
+        &::placeholder {
+          color: $text-grey;
+          font-size: 21px;
+          font-weight: 600;
+          line-height: 26px;
+        }
+      }
+
+      &Btn {
+        cursor: pointer;
+        padding: 22px 25px;
+      }
+    }
+
+    &Punga {
+      margin-top: 25px;
+      margin-bottom: 100px;
+      padding: 20px 14px;
+      background-color: $bg-grey;
+      border-radius: 9px;
+      display: flex;
+      justify-content: space-between;
+
+      &Block {
+      }
+
+      &Title {
+        margin-bottom: 13px;
+        font-size: 21.57px;
+        font-weight: 800;
+        line-height: 27.57px;
+
+      }
+
+      &Text {
+        margin-bottom: 35px;
+
+        font-size: 18.87px;
+        font-weight: 600;
+        line-height: 24.12px;
+
+      }
+
+      &Counter {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 177px;
+        padding: 15px 13px 10px 13px;
+        border-radius: 9px;
+        background-color: $green;
+
+        &Btn {
+          font-size: 35.95px;
+          font-weight: 600;
+          line-height: 45.94px;
+          cursor: pointer;
+
+          color: $white;
+          background-color: inherit;
+        }
+
+        &Text {
+          font-size: 44.94px;
+          font-weight: 800;
+          line-height: 57.43px;
+          color: $white;
+
+        }
+
+
+      }
+
+      &Price {
+        text-align: right;
+      }
+    }
+
+    &Submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        padding: 22px 70px;
+      }
+    }
+
+    &BgOrange {
+      margin-top: 25px;
+      background-color: #f2994a;
+
+      &Text {
+        color: $white;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+      }
+
+      &Title {
+        margin: 10px 0;
+        color: $white;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 70px;
+      }
+
+      &Img {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  &__form {
+    height: fit-content;
     max-width: 900px;
     background-color: $white;
     border-radius: 10px;
@@ -454,6 +639,20 @@ $quarter-spacing-unit: $spacing-unit / 4;
 
 
 @media (max-width: $md1 + px) {
+  .checkOut {
+    &__content {
+      margin-top: 55px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    &__form {
+      max-width: none;
+    }
+  }
+
+
 }
 
 @media (max-width: $md2 + px) {
@@ -495,8 +694,142 @@ $quarter-spacing-unit: $spacing-unit / 4;
       }
     }
 
-    &__form {
+    &__content {
       margin-top: 21px;
+      display: flex;
+    }
+
+    &__comand {
+      border-radius: 5px;
+      padding: 20px 18px;
+
+      &Hr {
+        margin: 20px 0;
+      }
+
+      &Info {
+        font-size: 11px;
+        line-height: 15px;
+
+        &TextGreen {
+          font-size: 13px;
+          line-height: 17px;
+        }
+
+        &Index {
+          font-size: 10px;
+          line-height: 15px;
+          border-radius: 2px;
+        }
+      }
+
+      &Cupon {
+        margin: 20px 0;
+        font-size: 11px;
+        line-height: 13px;
+
+        input {
+          padding: 11px 8px;
+          border-radius: 3px;
+          font-size: 11px;
+          line-height: 13px;
+
+          &::placeholder {
+            font-size: 11px;
+            line-height: 13px;
+          }
+        }
+
+        &Btn {
+          padding: 11px 13px;
+        }
+      }
+
+      &Punga {
+        margin-top: 15px;
+        margin-bottom: 50px;
+        padding: 12px 9px;
+        border-radius: 5px;
+
+        &Title {
+          margin-bottom: 8px;
+          font-size: 13px;
+          line-height: 17px;
+        }
+
+        &Text {
+          margin-bottom: 23px;
+          font-size: 12px;
+          line-height: 15px;
+
+        }
+
+        &Counter {
+          width: 110px;
+          padding: 9px 8px 5px 9px;
+          border-radius: 5px;
+
+          &Btn {
+            font-size: 22.32px;
+            line-height: 28.53px;
+          }
+
+          &Text {
+            font-size: 27.9px;
+            line-height: 35.66px;
+          }
+        }
+
+        &Img {
+          width: 116px;
+          height: 119px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      &Submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button,span {
+          padding: 13px 35px 9px;
+        }
+      }
+
+      &BgOrange {
+        margin-top: 20px;
+
+        &Text {
+          font-size: 10px;
+          line-height: 13px;
+        }
+
+        &Title {
+          font-size: 30px;
+          font-weight: 800;
+          line-height: 35px;
+        }
+
+        &Img {
+          margin: 10px 0;
+
+          img{
+            width: 150px;
+            height: 100px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+
+    &__form {
       border-radius: 5px;
 
       &Nav {
