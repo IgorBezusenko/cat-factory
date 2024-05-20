@@ -182,8 +182,7 @@
   }
 }
 
-@media (max-width: $md3 + px) {
-}
+
 
 
 .icon-menu-burger {
@@ -558,11 +557,6 @@
       padding: 30px 30px 48px;
     }
 
-    //&__list{
-    //  flex-grow: 1;
-    //  overflow-y: auto;
-    //}
-
     &__mt28 {
       margin-top: 14px;
     }
@@ -592,12 +586,7 @@
     }
 
     &__content {
-      //flex-grow: 1;
-      //
       &Head {
-        //display: flex;
-        //justify-content: space-between;
-
         margin-bottom: 12px;
 
         &Item {
@@ -613,14 +602,6 @@
 
     }
 
-    //&__block {
-    //
-    //  display: flex;
-    //  justify-content: space-between;
-    //  align-items: flex-end;
-    //
-    //}
-
     &__deleteBtn {
       width: 10px;
       height: 13px;
@@ -633,14 +614,9 @@
     }
 
     &__counter {
-
-      //display: flex;
-      //justify-content: space-between;
-      //align-items: center;
       width: 90px;
       padding: 7px 7px 4px 7px;
       border-radius: 5px;
-      //background-color: $white;
 
       &Btn {
         font-size: 18px;
@@ -651,33 +627,22 @@
       &Text {
         font-size: 23px;
         line-height: 29px;
-
       }
-
 
     }
 
     &__footer {
       padding: 16px 32px 18px 27px;
-      //background-color: $black;
 
       &Head {
-        //display: flex;
-        //justify-content: space-between;
-        //align-items: center;
-        //color: $white;
         margin-bottom: 20px;
       }
 
       &Btn {
-
-        //display: flex;
-        //justify-content: center;
         margin-bottom: 16px;
 
         button {
           width: 246px;
-          //background-color: $white;
 
         }
       }
@@ -691,10 +656,6 @@
     .closebtn {
       position: absolute;
       top: 11px;
-      //right: 25px;
-      //font-size: 40px;
-      //font-weight: 600;
-      //cursor: pointer;
     }
 
   }
@@ -820,3 +781,8 @@ li.menu__list_burgerTitle {
   }
 }
 
+@media (max-width: $md3 + px) {
+  .sidenav{
+    margin-left: 0;
+  }
+}

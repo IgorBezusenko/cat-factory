@@ -44,6 +44,7 @@ $Inter: "Inter", sans-serif;
 @import "produce";
 @import "login";
 @import "chek-out";
+@import "blog";
 
 .wrapper {
   display: flex;
@@ -205,7 +206,9 @@ $Inter: "Inter", sans-serif;
     }
   }
 }
-
+.relative {
+  position: relative;
+}
 .rounded-l {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;

@@ -1,0 +1,554 @@
+.blog {
+
+  &__mw580 {
+    max-width: 580px;
+  }
+
+  &__mw840 {
+    max-width: 840px;
+  }
+
+  &__header {
+    background-color: $black;
+
+    &List {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &Item {
+      color: $white;
+      padding: 14px 14px 15px;
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 26.84px;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 89px;
+
+  }
+
+  &__subTitle {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 38px;
+
+  }
+
+  &__text {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+
+  }
+
+  &__block1 {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 238px;
+
+    &Title {
+      margin-bottom: 34px;
+    }
+
+    &Img {
+      position: absolute;
+      top: -650px;
+      left: 0;
+      z-index: 3;
+
+      width: 586px;
+      height: 879px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &Top {
+      display: flex;
+      justify-content: flex-end;
+
+      &Blue {
+        flex: 0 0 65%;
+        padding: 74px 0 12px 166px;
+        background-color: $blue;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+
+    &Bottom {
+      display: flex;
+      justify-content: flex-end;
+      background-color: $sky-blue;
+      margin-top: -100px;
+      position: relative;
+      z-index: 1;
+
+      &Sky {
+        padding: 118px 0 66px 166px;
+
+        flex: 0 0 65%;
+      }
+    }
+
+
+  }
+
+  &__block2 {
+    overflow: hidden;
+    padding: 150px 0 365px;
+
+    &SubTitle {
+      margin-bottom: 30px;
+    }
+
+    &Sky {
+      margin-top: 6px;
+      padding: 34px 0 90px;
+      background-color: $sky-blue;
+    }
+
+    &Img {
+      position: absolute;
+      top: -840px;
+      right: -200px;
+      z-index: 3;
+
+      width: 815px;
+      height: 1222px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+  }
+
+  &__block3 {
+
+    position: relative;
+    padding: 220px 0 210px;
+    display: flex;
+    justify-content: flex-end;
+
+    &SubTitle {
+      margin-top: 34px;
+      margin-bottom: 30px;
+    }
+
+    &Content {
+      flex: 0 0 50%;
+    }
+
+    &Img {
+      position: absolute;
+      top: -365px;
+      left: -209px;
+      z-index: 4;
+
+      width: 815px;
+      height: 1222px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+  }
+
+  &__block4 {
+
+    position: relative;
+    padding: 0 0 205px;
+    display: flex;
+    justify-content: flex-end;
+
+    &Content {
+      flex: 0 0 870px;
+    }
+
+    &SubTitle {
+      margin-top: 34px;
+      margin-bottom: 178px;
+    }
+
+    &Text {
+      padding-left: 326px;
+    }
+
+    &Img {
+      position: absolute;
+      top: -40px;
+      left: -209px;
+      z-index: 4;
+
+      width: 650px;
+      height: 970px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &Img2 {
+      position: absolute;
+      bottom: 235px;
+      left: 200px;
+      z-index: 5;
+
+      width: 635px;
+      height: 950px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: 2150px) {
+  .blog {
+    &__block1 {
+      &Img {
+        left: -220px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md1 + px) {
+  .blog {
+
+    &__title {
+      font-size: 70px;
+      line-height: 79px;
+    }
+
+    &__subTitle {
+      font-size: 25px;
+      line-height: 36px;
+
+    }
+
+    &__text {
+      font-size: 25px;
+      line-height: 36px;
+
+    }
+
+    &__block1 {
+      &Img {
+        left: -149px;
+        width: 486px;
+        height: 779px;
+      }
+
+      &Top {
+        &Blue {
+          padding: 74px 0 12px 100px;
+        }
+      }
+
+      &Bottom {
+        &Sky {
+          padding: 118px 0 66px 100px;
+        }
+      }
+    }
+
+    &__block2 {
+      padding: 0 0 365px;
+
+      &Img {
+        top: -690px;
+        right: -500px;
+        width: 615px;
+        height: 922px;
+      }
+    }
+
+    &__block3 {
+      padding: 0 0 210px;
+
+      &Content {
+        flex: 0 0 70%;
+      }
+
+      &Img {
+        top: -365px;
+        left: -400px;
+
+        width: 615px;
+        height: 950px;
+
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__block4 {
+
+      padding: 0 0 205px;
+      display: flex;
+      justify-content: flex-end;
+
+      &Content {
+        flex: 0 0 870px;
+      }
+
+      &SubTitle {
+        margin-top: 34px;
+        margin-bottom: 110px;
+      }
+
+      &Text {
+        padding-left: 326px;
+      }
+
+      &Img {
+        position: absolute;
+        top: -40px;
+        left: -500px;
+        z-index: 4;
+
+        width: 550px;
+        height: 770px;
+
+
+      }
+
+      &Img2 {
+        position: absolute;
+        bottom: 170px;
+        left: -150px;
+        z-index: 5;
+
+        width: 535px;
+        height: 750px;
+
+
+      }
+
+    }
+  }
+}
+
+@media (max-width: $md2 + px) {
+  .blog {
+    &__header {
+
+      &Item {
+        padding: 13px 14px 12px;
+        font-size: 16px;
+        line-height: 20px;
+
+      }
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 44px;
+    }
+
+    &__subTitle {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &__text {
+      font-size: 17px;
+      line-height: 21px;
+    }
+
+    &__block1 {
+      padding-bottom: 300px;
+
+      &Title {
+        margin-bottom: 18px;
+      }
+
+
+      &Img {
+        top: -60px;
+        left: 50%;
+        margin-left: -165px;
+
+        width: 330px;
+        height: 336px;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &Top {
+        justify-content: center;
+
+        &Blue {
+          flex: 0 0 100%;
+          padding: 28px 24px 40px 24px;
+        }
+      }
+
+      &Bottom {
+        justify-content: center;
+
+        &Sky {
+          padding: 118px 24px 112px 24px;
+          flex: 0 0 100%;
+        }
+      }
+    }
+
+    &__block2 {
+      padding: 30px 0 380px;
+
+      &Title {
+        padding: 0 12px;
+      }
+
+      &SubTitle {
+        margin-bottom: 6px;
+      }
+
+      &Sky {
+        margin-top: 6px;
+        padding: 20px 12px 80px;
+      }
+
+      &Img {
+        top: -50px;
+        right: 50%;
+        margin-right: -155px;
+        z-index: 3;
+
+        width: 310px;
+        height: 400px;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+    }
+
+    &__block3 {
+      padding: 0 0 485px;
+      justify-content: flex-start;
+
+      &SubTitle {
+        margin-top: 19px;
+        margin-bottom: 19px;
+      }
+
+      &Content {
+        padding: 0 12px;
+        flex: 0 0 100%;
+      }
+
+      &Img {
+        top: initial;
+        bottom: 0;
+        left: 50%;
+        margin-left: -150px;
+
+        width: 300px;
+        height: 450px;
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+    }
+
+    &__block4 {
+
+      padding: 98px 0 950px;
+      display: flex;
+      justify-content: flex-start;
+
+      &Content {
+        flex: 0 0 100%;
+        padding: 0 12px;
+      }
+
+      &SubTitle {
+        margin-top: 19px;
+        margin-bottom: 19px;
+      }
+
+      &Text {
+        padding-left: 0;
+      }
+
+      &Img {
+        position: absolute;
+        top: initial;
+        bottom: 460px;
+        left: 50%;
+        margin-left: -160px;
+        z-index: 4;
+
+        width: 300px;
+        height: 440px;
+
+
+      }
+
+      &Img2 {
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        margin-left: -115px;
+        z-index: 5;
+
+        width: 275px;
+        height: 410px;
+
+
+      }
+
+    }
+  }
+}
+
+@media (max-width: $md3 + px) {
+
+}
+
+@media (max-width: 374px) {
+  .blog {
+    &__block1 {
+      &Img {
+        margin-left: -150px;
+        width: 300px;
+      }
+    }
+  }
+}
