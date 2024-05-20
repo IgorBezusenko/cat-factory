@@ -134,6 +134,7 @@ const closeShoppingCart = () => {
 
 const shoppingCart__list = document.querySelector('.shoppingCart__list')
 const produce__content = document.querySelector('.produce__content')
+const checkOut__comandPunga = document.querySelector('.checkOut__comandPunga')
 const tabsTitle = document.querySelectorAll('.tab__title')
 const tabsContent = document.querySelectorAll('.tab__content')
 
@@ -146,6 +147,9 @@ tabsTitle.forEach(item => item.addEventListener("click", event => {
     item.classList.add("active")
     document.getElementById(tabTitleTarget).classList.remove('tab-hidden')
 }))
+
+
+checkOut__comandPunga?.addEventListener("click",updateCounterShoppingCart)
 
 
 function recalculateCart() {
