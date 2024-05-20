@@ -52,6 +52,7 @@
       font-size: 21px;
       font-weight: 800;
       line-height: 27px;
+      position: relative;
     }
   }
 
@@ -293,19 +294,32 @@
   overflow: hidden;
   top: 150px;
   left: 0;
-
   transition: 0.4s;
 
   .light {
     font-size: 20px;
     font-weight: 600;
     line-height: 25.56px;
-
   }
+
+
 
   @media (max-width: $md1 + px) {
     gap: 75px;
   }
+}
+
+.menuDropdownConsultation{
+  padding:0 26px;
+
+  background-color: $white;
+  width: 324px;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top:69px;
+  left: 0;
+  transition: 0.4s;
 }
 
 .shoppingCart {
@@ -526,7 +540,7 @@
 
     &Wrapper {
       position: fixed;
-      z-index: 102;
+      z-index: 102!important;
       top: 40px;
       right: 0;
 
@@ -688,6 +702,7 @@
 
 
 .menu__body_burger {
+
   position: fixed;
   top: 0;
   left: 0;

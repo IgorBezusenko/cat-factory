@@ -29,6 +29,7 @@
 
       &Detox,
       &Morning,
+      &Supplement,
       &All {
         width: 52px;
         height: 52px;
@@ -40,6 +41,9 @@
 
       &Morning {
         background-image: url("../../img/produse/icon_morning_green.svg");
+      }
+      &Supplement {
+        background-image: url("../../img/produse/suplement_green.svg");
       }
 
       &All {
@@ -57,6 +61,9 @@
 
         .produce__navItemMorning {
           background-image: url("../../img/produse/icon_morning.svg");
+        }
+        .produce__navItemSupplement {
+          background-image: url("../../img/produse/suplement.svg");
         }
 
         .produce__navItemAll {
@@ -695,6 +702,7 @@
 
         &Detox,
         &Morning,
+        &Supplement,
         &All {
           width: 26px;
           height: 26px;
@@ -707,6 +715,10 @@
 
         &Morning {
           background-image: url("../../img/produse/icon_morning_green.svg");
+          background-size: contain;
+        }
+        &Supplement {
+          background-image: url("../../img/produse/suplement_green.svg");
           background-size: contain;
         }
 

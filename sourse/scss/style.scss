@@ -437,6 +437,14 @@ $Inter: "Inter", sans-serif;
   }
 }
 
+.tab-active{
+  display: block;
+}
+
+.tab-hidden{
+  display: none;
+}
+
 //
 //@media (max-width: $md1 + px) {
 //

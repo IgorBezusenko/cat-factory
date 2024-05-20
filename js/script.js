@@ -1,4 +1,3 @@
-
 const burger = document.querySelector(".icon-menu-burger");
 const menu__body_burger = document.querySelector(".menu__body_burger");
 
@@ -9,6 +8,7 @@ const mySidenavDrinks = document.getElementById("mySidenavDrinks");
 const mySidenavFood = document.getElementById("mySidenavFood");
 const mySidenavDessert = document.getElementById("mySidenavDessert");
 const menuDropdown = document.getElementById("menuDropdown");
+const menuDropdownConsultation = document.querySelector(".menuDropdownConsultation");
 const header__wrapper = document.querySelector(".header__wrapper");
 const header__navLeftItemActive1 = document.querySelector(".header__navLeftItemActive1");
 const header__navLeftItemActive2 = document.querySelector(".header__navLeftItemActive2");
@@ -16,6 +16,7 @@ const header__navLeftItemActive3 = document.querySelector(".header__navLeftItemA
 const shoppingCart = document.getElementById("shoppingCart");
 const checkOut__livrareWrapper = document.querySelector(".checkOut__livrareWrapper");
 const checkOut__livrare = document.querySelector(".checkOut__livrare");
+const main = document.querySelector(".main");
 
 const handlerClickLivrareTitle1 = () => {
     checkOut__livrareWrapper.classList.remove("active")
@@ -80,6 +81,7 @@ const closeBurgerDessert = () => {
     mySidenavDessert.style.width = "0";
 };
 const showMenuDropdown = () => {
+    closeMenuDropdownConsultation()
     menuDropdown.style.height = "500px";
     header__wrapper.classList.add("active");
     header__navLeftItemActive1?.classList?.add("active");
@@ -92,6 +94,17 @@ const closeMenuDropdown = () => {
     header__navLeftItemActive1?.classList?.remove("active");
     header__navLeftItemActive2?.classList?.remove("active");
     header__navLeftItemActive3?.classList?.remove("active");
+    closeMenuDropdownConsultation()
+};
+const showMenuDropdownConsultation = () => {
+    closeMenuDropdown()
+    header__wrapper.classList.add("active");
+    menuDropdownConsultation.style.height = "200px";
+
+};
+const closeMenuDropdownConsultation = () => {
+    header__wrapper.classList.remove("active");
+    menuDropdownConsultation.style.height = "0";
 };
 
 const closeAllBurgers = () => {
@@ -105,19 +118,34 @@ const closeAllBurgers = () => {
 
 const showShoppingCart = () => {
     shoppingCart.style.width = "100%";
+    main.style.zIndex = "9";
     setTimeout(() => {
         overflowHidden()
     }, 200)
 };
 const closeShoppingCart = () => {
     shoppingCart.style.width = "0";
+    main.style.zIndex = "11";
     overflowAuto();
 };
 
 
-const shoppingCartCounters = document.querySelectorAll('.shoppingCart__item')
 const shoppingCart__list = document.querySelector('.shoppingCart__list')
-const produce__cardWrappers = document.querySelectorAll('.produce__cardWrapper')
+const produce__content = document.querySelector('.produce__content')
+const tabsTitle = document.querySelectorAll('.tab__title')
+const tabsContent = document.querySelectorAll('.tab__content')
+
+tabsTitle.forEach(item => item.addEventListener("click", event => {
+    const tabTitleTarget = event.target.closest(".tab__title").getAttribute('data-tab')
+
+    tabsTitle.forEach(item => item.classList.remove("active"))
+    tabsContent.forEach(item => item.classList.add("tab-hidden"))
+
+    item.classList.add("active")
+    document.getElementById(tabTitleTarget).classList.remove('tab-hidden')
+}))
+
+
 function recalculateCart() {
     let subTotal = 0
     const shoppingCartItems = document.querySelectorAll(".shoppingCart__item")
@@ -131,7 +159,6 @@ function recalculateCart() {
 
     document.querySelector('.subTotal').innerHTML = subTotal
     header__navLeftShoppingCart.children[1].innerHTML = shoppingCartItems.length.toString()
-    addEventOnClickShoppingCard()
 }
 
 recalculateCart()
@@ -198,7 +225,6 @@ function addToCart(event, productId) {
         if (isAddNewItem) {
             shoppingCart__list.insertAdjacentHTML('beforeend', cardItem);
             recalculateCart()
-
         }
 
 
@@ -220,40 +246,18 @@ function removeShoppingCartItem(event, productId) {
 }
 
 
-function addEventClick(elemArr,callback) {
-    if (elemArr) {
-        elemArr.forEach(item => {
-            item.addEventListener('click', callback)
-        })
-    }
-}
-
 function handlerClickShoppingCartItem(event) {
     const productId = event.target.closest('.shoppingCart__item').dataset.productId
     updateCounterShoppingCart(event, productId)
     removeShoppingCartItem(event, productId)
 }
 
-function addEventOnClickShoppingCard() {
-    addEventClick(shoppingCartCounters,handlerClickShoppingCartItem)
-    // if (shoppingCartCounters) {
-    //     shoppingCartCounters.forEach(item => {
-    //
-    //         item.addEventListener('click', handlerClickShoppingCartItem)
-    //     })
-    // }
-}
-
-addEventOnClickShoppingCard()
+shoppingCart__list?.addEventListener("click", handlerClickShoppingCartItem)
 
 
 function handlerClickProduce__cardWrapper(event) {
     const productId = event.target.closest('.produce__cardWrapper').dataset.productId
     addToCart(event, productId)
-    addEventOnClickShoppingCard()
 }
-function addEventOnClickProduce__cardWrappers() {
-    addEventClick(produce__cardWrappers,handlerClickProduce__cardWrapper)
-}
-addEventOnClickProduce__cardWrappers()
 
+produce__content?.addEventListener("click", handlerClickProduce__cardWrapper)
