@@ -17,15 +17,17 @@ const shoppingCart = document.getElementById("shoppingCart");
 const checkOut__livrareWrapper = document.querySelector(".checkOut__livrareWrapper");
 const checkOut__livrare = document.querySelector(".checkOut__livrare");
 const main = document.querySelector(".main");
+const pickup = document.querySelectorAll(".pickup");
 
 const handlerClickLivrareTitle1 = () => {
     checkOut__livrareWrapper.classList.remove("active")
     checkOut__livrare.classList.remove("active")
+    pickup.forEach(item=>item.classList.remove("hidden"))
 }
 const handlerClickLivrareTitle2 = () => {
     checkOut__livrareWrapper.classList.add("active")
     checkOut__livrare.classList.add("active")
-
+    pickup.forEach(item=>item.classList.add("hidden"))
 }
 
 const overflowHidden = () => {
