@@ -22,12 +22,12 @@ const pickup = document.querySelectorAll(".pickup");
 const handlerClickLivrareTitle1 = () => {
     checkOut__livrareWrapper.classList.remove("active")
     checkOut__livrare.classList.remove("active")
-    pickup.forEach(item=>item.classList.remove("hidden"))
+    pickup.forEach(item => item.classList.remove("hidden"))
 }
 const handlerClickLivrareTitle2 = () => {
     checkOut__livrareWrapper.classList.add("active")
     checkOut__livrare.classList.add("active")
-    pickup.forEach(item=>item.classList.add("hidden"))
+    pickup.forEach(item => item.classList.add("hidden"))
 }
 
 const overflowHidden = () => {
@@ -133,7 +133,7 @@ const closeShoppingCart = () => {
 
 
 const shoppingCart__list = document.querySelector('.shoppingCart__list')
-const produce__content = document.querySelector('.produce__content')
+const produce__content = document.querySelectorAll('.produce__content')
 const checkOut__comandPunga = document.querySelector('.checkOut__comandPunga')
 const tabsTitle = document.querySelectorAll('.tab__title')
 const tabsContent = document.querySelectorAll('.tab__content')
@@ -149,7 +149,7 @@ tabsTitle.forEach(item => item.addEventListener("click", event => {
 }))
 
 
-checkOut__comandPunga?.addEventListener("click",updateCounterShoppingCart)
+checkOut__comandPunga?.addEventListener("click", updateCounterShoppingCart)
 
 
 function recalculateCart() {
@@ -195,6 +195,7 @@ function updateCounterShoppingCart(e, productId) {
 
 function addToCart(event, productId) {
     const target = event.target;
+    console.log("log")
     if (target.closest('.produce__cardButtons .btn-primary')) {
 
         const cardItem = `<li class="shoppingCart__item " data-product-id="${productId}">
@@ -266,4 +267,4 @@ function handlerClickProduce__cardWrapper(event) {
     addToCart(event, productId)
 }
 
-produce__content?.addEventListener("click", handlerClickProduce__cardWrapper)
+produce__content?.forEach(item => item.addEventListener("click", handlerClickProduce__cardWrapper))
