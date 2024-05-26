@@ -42,6 +42,7 @@
       &Morning {
         background-image: url("../../img/produse/icon_morning_green.svg");
       }
+
       &Supplement {
         background-image: url("../../img/produse/suplement_green.svg");
       }
@@ -62,6 +63,7 @@
         .produce__navItemMorning {
           background-image: url("../../img/produse/icon_morning.svg");
         }
+
         .produce__navItemSupplement {
           background-image: url("../../img/produse/suplement.svg");
         }
@@ -237,6 +239,7 @@
       .produce__cardTabs {
         opacity: 1;
         z-index: 11;
+
       }
 
     }
@@ -278,6 +281,31 @@
       gap: 2px;
       opacity: 0;
       z-index: -1;
+
+
+      /* Стили для самой радиокнопки */
+      .radio-input {
+        display: none; /* Скрыть сам input */
+      }
+
+      /* Внешний вид фоновой области радиокнопки */
+      .radio-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 88px;
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 39px;
+        background-color: #2A794D;
+        color: $white;
+      }
+
+      /* Псевдоэлемент активного состояния для внутреннего кружка */
+      .radio-input:checked + .radio-label {
+        background-color: $white;
+        color: $green;
+      }
     }
 
     &Buttons {
@@ -717,6 +745,7 @@
           background-image: url("../../img/produse/icon_morning_green.svg");
           background-size: contain;
         }
+
         &Supplement {
           background-image: url("../../img/produse/suplement_green.svg");
           background-size: contain;
@@ -807,7 +836,16 @@
       }
 
       &Tabs {
-        display: none;
+
+        opacity: 1;
+        /* Внешний вид фоновой области радиокнопки */
+        .radio-label {
+          width: 38px;
+          font-size: 21px;
+          font-weight: 800;
+          line-height: 25px;
+        }
+
       }
 
       &Buttons {
@@ -846,19 +884,21 @@
         width: 77px;
       }
     }
-&__content{
-  &ViewAll {
-    margin-top: 45px;
 
-    .btn {
-      padding: 10px;
-      border: 1px solid $black;
-      font-size: 12px;
-      line-height: 14px;
+    &__content {
+      &ViewAll {
+        margin-top: 45px;
 
+        .btn {
+          padding: 10px;
+          border: 1px solid $black;
+          font-size: 12px;
+          line-height: 14px;
+
+        }
+      }
     }
-  }
-}
+
     &View {
       display: block;
 
