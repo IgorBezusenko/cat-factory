@@ -8,6 +8,18 @@
     max-width: 840px;
   }
 
+  &__mw750 {
+    max-width: 750px;
+  }
+
+  &__mw900 {
+    max-width: 900px;
+  }
+
+  &__pb0 {
+    padding-bottom: 0;
+  }
+
   &__header {
     background-color: $black;
 
@@ -228,6 +240,156 @@
 
   }
 
+  &OurStory {
+    &__head {
+      margin-top: 100px;
+      text-align: center;
+
+      &SubTitle {
+        margin: 28px 0 32px;
+      }
+    }
+
+    &__title {
+      font-size: 42.69px;
+      font-weight: 800;
+      line-height: 54.56px;
+      margin-bottom: 80px;
+    }
+
+    &__block1 {
+      margin-top: 160px;
+
+      &Sky {
+        background-color: $sky-blue;
+        padding: 90px 0 90px;
+        min-height: 650px;
+      }
+
+      &Content {
+
+        display: flex;
+        justify-content: flex-end;
+
+
+      }
+
+      &Img {
+        position: absolute;
+        top: -792px;
+        left: -220px;
+        z-index: 3;
+
+        width: 781px;
+        height: 792px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__block2 {
+      overflow: hidden;
+
+      &Blue {
+        background-color: $blue;
+        padding: 170px 0 90px;
+        min-height: 735px;
+      }
+
+      &Img {
+        position: absolute;
+        top: -735px;
+        right: -200px;
+        z-index: 3;
+
+        width: 726px;
+        height: 735px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__block3 {
+
+
+      &Wrapper {
+        background-color: #FB9940;
+      }
+
+      &Content {
+        padding: 90px 0 90px;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        min-height: 1303px;
+
+        &Button {
+          margin-top: 150px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+      }
+
+      &Img {
+        position: absolute;
+        top: -1303px;
+        left: -220px;
+        z-index: 3;
+
+        width: 868px;
+        height: 1303px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__block4 {
+      overflow: hidden;
+
+      &Wrapper {
+        padding: 140px 0 90px;
+        min-height: 775px;
+      }
+
+      &Link {
+        margin-top: 66px;
+        font-size: 28.46px;
+        font-weight: 800;
+        line-height: 36.37px;
+
+      }
+
+      &Img {
+        position: absolute;
+        top: -775px;
+        right: -200px;
+        z-index: 3;
+
+        width: 764px;
+        height: 775px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
 }
 
 @media (min-width: 2150px) {
@@ -354,6 +516,77 @@
 
       }
 
+    }
+
+    &OurStory {
+
+      &__block1 {
+        margin-top: 100px;
+
+        &Content {
+          .blog__mw750 {
+            max-width: 500px;
+          }
+
+          .blog__mw900 {
+            max-width: 600px;
+          }
+        }
+
+        &Img {
+          left: -230px;
+
+          width: 581px;
+          height: 592px;
+        }
+      }
+
+      &__block2 {
+
+        &Blue {
+          .blog__mw840 {
+            max-width: 600px;
+          }
+        }
+
+        &Img {
+          top: -635px;
+          width: 526px;
+          height: 535px;
+        }
+      }
+
+      &__block3 {
+        &Content {
+          .blog__mw750 {
+            max-width: 500px;
+          }
+
+        }
+
+        &Img {
+          width: 668px;
+          height: 1003px;
+        }
+      }
+
+      &__block4 {
+        &Wrapper {
+          padding: 90px 0 90px;
+        }
+
+        .blog__mw840 {
+          max-width: 600px;
+        }
+
+        &Img {
+          top: -675px;
+          right: -200px;
+
+          width: 564px;
+          height: 575px;
+        }
+      }
     }
   }
 }
@@ -534,6 +767,147 @@
 
       }
 
+    }
+
+    &OurStory {
+      &__head {
+        margin-top: 29px;
+
+        &SubTitle {
+          margin: 5px 0 11px;
+        }
+
+
+        .blog__subTitle {
+          font-size: 18px;
+          line-height: 23px;
+        }
+
+        .blog__text {
+          font-size: 14px;
+          line-height: 17px;
+        }
+
+      }
+
+      &__title {
+        font-size: 18px;
+        line-height: 23px;
+
+        margin-bottom: 30px;
+      }
+
+      &__block1 {
+        margin-top: 27px;
+        overflow: hidden;
+
+        &Sky {
+          padding: 17px 0 410px;
+          min-height: auto;
+        }
+
+        &Content {
+          display: flex;
+          justify-content: center;
+
+        }
+
+        &Img {
+          top: -384px;
+          left: 50%;
+          margin-left: -190px;
+
+          width: 390px;
+          height: 384px;
+
+        }
+      }
+
+      &__block2 {
+        overflow: hidden;
+
+        &Blue {
+          background-color: $blue;
+          padding: 29px 0 420px;
+          min-height: auto;
+        }
+
+        &Content {
+          display: flex;
+          justify-content: center;
+        }
+
+        &Img {
+          top: -395px;
+          right: 50%;
+          margin-right: -190px;
+
+          width: 390px;
+          height: 395px;
+
+        }
+      }
+
+      &__block3 {
+        overflow: hidden;
+
+        &Wrapper {
+          background-color: #FB9940;
+        }
+
+        &Content {
+          padding: 60px 0 570px;
+          justify-content: center;
+          min-height: auto;
+
+          &Button {
+            margin-top: 0;
+            flex-direction: column;
+            gap: 0;
+          }
+        }
+
+        &Img {
+          top: -537px;
+          left: 50%;
+          margin-left: -202.5px;
+
+          width: 405px;
+          height: 537px;
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+
+      &__block4 {
+        overflow: hidden;
+
+        &Wrapper {
+          padding: 100px 0 470px;
+          min-height: auto;
+        }
+
+        &Link {
+          margin-top: 30px;
+          font-size: 17px;
+          //font-weight: 800;
+          line-height: 23px;
+
+        }
+
+        &Img {
+          position: absolute;
+          top: -405px;
+          right: 50%;
+          margin-right: -200px;
+
+          width: 400px;
+          height: 405px;
+
+        }
+      }
     }
   }
 }
