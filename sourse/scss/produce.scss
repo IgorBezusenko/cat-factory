@@ -867,6 +867,9 @@
 
 
 @media (max-width: $md3 + px) {
+  .tabs__wrapper {
+    width: 100%;
+  }
   //max-width: none;
   .produce {
     &__nav {
@@ -886,6 +889,12 @@
     }
 
     &__content {
+
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      align-items: center;
+
       &ViewAll {
         margin-top: 45px;
 

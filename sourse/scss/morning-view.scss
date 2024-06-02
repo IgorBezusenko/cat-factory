@@ -33,15 +33,63 @@
     }
 
     &Bottle {
+      position: relative;
       height: 1396px;
 
-      img {
-        height: 100%;
+      &Img {
+        margin-top: 150px;
+        height: 1110px;
+
+        img {
+          height: 100%;
+        }
       }
 
       &Mobile {
         display: none;
       }
+    }
+
+    &W1, &W2, &W3, &W4, &W5, &W6 {
+      position: absolute;
+
+    }
+
+    &W1.active, &W2.active, &W3.active, &W4.active, &W5.active, &W6.active {
+      transition: 0.6s ease-in-out;
+      animation: animate-scroll 0.6s ease-in-out forwards 0s;
+    }
+
+    &W1 {
+      top: 0;
+      left: 0;
+    }
+
+    &W2 {
+      top: 310px;
+      right: 0;
+    }
+
+    &W3 {
+
+      left: 0;
+      bottom: 260px;
+    }
+
+    &W4 {
+      right: -35px;
+      bottom: 200px;
+    }
+
+
+    &W5 {
+      right: -17px;
+      bottom: -50px;
+    }
+
+    &W6 {
+      left: -75px;
+      bottom: 115px;
     }
 
     &List {
@@ -114,6 +162,11 @@
 
       &Bottle {
         height: 513px;
+
+        &Img {
+          margin-top: 50px;
+          height: 408px;
+        }
 
         &Mobile {
           display: block;

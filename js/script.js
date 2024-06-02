@@ -156,14 +156,17 @@ function recalculateCart() {
     let subTotal = 0
     const shoppingCartItems = document.querySelectorAll(".shoppingCart__item")
     const header__navLeftShoppingCart = document.querySelector(".header__navLeftShoppingCart")
+    const subTotalElement = document.querySelector('.subTotal')
+
 
     shoppingCartItems?.forEach(item => {
         const price = parseInt(item.querySelector('.shoppingCart__price').innerHTML)
         const counter = parseInt(item.querySelector('.counter__btn_input').innerHTML)
         subTotal += price * counter
     })
-
-    document.querySelector('.subTotal').innerHTML = subTotal
+    if (subTotalElement) {
+        subTotalElement.innerHTML = subTotal
+    }
     header__navLeftShoppingCart.children[1].innerHTML = shoppingCartItems.length.toString()
 }
 
@@ -268,3 +271,50 @@ function handlerClickProduce__cardWrapper(event) {
 }
 
 produce__content?.forEach(item => item.addEventListener("click", handlerClickProduce__cardWrapper))
+
+
+const buttonAnimate = document.querySelectorAll("button")
+const handlerButtonAnimate = (e) => {
+    e.target.classList.add("animation")
+    setTimeout(() => {
+        e.target.classList.remove("animation")
+    }, 600)
+}
+buttonAnimate?.forEach(item => item.addEventListener("click", handlerButtonAnimate))
+
+
+const animItems = document.querySelectorAll("._anim_items")
+
+if (animItems.length > 0) {
+    window.addEventListener("scroll", animOnScroll)
+
+    function animOnScroll() {
+        for (let i = 0; i < animItems.length; i++) {
+            const animItem = animItems[i]
+            const animItemHeight = animItem.offsetHeight
+            const animItemOffset = offset(animItem).top
+            const animStart = 4
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart
+
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                animItem.classList.add("active")
+            } else {
+                animItem.classList.remove("active")
+            }
+
+        }
+    }
+
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+    }
+}
