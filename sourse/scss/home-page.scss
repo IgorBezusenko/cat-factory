@@ -251,12 +251,12 @@
       }
 
       &C1.activeDown, &C2.activeDown, &C3.activeDown, &C4.activeDown, &C5.activeDown, &C9.activeDown {
-        transition: all 1s;
+        transition: ease-in-out 1s;
         animation: animate-scroll-down 0.6s ease-in-out forwards 0s;
 
       }
       &C1.activeUp, &C2.activeUp, &C3.activeUp, &C4.activeUp, &C5.activeUp, &C9.activeUp {
-        transition: all 1s;
+        transition: ease-in-out 1s;
         animation: animate-scroll-up 0.6s ease-in-out forwards 0s;
 
       }

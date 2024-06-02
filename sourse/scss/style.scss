@@ -489,8 +489,8 @@ button.animation {
 
 @keyframes animate-scroll-down {
 
-  20% {
-    transform: translateY(10px);
+  0% {
+    transform: translateY(0);
   }
 
   //40% {
@@ -513,8 +513,8 @@ button.animation {
 
 @keyframes animate-scroll-up {
 
-  20% {
-    transform: translateY(-10px);
+  0% {
+    transform: translateY(60px);
   }
 
   //40% {
@@ -531,7 +531,7 @@ button.animation {
 
 
   100% {
-    transform: translateY(-60px);
+    transform: translateY(0);
   }
 }
 

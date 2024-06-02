@@ -282,7 +282,6 @@ const handlerButtonAnimate = (e) => {
 }
 buttonAnimate?.forEach(item => item.addEventListener("click", handlerButtonAnimate))
 
-const animItems = document.querySelectorAll("._anim_items")
 document.addEventListener('DOMContentLoaded', () => {
     const boxes = document.querySelectorAll('._anim_items');
     let lastScrollTop = 0;
@@ -293,23 +292,21 @@ document.addEventListener('DOMContentLoaded', () => {
         boxes.forEach((box,index) => {
             if (currentScrollTop > lastScrollTop) {
                 box.classList.remove('activeUp');
-                // box.classList.add('activeDown');
                 setTimeout(() => {
                     box.classList.add('activeDown');
-                }, index * 100);
+                }, index * 10);
             } else {
                 box.classList.remove('activeDown');
-                // box.classList.add('activeUp');s
                 setTimeout(() => {
                     box.classList.add('activeUp');
-                }, index * 100);
+                }, index * 10);
             }
         });
         lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop
     });
 });
 
-
+// const animItems = document.querySelectorAll("._anim_items")
 // if (animItems.length > 0) {
 //     document.addEventListener("DOMContentLoaded", () => animOnScroll())
 //     let lastScrollTop = 0;
