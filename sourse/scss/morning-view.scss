@@ -50,6 +50,10 @@
       }
     }
 
+    &WaterMobile {
+      display: none;
+    }
+
     &W1, &W2, &W3, &W4, &W5, &W6 {
       position: absolute;
 
@@ -158,6 +162,45 @@
       &Content {
         margin-top: 15px;
         gap: 10px;
+      }
+
+      &WaterMobile {
+        display: block;
+      }
+
+      &WaterDesktop {
+        display: none;
+      }
+
+      &W1 {
+        //top: 0;
+        //left: 0;
+      }
+
+      &W2 {
+        top: 110px;
+        right: 0;
+      }
+
+      &W3 {
+        left: -6px;
+        bottom: 90px;
+      }
+
+      &W4 {
+        right: -10px;
+        bottom: 100px;
+      }
+
+
+      &W5 {
+        right: -6px;
+        bottom: -19px;
+      }
+
+      &W6 {
+        left: -28px;
+        bottom: 40px;
       }
 
       &Bottle {
