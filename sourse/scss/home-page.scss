@@ -251,7 +251,7 @@
       }
 
       &C1.active, &C2.active, &C3.active, &C4.active, &C5.active, &C9.active {
-        transition: 0.6s ease-in-out;
+        transition: all 0.6s;
         animation: animate-scroll 0.6s ease-in-out forwards 0s;
 
       }
@@ -541,10 +541,12 @@
         color: $green;
       }
 
-      &.active {
+      &:hover {
+        transition: all 0.3s;
         color: $white;
 
         .home__fanItemBgAbsolute {
+          transition: all 0.3s;
           background-color: $blue;
         }
       }

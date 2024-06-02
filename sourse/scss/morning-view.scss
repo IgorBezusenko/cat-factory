@@ -60,9 +60,11 @@
     }
 
     &W1.active, &W2.active, &W3.active, &W4.active, &W5.active, &W6.active {
-      transition: 0.6s ease-in-out;
+      transition: all 0.6s;
       animation: animate-scroll 0.6s ease-in-out forwards 0s;
     }
+
+
 
     &W1 {
       top: 0;
