@@ -286,9 +286,10 @@ buttonAnimate?.forEach(item => item.addEventListener("click", handlerButtonAnima
 const animItems = document.querySelectorAll("._anim_items")
 
 if (animItems.length > 0) {
-    window.addEventListener("scroll", animOnScroll)
+    window.addEventListener("scroll", () => animOnScroll(false))
+    window.addEventListener("scrollend", () => animOnScroll(true))
 
-    function animOnScroll() {
+    function animOnScroll(isScroll = false) {
         for (let i = 0; i < animItems.length; i++) {
             const animItem = animItems[i]
             const animItemHeight = animItem.offsetHeight
@@ -301,11 +302,19 @@ if (animItems.length > 0) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart
             }
 
-            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-                animItem.classList.add("active")
+            if (!isScroll) {
+                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                    animItem.classList.add("active")
+                } else {
+                    animItem.classList.remove("active")
+                }
             } else {
-                animItem.classList.remove("active")
+                animItem.classList.add("active")
+                setTimeout(() => {
+                    animItem.classList.remove("active")
+                }, 1200)
             }
+
 
         }
     }
