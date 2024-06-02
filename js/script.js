@@ -282,24 +282,62 @@ const handlerButtonAnimate = (e) => {
 }
 buttonAnimate?.forEach(item => item.addEventListener("click", handlerButtonAnimate))
 
-
 const animItems = document.querySelectorAll("._anim_items")
+document.addEventListener('DOMContentLoaded', () => {
+    const boxes = document.querySelectorAll('._anim_items');
+    let lastScrollTop = 0;
 
-if (animItems.length > 0) {
-    window.addEventListener("scrollend", () => animOnScroll())
+    // Reset animation state on scroll
+    window.addEventListener('scroll', () => {
+        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        boxes.forEach((box,index) => {
+            if (currentScrollTop > lastScrollTop) {
+                box.classList.remove('activeUp');
+                // box.classList.add('activeDown');
+                setTimeout(() => {
+                    box.classList.add('activeDown');
+                }, index * 100);
+            } else {
+                box.classList.remove('activeDown');
+                // box.classList.add('activeUp');s
+                setTimeout(() => {
+                    box.classList.add('activeUp');
+                }, index * 100);
+            }
+        });
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop
+    });
+});
 
-    function animOnScroll() {
-        for (let i = 0; i < animItems.length; i++) {
-            const animItem = animItems[i]
 
-            setTimeout(() => {
-                animItem.classList.add("active")
-            }, i * 150)
-            animItem.classList.remove("active")
-
-
-        }
-    }
-
-
-}
+// if (animItems.length > 0) {
+//     document.addEventListener("DOMContentLoaded", () => animOnScroll())
+//     let lastScrollTop = 0;
+//     console.log("lastScrollTop", lastScrollTop)
+//     function animOnScroll() {
+//         for (let i = 0; i < animItems.length; i++) {
+//             const animItem = animItems[i]
+//             const st = window.pageYOffset || document.documentElement.scrollTop;
+//             console.log("st > lastScrollTop",st , lastScrollTop)
+//             if (st > lastScrollTop) {
+//                 // Scrolling down
+//                 setTimeout(() => {
+//                     animItem.classList.add("activeDown")
+//                 }, i * 150)
+//                 animItem.classList.remove("activeDown")
+//             } else {
+//                 // Scrolling up
+//                 setTimeout(() => {
+//                     animItem.classList.add("activeUp")
+//                 }, i * 150)
+//                 animItem.classList.remove("activeUp")
+//             }
+//             lastScrollTop = st <= 0 ? 0 : st;
+//
+//
+//
+//         }
+//     }
+//
+//
+// }

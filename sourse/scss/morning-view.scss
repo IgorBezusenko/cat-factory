@@ -59,9 +59,14 @@
 
     }
 
-    &W1.active, &W2.active, &W3.active, &W4.active, &W5.active, &W6.active {
-      transition: all 0.6s;
-      animation: animate-scroll 0.6s ease-in-out forwards 0s;
+    &W1.activeDown, &W2.activeDown, &W3.activeDown, &W4.activeDown, &W5.activeDown, &W6.activeDown {
+      transition: all 1s;
+      animation: animate-scroll-down 0.6s ease-in-out forwards 0s;
+    }
+
+    &W1.activeUp, &W2.activeUp, &W3.activeUp, &W4.activeUp, &W5.activeUp, &W6.activeUp {
+      transition: all 1s;
+      animation: animate-scroll-up 0.6s ease-in-out forwards 0s;
     }
 
 
