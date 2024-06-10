@@ -462,11 +462,17 @@
 
       &List {
         display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        align-items: center;
         gap: 7px;
         margin-top: 15px;
       }
 
       &Item {
+
+        flex: 0 0 167px;
         padding: 15px 0;
         width: 167px;
         height: 376px;
@@ -1006,6 +1012,49 @@
           font-size: 12px;
           line-height: 15px;
         }
+
+      }
+
+      &__foods {
+
+        &Item {
+          flex: 0 0 85px;
+          padding: 7px 0;
+          width: 85px;
+          height: 188px;
+          border-radius: 5px;
+
+        }
+
+        &Title {
+          font-size: 10px;
+          line-height: 13px;
+        }
+
+        &Price {
+          margin-top: 4px;
+          font-size: 12px;
+          line-height: 15px;
+        }
+
+        &Text {
+          margin-top: 4px;
+          font-size: 10px;
+          line-height: 13px;
+        }
+
+        &Img {
+          margin: 12px auto 0;
+          width: 57px;
+          height: 57px;
+
+          img {
+            width: 26px;
+            height: 88px;
+            object-fit: cover;
+          }
+        }
+
 
       }
 
